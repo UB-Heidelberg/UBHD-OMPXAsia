@@ -30,5 +30,5 @@ def index():
         
   series_ids = db(db.series.press_id==myconf.take("omp.press_id")).select(db.series.series_id)
   if len(series_ids) == 0 :
-    raise HTTP(200, "'invalid': no series in this press")
+    raise HTTP(200, "'no series in this press")
   return dict(series_ids=series_ids, series_metadata=series_metadata)
