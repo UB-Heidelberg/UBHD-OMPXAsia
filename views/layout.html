@@ -72,11 +72,7 @@
 
                 <ul class="nav nav-pills pull-right">
                     <li><a href="{{=URL(myconf.take('web.application'),'contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
-                    <li>{{if session.forced_language=='de':}}
-                        <a href="/contact/imprint.html">Impressum</a>
-                        {{elif session.forced_language=='en':}}
-                        <a href="/contact/imprint.html">Legal Notice</a>
-                        {{pass}}
+                    <li><a href="{{=URL(myconf.take('web.application'),'contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
                     </li>
          <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
                     <!--<li><a href="faq.html">FAQ |</a></li>-->
@@ -121,11 +117,9 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                        data-delay="0" data-close-others="false">{{=T('About us')}}<b class=" icon-angle-down"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'mission_statement')}}"> {{=T('Mission Statement')}}</a></li>
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us','profile')}}">{{=T('Profile')}}</a></li>
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us','advisory_board')}}"> {{=T('Advisory Board')}}</a></li>
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us','team')}}">{{=T('Team')}}</a></li>
-
+                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'profile')}}"> {{=T('Profil')}}</a></li>
+                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us','our_service')}}">{{=T('Our Service')}}</a></li>
+                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us','technology')}}"> {{=T('Technology')}}</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{{=URL(myconf.take('web.application'),'catalog','index')}}">{{=T('Books')}}</a></li>
@@ -211,8 +205,36 @@
     {{end}}
     <!-- Main ========================================= -->
     <!-- Begin page content -->
+<script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+        $('.flexslider').flexslider();
+    });
+</script>
+
+
     <div class="container-fluid">
-      {{if left_sidebar_enabled:}}
+            <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <!-- Slider -->
+
+                    <div id="main-slider" class="flexslider">
+
+                        <ul class="slides">
+                            <li>
+                                <img id="hup-logo" src="{{=URL(myconf.take('web.application'),'static','images/press/slideshow/01_ebook_reader.jpg')}}" />
+                            </li>
+                        </ul>
+
+                    </div>
+            </div>
+        </div>
+      </div>
+      
+{{if left_sidebar_enabled:}}
         <div class="col-md-3 left-sidebar">
             {{block left_sidebar}}
             <h3>Left Sidebar</h3>
@@ -264,12 +286,11 @@
 
 
                         <div class="col-lg-3">
-                           <div id="footer_logo_ahn" class="widget"><a href="http://www.arthistoricum.net/" title="Homepage Arthistoricum.net"><img alt="Logo - Arthistoricum.net" src="{{=URL(myconf.take('web.application'),'static','/images/press/footer_logoAHN.png')}}" /></a></div>
+                           <div id="footer_logo_propylaeum" class="widget"><a href="https://www.propylaeum.de" title="Homepage Propylaeum"><img alt="Logo - Propylaeum" src="{{=URL(myconf.take('web.application'),'static','/images/press/footer_logo_propylaeum.png')}}" /></a></div>
                         </div>
 
                         <div class="col-lg-3">
                           <div id="footer_logo_pkp" class="widget">
-                          Template by&nbsp;<a href="http://bootstraptaste.com/free-bootstrap-template-corporate-moderna/">bootstraptaste.com</a><br />
                           <a href="https://pkp.sfu.ca/" title="Homepage PKP - Public Knowledge Project"><img class="" alt="Public Knowledge Project" src="http://books.ub.uni-heidelberg.de/lib/pkp/templates/images/pkp_brand.png"></a>
                           </div>
                         </div>
