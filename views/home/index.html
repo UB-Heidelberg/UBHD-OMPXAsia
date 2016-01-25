@@ -195,15 +195,15 @@
    <h4>Series</h4>
                                        {{pass}}
 
-                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/26/simple/cover.jpg'),_width='145px')}}
+                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/19/simple/cover.jpg'),_width='145px')}}
 
                                 </div>
 
                                 <div class="box-bottom">
    {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('catalog','series/mps'))}}
+                                    {{=A(T('More'),_href=URL('catalog','series/arch-ber'))}}
       {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('catalog','series/mps'))}}
+                                    {{=A(T('More Information'),_href=URL('catalog','series/arch-ber'))}}
                                       {{pass}}
                                 </div>
 
@@ -221,19 +221,16 @@
                                    {{elif session.forced_language =='en': }}
                                     <h4>Series</h4>
                                    {{pass}}
-
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/serien_cover.png'),_width='145px')}}
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/digital_classic_books.jpg'),_width='145px')}}
 
 
                                 </div>
 
                                 <div class="box-bottom">&nbsp;
                                 {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL(''))}}
-<!--                                {{=A(T('More'),_href=URL('catalog','series/mps'))}}-->
+                                {{=A(T('More'),_href=URL('catalog','series/mps'))}}
       {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL(''))}}
-<!--                                {{=A(T('More Information'),_href=URL('catalog','series/mps'))}}-->
+                               {{=A(T('More Information'),_href=URL('catalog','series/mps'))}}
                                 {{pass}}
                                 </div>
 
