@@ -1,6 +1,6 @@
 {{extend 'layout.html'}}
-<div id="main" class="container">
 
+<div id="main" class="container">
 
 <section id="content">
   <div style="height: 20px"></div>
@@ -62,7 +62,6 @@
                    <div class="tab-content">
                      <div class="tab-pane active" id="one2">
                        <table class="table">                
-                         
                          {{file_ids=[]}}
                                      
                          
@@ -142,7 +141,6 @@
         <article>
           <div class="">
             <div class="btn-group" role="group" aria-label="1">
-	    {{=full_files}}
               {{for fullbook in full_files:}}
                 {{if fullbook['original_file_name'].rsplit('.')[1].lower()==myconf.take('omp.xml_category_name').lower():}}
               
