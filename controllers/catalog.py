@@ -18,8 +18,8 @@ def series():
     
     
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
-        db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series) & (db.submissions.context_id == myconf.take('omp.press_id')) & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id) & (db.series.path==series))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.submission_id)
+        db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
+    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
     subs = {}
     
     for i in submissions:
@@ -50,7 +50,7 @@ def index():
     ignored_submissions =  myconf.take('omp.ignore_submissions') if myconf.take('omp.ignore_submissions') else -1
     query = ((db.submissions.context_id == myconf.take('omp.press_id')) &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.submission_id)
+    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
     subs = {}
     for i in submissions:
       authors=''
