@@ -1,5 +1,4 @@
 {{extend 'layout.html'}}
-{{=full_files}}
 <div id="main" class="container">
 
 <section id="content">
@@ -164,16 +163,16 @@
             </div>
             <div class="btn-group" role="group" aria-label="2">
 	       {{if representatives:}}
-              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+              <!--button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
                 {{=T('Print On Demand')}}
                 <span class="caret"></span>
-              </button>
+              </button-->
 		{{pass}}
-              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+              <!--ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                 {{for i in representatives:}}
                 <li role="presentation"><a role="menuitem"  href="{{=i['url']}}" target='_blank'>{{=i['name']}}</a></li>
                 {{pass}}
-              </ul>
+              </ul-->
             </div>
             <div class="post-heading">
               <br/>
