@@ -21,6 +21,7 @@ def index():
       metadata = {}
       prev_series = row['series_settings']['series_id']
       metadata['path'] = row['series']['path']
+      metadata['image'] = row['series']['image']
       series_metadata.append(metadata)
       
     for t in types:
@@ -30,5 +31,5 @@ def index():
         
   series_ids = db(db.series.press_id==myconf.take("omp.press_id")).select(db.series.series_id)
   if len(series_ids) == 0 :
-    raise HTTP(200, "'no series in this press")
+    raise HTTP(200, "'invalid': no series in this press")
   return dict(series_ids=series_ids, series_metadata=series_metadata)
