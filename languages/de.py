@@ -112,6 +112,7 @@
 'Deployment Recipes': 'Entwicklungsrezepte',
 'Description': 'Beschreibung',
 'design': 'Design',
+'DGUF': 'DGUF',
 'DISK': 'DISK',
 'Disk Cache Keys': 'Disk Cache Keys',
 'Disk Cleared': 'Disk gelöscht',
