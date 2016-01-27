@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 '''
 Copyright (c) 2015 Heidelberg University Library
-Distributed under the GNU GPL v3. For full terms see the file
+Distributed under the GNU GPL For full terms see the file
 LICENSE.md
 '''
 import os
@@ -14,7 +14,9 @@ def series():
     
     if request.args is None:
       redirect( URL('home', 'index'))
-    series = request.args[0]
+    series=''
+    if request.args[0]:
+  	 series = request.args[0]
     
     
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
@@ -40,17 +42,19 @@ def series():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-    return dict(submissions=submissions, subs=subs)
+      series_positions = db((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
+        db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id)  ).select(db.submissions.submission_id,db.submissions.series_position, orderby=db.submissions.series_position)
+
+    return dict(submissions=submissions, subs=subs, sp=series_positions)
 
 def index():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
     locale = 'de_DE'
     if session.forced_language == 'en':
         locale = 'en_US'
-    ignored_submissions =  myconf.take('omp.ignore_submissions') if myconf.take('omp.ignore_submissions') else -1
-    query = ((db.submissions.context_id == myconf.take('omp.press_id')) &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
+    query = ((db.submissions.context_id == myconf.take('omp.press_id'))  & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
+    submissions = db(query).select(db.submission_settings.ALL,orderby =[db.submissions.context_id,~db.submissions.series_position])
     subs = {}
     for i in submissions:
       authors=''
@@ -70,9 +74,8 @@ def index():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-    if len(subs) == 0:
-      redirect( URL('home', 'index'))  
     return dict(submissions=submissions, subs=subs)
+
 
 
 def book():
