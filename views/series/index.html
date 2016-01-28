@@ -52,7 +52,9 @@ text = html2text("")}}
                             <li>
                               
                               <a href="{{=URL(myconf.take('web.application'),'catalog','series/'+str(row['path']))}}">{{=T('More information')}}</a>
+                              {{if len(row['description']) > 1000            :}}
                             <a data-toggle="modal" href="#{{=str(row['path'])}}" >{{=T('Series Datails')}}</a>
+                             {{pass}}
                             </li><br>
                               
                               <div style="display: none;" class="modal fade" id="{{=str(row['path'])}}" tabindex="-1" role="dialog" aria-hidden="true">
