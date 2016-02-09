@@ -15,20 +15,19 @@ text = html2text("")}}
         <div class="row">
 	
             <div class="col-lg-2">
-                <article>
+              <article>
                     <div class="post-image">
-			{{if len(row['image']) > 7 :}}
-		 	<img src="{{=URL(myconf.take('web.application'),'static','series/'+row['image'][4:].split(';')[1].split('"')[1])}}"/>
-			{{pass}}
+                        {{if len(row['image']) > 7 :}}
+                        <img src="{{=URL(myconf.take('web.application'),'static','series/'+row['image'][4:].split(';')[1].split('"')[1])}}"/>
+                        {{pass}}
                   </div>
-
                 </article>
 
             </div>
             <div class="col-lg-10">
                <article>
                         <div class="post-heading">
-	
+        
           <h3> {{=row['title']}} </h3>
                         </div>
                        
@@ -51,38 +50,21 @@ text = html2text("")}}
              
                             <li>
                               
-                              <a href="{{=URL(myconf.take('web.application'),'catalog','series/'+str(row['path']))}}">{{=T('More information')}}</a>
-                              {{if len(row['description']) > 1000            :}}
-                            <a data-toggle="modal" href="#{{=str(row['path'])}}" >{{=T('Series Datails')}}</a>
-                             {{pass}}
-                            </li><br>
-                              
-                              <div style="display: none;" class="modal fade" id="{{=str(row['path'])}}" tabindex="-1" role="dialog" aria-hidden="true">
-                                <div class="modal-dialog ">
-                                  <div class="modal-content">
-                                    <div class="modal-header"> 
-                                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                      <h4 class="modal-title"> {{=row['title']}}</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                      {{=XML(row['description'])}}<br>
-                                      <div class="modal-footer"> 
-                                        <a href="#" class="btn btn-primary" data-dismiss="modal">{{=T('Close')}}</a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            
+                              <a href="{{=URL(myconf.take('web.application'),'catalog','series/'+str(row['path']))}}">{{=T('Volumes')}}</a>
+                              <a href="./series/{{=str(row['path'])}}_info.html">{{=T('Information about the series')}}</a>
 
+
+                            </li>
+                              
                             
 
                         </ul>
                     </div>
 
-			
-			
+                        
+                        
                 </article>
+
             </div>
 
         </div>
