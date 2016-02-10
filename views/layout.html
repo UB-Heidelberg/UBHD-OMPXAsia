@@ -129,7 +129,11 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                        data-delay="0" data-close-others="false">{{=T('Partner')}}<b class=" icon-angle-down"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{=URL(myconf.take('web.application'),'editor', 'dguf')}}"> {{=T('DGUF')}}</a></li>
+                                      {{if session.forced_language=='de':}}
+                                        <li><a href="{{=URL(myconf.take('web.application'),'editor', 'asdgfg')}}">Arbeitskreis Südasien</a></li>
+                                      {{elif session.forced_language=='en':}}
+                                        <li><a href="{{=URL(myconf.take('web.application'),'editor', 'asdgfg')}}">South Asia Study Group</a></li>
+                                      {{pass}}
                                     </ul>
                                 </li>
 
