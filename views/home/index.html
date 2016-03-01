@@ -27,7 +27,7 @@
 
                                     <h4>Neuerscheinung</h4>
 
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/49/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
                                 </div>
 
                                 <div class="box-bottom">
@@ -40,7 +40,7 @@
                         <div class="box-gray aligncenter">
 
    <h4>New Titles</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/49/simple/cover.jpg'),_width='145px')}}
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
                                 </div>
 
              <div class="box-bottom">
@@ -60,6 +60,7 @@
               <div class="box-gray aligncenter">
               {{if session.forced_language =='de': }}
                   <h4>Neuerscheinung</h4>
+                  {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
                </div>
 
                <div class="box-bottom">
@@ -69,6 +70,7 @@
                </div>
           {{elif session.forced_language =='en': }}
                 <h4>New Titles</h4>
+               {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
                </div>
 
                <div class="box-bottom">
@@ -221,8 +223,7 @@
                                    {{elif session.forced_language =='en': }}
                                     <h4>Series</h4>
                                    {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/series/digital_classics_books.jpg'),_width='145px')}}
-
+                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
 
                                 </div>
 

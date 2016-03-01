@@ -59,6 +59,18 @@
     middle_column = {0: mc0, 1: mc1, 2: mc2}[
     (left_sidebar_enabled and 1 or 0)+(right_sidebar_enabled and 1 or 0)]
     }}
+ 
+  <script type="text/javascript" charset="utf-8">  
+     function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if(e.style.display == 'block')
+       e.style.display = 'none';
+     else
+       e.style.display = 'block';
+     }
+
+     if(screen.width <= 850) {alert('test');}
+  </script>
 
   </head>
   <body>
@@ -76,6 +88,11 @@
                                 <h1>
                                         <a title="zur Startseite" href="http://crossasia.org/"><span class="xAsiaIcon"></span></a>
                                 </h1>
+                          </li>
+                          <li class="toggle-topbar menu-icon">
+                              <a href="#">
+                                 <span onclick="toggle_visibility('topNavElements');">Menu</span>
+                              </a>
                           </li>
                         </ul>
                         <section class="top-bar-section" id="topNavElements">
@@ -204,7 +221,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                        data-delay="0" data-close-others="false">{{=T('About us')}}<b class=" icon-angle-down"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'profile')}}"> {{=T('Profil')}}</a></li>
+                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'profile')}}"> {{=T('Profile')}}</a></li>
                                         <li><a href="{{=URL(myconf.take('web.application'),'about_us','our_service')}}">{{=T('Our Service')}}</a></li>
                                         <li><a href="{{=URL(myconf.take('web.application'),'about_us','technology')}}"> {{=T('Technology')}}</a></li>
                                     </ul>
