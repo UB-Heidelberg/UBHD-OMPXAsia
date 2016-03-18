@@ -20,7 +20,6 @@ def series():
     if request.args[0]:
   	 series = request.args[0]
     
-    
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
     submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position|~db.submissions.date_submitted)
@@ -81,7 +80,7 @@ def index():
     if session.forced_language == 'en':
         locale = 'en_US'
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  & (db.submissions.status == 3) & (
-        db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
+        db.submission_settings.submission_id == db.submissions.submission_id))
     submissions = db(query).select(db.submission_settings.ALL,orderby=~db.submissions.date_submitted)
     subs = {}
     order = []
@@ -105,9 +104,7 @@ def index():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-    return dict(submissions=submissions, subs=subs, order=order)
-
-
+    return locals()
 
 def book():
     abstract, authors, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', '', ''
