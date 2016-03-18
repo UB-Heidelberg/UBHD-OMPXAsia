@@ -6,7 +6,7 @@ LICENSE.md
 '''
 
 
-def dguf():
+def asdgfg():
     return dict()
 
 

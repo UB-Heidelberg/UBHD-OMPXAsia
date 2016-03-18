@@ -5,6 +5,8 @@ Distributed under the GNU GPL For full terms see the file
 LICENSE.md
 '''
 import os
+from operator import itemgetter
+
 def series():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
     locale = 'de_DE'
@@ -12,19 +14,44 @@ def series():
         locale = 'en_US'
     ignored_submissions =  myconf.take('omp.ignore_submissions') if myconf.take('omp.ignore_submissions') else -1
     
-    if request.args is None:
+    if request.args == []:
       redirect( URL('home', 'index'))
     series=''
     if request.args[0]:
   	 series = request.args[0]
     
-    
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
         db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale) & (db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id))
-    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position)
+    submissions = db(query).select(db.submission_settings.ALL,orderby=db.submissions.series_position|~db.submissions.date_submitted)
     subs = {}
-    
+
+    series_title = ""
+    series_subtitle = ""
+    rows = db(db.series.path == series).select(db.series.series_id)
+    if len(rows) == 1:
+        series_id = rows[0]['series_id']
+    	rows = db((db.series_settings.series_id == series_id) & (db.series_settings.setting_name == 'title') & (db.series_settings.locale == locale)).select(db.series_settings.setting_value)
+	if rows:
+	    series_title=rows[0]['setting_value']
+	rows = db((db.series_settings.series_id == series_id) & (db.series_settings.setting_name == 'subtitle') & (db.series_settings.locale == locale)).select(db.series_settings.setting_value)
+        if rows:
+            series_subtitle=rows[0]['setting_value']
+
+    series_positions = {}
+    order = []
     for i in submissions:
+      if not i.submission_id in order:
+	order.append(i.submission_id)
+      series_position = db(db.submissions.submission_id == i.submission_id).select(db.submissions.series_position).first()['series_position']
+      if series_position:
+         subs.setdefault(i.submission_id, {})['series_position'] = series_position
+	 pos_counter = 0
+         try:
+	   int_pos = int(series_position)
+	   series_positions[i.submission_id] = int_pos
+	 except:
+	   series_positions[i.submission_id] = pos_counter
+	   pos_counter += 1
       authors=''
       if i.setting_name == 'abstract':
           subs.setdefault(i.submission_id, {})['abstract'] = i.setting_value
@@ -42,10 +69,10 @@ def series():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-      series_positions = db((db.submissions.context_id == myconf.take('omp.press_id'))  &  (db.submissions.submission_id!=ignored_submissions) & (db.submissions.status == 3) & (
-        db.submissions.context_id==db.series.press_id) & (db.series.path==series)  & (db.submissions.series_id==db.series.series_id) &(db.submissions.context_id==db.series.press_id)  ).select(db.submissions.submission_id,db.submissions.series_position, orderby=db.submissions.series_position)
+      if series_positions != {}:
+        order = [e[0] for e in sorted(series_positions.items(), key=itemgetter(1), reverse=True)]
 
-    return dict(submissions=submissions, subs=subs, sp=series_positions)
+    return dict(submissions=submissions, subs=subs, order=order, series_title=series_title, series_subtitle=series_subtitle)
 
 def index():
     abstract, author, cleanTitle, subtitle = '', '', '', ''
@@ -53,10 +80,13 @@ def index():
     if session.forced_language == 'en':
         locale = 'en_US'
     query = ((db.submissions.context_id == myconf.take('omp.press_id'))  & (db.submissions.status == 3) & (
-        db.submission_settings.submission_id == db.submissions.submission_id) & (db.submission_settings.locale == locale))
-    submissions = db(query).select(db.submission_settings.ALL,orderby =[db.submissions.context_id,~db.submissions.series_position])
+        db.submission_settings.submission_id == db.submissions.submission_id))
+    submissions = db(query).select(db.submission_settings.ALL,orderby=~db.submissions.date_submitted)
     subs = {}
+    order = []
     for i in submissions:
+      if not i.submission_id in order:
+	order.append(i.submission_id)
       authors=''
       if i.setting_name == 'abstract':
           subs.setdefault(i.submission_id, {})['abstract'] = i.setting_value
@@ -74,9 +104,7 @@ def index():
         authors = authors[:-2]
           
       subs.setdefault(i.submission_id, {})['authors'] = authors
-    return dict(submissions=submissions, subs=subs)
-
-
+    return locals()
 
 def book():
     abstract, authors, cleanTitle, publication_format_settings_doi, press_name, subtitle = '', '', '', '', '', ''

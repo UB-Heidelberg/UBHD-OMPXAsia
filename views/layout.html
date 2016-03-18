@@ -31,7 +31,11 @@
       <link rel="stylesheet" href="{{=URL(myconf.take('web.application'),'static','css/style.css')}}"/>
       <link rel="stylesheet" href="{{=URL(myconf.take('web.application'),'static','css/default.css')}}"/>
       <link rel="stylesheet" href="{{=URL(myconf.take('web.application'),'static','css/font-awesome.css' )}}"/>
-      <!-- end -->
+      <link rel="stylesheet" href="{{=URL(myconf.take('web.application'),'static','css/font-awesome.min.css' )}}"/>
+
+
+   
+  <!-- end -->
 
     <link rel="shortcut icon" href="{{=URL(myconf.take('web.application'),'static','images/favicon.ico')}}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{=URL(myconf.take('web.application'),'static','images/favicon.png')}}">
@@ -56,6 +60,19 @@
     middle_column = {0: mc0, 1: mc1, 2: mc2}[
     (left_sidebar_enabled and 1 or 0)+(right_sidebar_enabled and 1 or 0)]
     }}
+ 
+  <script type="text/javascript" charset="utf-8">  
+     function toggle_visibility(id) {
+     var e = document.getElementById(id);
+     if(e.style.display == 'block')
+       e.style.display = 'none';
+     else
+       e.style.display = 'block';
+     }
+
+     if(screen.width <= 850) {
+     }
+  </script>
 
   </head>
   <body>
@@ -64,37 +81,126 @@
     <!-- Navbar ======================================= -->
     <!-- start header -->
 
-    <div id="service-navi" class="container">
+  <div id="xasia_navi" class="container">
+      <div class="row">
+          <div class="col-lg-12 col-sm-12 col-xs-12">
+           <nav class="top-bar" id="MainMenu">
+                        <ul class="title-area">
+                          <li class="name">
+                                <h1>
+                                        <a title="zur Startseite" href="http://crossasia.org/"><span class="xAsiaIcon"></span></a>
+                                </h1>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="toggle-topbar menu-icon">
+                              <a href="#">
+                                 <span onclick="toggle_visibility('topNavElements');">Menu</span>
+                              </a>
+                          </li>
+                        </ul>
+                        <section class="top-bar-section" id="topNavElements">
+                        <ul class="left">
+                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Ressourcen </a>
+                            <ul class="dropdown">
+                              <li><a href="http://crossasia.org/ressourcen/search.html"  >CrossAsia Suche</a></li>
+                              <li><a href="http://crossasia.org/ressourcen/databasesearch.html"  >Datenbanken</a></li>
+                              <li><a href="http://crossasia.org/ressourcen/sammlungen.html"  >Digitale Sammlungen</a></li>
+                              <li><a href="http://crossasia.org/ressourcen/tp.html"  >Themen Portale</a></li>
+                              <li><a href="http://crossasia.org/ressourcen/ogea/ogeasearch.html"  >Online Guide East Asia</a></li>
+                              <li><a href="http://crossasia.org/ressourcen/archive.html"  >eGovernment Archive</a></li>
 
-        <div class="row">
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
+                            <ul class="dropdown">
+                            {{if session.forced_language=='de':}}
+                              <li><a href="http://crossasia.org/service/aktuelles.html"  >CrossAsia Aktuelles</a></li>
+                              <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
+                              <li><a href="http://crossasia.org/service/newsletter.html"  >CrossAsia Newsletter</a></li>
+                              <li><a href="http://crossasia.org/service/epublish.html"  >CrossAsia E-Publishing</a></li>
+                              <li><a href="http://crossasia.org/service/blv.html"  >Kataloge & Blauer Leihverkehr</a></li>
+                              <li><a href="http://crossasia.org/service/lab.html"  >CrossAsia Lab</a></li>
+                              <li><a href="http://crossasia.org/service/xasia.html"  >Über CrossAsia</a></li>
+                            {{elif session.forced_language=='en':}}
+                              <li><a href="http://crossasia.org/en/service/aktuelles.html"  >CrossAsia News</a></li>
+                              <li><a href="http://crossasia.org/en/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
+                              <li><a href="http://crossasia.org/en/service/newsletter.html"  >CrossAsia Newsletter</a></li>
+                              <li><a href="http://crossasia.org/en/service/epublish.html"  >CrossAsia E-Publishing</a></li>
+                              <li><a href="http://crossasia.org/en/service/blv.html"  >Catalogues & Blauer Leihverkehr</a></li>
+                              <li><a href="http://crossasia.org/en/service/lab.html"  >CrossAsia Lab</a></li>
+                              <li><a href="http://crossasia.org/en/service/xasia.html"  >About CrossAsia</a></li>
+                             {{pass}}
+                            </ul>
+                          </li>
+                          <li class="divider"></li>
+                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>Mein CrossAsia </a>
+                            <ul class="dropdown">
+                              <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
+                              <li><a href="http://crossasia.org/meinxasia/registrierung.html"  >CrossAsia Registrierung</a></li>
+                            </ul>
+                          </li>
+                        </ul>
 
-            <div class="col-lg-12 col-sm-12 col-xs-12">
-
-                <ul class="nav nav-pills pull-right">
-                    <li><a href="{{=URL(myconf.take('web.application'),'contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
-                    <li><a href="{{=URL(myconf.take('web.application'),'contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
-                    </li>
-         <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
-                    <!--<li><a href="faq.html">FAQ |</a></li>-->
-                     {{if session.forced_language=='en':}}
-                    <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
-                    {{elif session.forced_language=='de':}}
-                    <li><a href="{{=request.url}}?lang=en" style="padding-left: 10px;">EN</a></li>
-                    {{pass}}
-                </ul>
-
-            </div>
-
-        </div>
-
+                        <ul id="rightTopNav" class="right">
+                               <li>
+                                <form id="pazpar2" action="/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
+                                        <div id="topSearch" class="collapse">
+                                                        <div class="small-12 twelve columns">
+                                                                <input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Suche" class="infocus" size="10" type="text" />
+                                                                <button id="pz2ButtonTop" class="button small" value="Go"><span class="sprite search-w" style="margin:0;">&nbsp;</span></button>
+                                                        </div>
+                                        </div>
+                                </form>
+                               </li>
+                               <li class="divider"></li>
+                               <li class="has-dropdown">
+                                        <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
+                                                <ul class="dropdown">
+                                                                <li><a href="http://crossasia.org/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registrierung</a></li>
+                                                                <li><div class="login"><form action="http://crossasia.org/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
+                        <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Benutzer:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Passwort:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>
+                        </form></div></li>
+                                                </ul>
+                                 </li>
+                        </ul>
+                </section>
+                </nav>
+          </div>
+        </div> 
     </div>
+
        <div class="container">
        <div id="headerLogo" class="col-lg-12 print-url">
          <img id="heiup-logo" class="screen" src="{{=URL(myconf.take('web.application'),'static','images/press/schriftzug_header.png')}}" />
          <img id="heiup-logo-print" class="print" src="{{=URL(myconf.take('web.application'),'static','images/press/schriftzug_header_print.png')}}" />
        </div> 
        </div>
-       
+   
+    <div class="container-fluid">
+            <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <!-- Slider -->
+
+                    <div id="main-slider" class="flexslider">
+
+                        <ul class="slides">
+                            <li>
+                                <img id="hup-logo" src="{{=URL(myconf.take('web.application'),'static','images/press/home/slideshow/paisley.png')}}" />
+                            </li>
+
+                        </ul>
+
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
     <div class="container">
 
         <header>
@@ -117,7 +223,7 @@
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                        data-delay="0" data-close-others="false">{{=T('About us')}}<b class=" icon-angle-down"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'profile')}}"> {{=T('Profil')}}</a></li>
+                                        <li><a href="{{=URL(myconf.take('web.application'),'about_us', 'profile')}}"> {{=T('Profile')}}</a></li>
                                         <li><a href="{{=URL(myconf.take('web.application'),'about_us','our_service')}}">{{=T('Our Service')}}</a></li>
                                         <li><a href="{{=URL(myconf.take('web.application'),'about_us','technology')}}"> {{=T('Technology')}}</a></li>
                                     </ul>
@@ -127,9 +233,13 @@
                                 <!--<li><a href="{{=URL(myconf.take('web.application'),'journals','index')}}">{{=T('Journals')}}</a></li>-->
 	                        <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                                       data-delay="0" data-close-others="false">{{=T('Editor')}}<b class=" icon-angle-down"></b></a>
+                                       data-delay="0" data-close-others="false">{{=T('Partner')}}<b class=" icon-angle-down"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="{{=URL(myconf.take('web.application'),'editor', 'dguf')}}"> {{=T('DGUF')}}</a></li>
+                                      {{if session.forced_language=='de':}}
+                                        <li><a href="{{=URL(myconf.take('web.application'),'partner', 'asdgfg')}}">Arbeitskreis Südasien</a></li>
+                                      {{elif session.forced_language=='en':}}
+                                        <li><a href="{{=URL(myconf.take('web.application'),'partner', 'asdgfg')}}">South Asia Study Group</a></li>
+                                      {{pass}}
                                     </ul>
                                 </li>
 
@@ -217,28 +327,6 @@
 </script>
 
 
-    <div class="container-fluid">
-            <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-                    <!-- Slider -->
-
-                    <div id="main-slider" class="flexslider">
-
-                        <ul class="slides">
-                            <li>
-                                <img id="hup-logo" src="{{=URL(myconf.take('web.application'),'static','images/press/home/slideshow/01_nicolini.jpg')}}" />
-                            </li>
-
-                        </ul>
-
-                    </div>
-            </div>
-        </div>
-      </div>
       
 {{if left_sidebar_enabled:}}
         <div class="col-md-3 left-sidebar">
@@ -272,6 +360,33 @@
          <footer>
 
      <div id="sub-footer"  class="screen">
+
+<div id="service-navi" class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="{{=URL(myconf.take('web.application'),'contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
+                    <li><a href="{{=URL(myconf.take('web.application'),'contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
+                    </li>
+         <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
+                    <!--<li><a href="faq.html">FAQ |</a></li>-->
+                     {{if session.forced_language=='en':}}
+                    <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
+                    {{elif session.forced_language=='de':}}
+                    <li><a href="{{=request.url}}?lang=en" style="padding-left: 10px;">EN</a></li>
+                    {{pass}}
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
          <div class="container">
 
  <div class="col-lg-12">
@@ -292,7 +407,7 @@
 
 
                         <div class="col-lg-3">
-                           <div id="footer_logo_propylaeum" class="widget"><a href="https://www.propylaeum.de" title="Homepage Propylaeum"><img alt="Logo - Propylaeum" src="{{=URL(myconf.take('web.application'),'static','/images/press/footer_logo_propylaeum.png')}}" /></a></div>
+                           <div id="footer_logo_xasia" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL(myconf.take('web.application'),'static','/images/press/footer_logoXasia.png')}}" /></a></div>
                         </div>
 
                         <div class="col-lg-3">
