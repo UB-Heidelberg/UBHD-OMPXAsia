@@ -154,6 +154,7 @@ db.define_table("series",
                 Field("editor_restricted", "integer"),
                 Field("path","string"),
                 Field("image","text"),
+                primarykey=['series_id'],
                 migrate=False
                 )
 
@@ -163,6 +164,7 @@ db.define_table("series_settings",
                 Field("setting_name", "string"),
                 Field("setting_value", "string"),
                 Field("setting_type", "string"),
+                primarykey=['series_id', 'locale', 'setting_name'],
                 migrate=False
                 )
 db.define_table("representatives",
@@ -218,7 +220,7 @@ db.define_table("submission_settings",
                 Field("setting_name", "string"),
                 Field("setting_value", "string"),
                 Field("setting_type", "string"),
-                primarykey=['submission_id'],
+                primarykey=['submission_id', 'locale', 'setting_name'],
                 migrate=False
                 )
 db.define_table("submission_file_settings",
@@ -227,6 +229,7 @@ db.define_table("submission_file_settings",
                 Field("setting_name", "string"),
                 Field("setting_value", "string"),
                 Field("setting_type", "string"),
+                primarykey=['file_id', 'locale', 'setting_name'],
                 migrate=False,
                 )
 
@@ -250,7 +253,7 @@ db.define_table('submission_files',
                 Field('uploader_user_id', 'integer'),
                 Field('assoc_type', 'integer'),
                 Field('assoc_id', 'integer'),
-
+                primarykey=['file_id', 'revision'],
                 migrate=False
                 )
 
@@ -268,6 +271,7 @@ db.define_table("user_group_settings",
                 Field("setting_name", "string"),
                 Field("setting_value", "string"),
                 Field("setting_type", "string"),
+                primarykey=['user_group_id', 'locale', 'setting_name'],
                 migrate=False
                 )
 
