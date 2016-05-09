@@ -8,7 +8,7 @@ LICENSE.md
 import os
 from operator import itemgetter
 from ompdal import OMPDAL, OMPSettings, OMPItem
-from ompformat import convertDate
+from ompformat import convertDate, seriesPositionCompare
 from datetime import datetime
 
 def series():
@@ -50,7 +50,8 @@ def series():
         )
         
         submissions.append(submission)
-    
+
+    submissions = sorted(submissions, cmp=seriesPositionCompare, reverse=True)
     series.associated_items['submissions'] = submissions
 
     return locals()
