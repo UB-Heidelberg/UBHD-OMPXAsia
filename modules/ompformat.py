@@ -74,12 +74,12 @@ def formatCitation(title, subtitle, authors, editors, year, location, press_name
     cit, et_al, edt = "", "", ""
     if editors:
         if len(editors) > max_contrib:
-            et_al = " et al"
+            et_al = " et al."
         contrib = editors[:max_contrib]
         if len(editors) == 1:
-            edt = ", "+current.T.translate('ed', {})
+            edt = ", "+current.T.translate('(ed.)', {})
         else:
-            edt = ", "+current.T.translate('eds', {})
+            edt = ", "+current.T.translate('(eds)', {})
     elif authors:
         if len(authors) > max_contrib:
             et_al = " et al"
@@ -89,22 +89,29 @@ def formatCitation(title, subtitle, authors, editors, year, location, press_name
     if num_contrib == 1:
         cit = formatName(contrib.pop().attributes)
     elif num_contrib == 2:
-        cit = "{} and {}".format(formatName(contrib[0].attributes, reverse=True),
+        f_str = "{} "+current.T.translate('and', {})+" {}"
+        cit = f_str.format(formatName(contrib[0].attributes, reverse=True),
                                  formatName(contrib[1].attributes))
     elif num_contrib == 3:
-        cit = "{}, {} and {}".format(formatName(contrib[0].attributes, reverse=True),
+        f_str = "{}, {} "+current.T.translate('and', {})+" {}"
+        cit = f_str.format(formatName(contrib[0].attributes, reverse=True),
                                      formatName(contrib[1].attributes),
                                      formatName(contrib[2].attributes))
     else:
-        cit = "{} and {}".format(", ".join([formatName(c.attributes, reverse=True) for c in contrib[:-1]]),
+        f_str = "{} "+current.T.translate('and', {})+" {}"
+        cit = f_str.format(", ".join([formatName(c.attributes, reverse=True) for c in contrib[:-1]]),
                                      formatName(contrib[-1].attributes))
     
-    cit = "".join([cit, et_al, edt])+". "
+    cit = "".join([cit, et_al, edt])+": "
     cit += title
     if subtitle:
         cit += ": "+subtitle
 
-    cit += location+": "+press_name+", "+year+"."
+    cit += ", "+location+": "+press_name+", "+year
+    if series_name and series_pos:
+        f_str = " ({}, "+current.T.translate('Vol.', {})+" {})"
+        cit += f_str.format(series_name, series_pos)
+    cit += "."
     if doi:
         cit += " DOI: "
     return cit
