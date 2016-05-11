@@ -43,7 +43,7 @@ sessions/*
 static/files
 private/*
 errors/*
-private/
+private/*
 errors/*
 *.swp
 *.swo
