@@ -2238,7 +2238,7 @@ li.active {
 .flex-caption .btn-theme,
 .widget ul.tags li a,
 .widget ul.tags li a:hover {
-  background:  #40448b !important;
+  background:  #c70c1f !important;
   border: none;
 }
 
@@ -2297,6 +2297,14 @@ li.active {
 
 #infoBoxRechts {
   float: right;
+}
+
+#infoBoxRechts {
+  float: right;
+  background-color:#f7f7f7;
+  padding-top:1em;
+  padding-bottom:1em;
+  margin-left:1em;
 }
 
 .boxListe {
