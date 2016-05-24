@@ -2,46 +2,64 @@
 <div class="container">
     <div class="row">
       <div id="main" class="container">
-        <div class="col-lg-12" style="height: 500px">
+        <div class="col-lg-12 contentbox">
             <h3>            {{=T('Contact')}}</h3>
-
-            <p>
-
-
+             <div class="row">
+                <p>
               {{if session.forced_language=='de':}}
-                     <strong>Nicole Merkel-Hilf</strong><br>
+                   <div class="col-lg-3">
+                     <strong>Südasien</strong><br>
+                         Nicole Merkel-Hilf, M.A.<br>
                          Bibliothek / Südasien-Institut<br>
                          Im Neuenheimer Feld 330<br>
                          69120 Heidelberg<br>
                          Tel.: +49 6221 54-8927<br>
-                         E-Mail: merkel@sai.uni-heidelberg.de<br><br>
+                         Mail: <a href="mailto:merkel@sai.uni-heidelberg.de">E-Mail</a><br><br>
 
-                     <strong>Dr. Maria Effinger</strong><br>
+                         Dr. Maria Effinger<br>
                          Universitätsbibliothek Heidelberg<br>
                          Plöck 107-109<br>
                          69117 Heidelberg<br>
                          Tel.: +49 6221 54-3561<br>
-                         E-Mail: effinger@ub.uni-heidelberg.de
+                         Mail: <a href="mailto:effinger@sai.uni-heidelberg.de">E-Mail</a><br><br><br>
+                     </div>
+                     <div class="col-lg-3">
+                      <strong>Ost- und Südostasien</strong><br>
+                         Staatsbibliothek zu Berlin - PK<br>
+                         Ostasienabteilung<br>
+                         Tel.: +49 (30)266-436001<br>
+                         Mail: <a href="mailto:x-asia@sbb.spk-berlin.de">E-Mail</a><br>
+                      </div>
               {{elif session.forced_language=='en':}}
-                     <strong>Nicole Merkel-Hilf</strong><br>
+                   <div class="col-lg-3">
+                     <strong>South Asia</strong><br>
+                         Nicole Merkel-Hilf, M.A.
                          Library / South Asia Institute<br>
                          Im Neuenheimer Feld 330<br>
                          69120 Heidelberg<br>
                          Germany<br>
                          Tel.: +49 6221 54-8927<br>
-                         E-Mail: merkel@sai.uni-heidelberg.de<br><br>
+                         Mail: <a href="mailto:merkel@sai.uni-heidelberg.de">E-Mail</a><br><br>
 
 
-                         <strong>Dr. Maria Effinger</strong><br>
+                         Dr. Maria Effinger<br>
                          Heidelberg University Library<br>
                          Plöck 107-109<br>
                          69117 Heidelberg<br>
                          Germany<br>
                          Tel.: +49 6221 54-3561<br>
-                         E-Mail: effinger@ub.uni-heidelberg.de
+                         Mail: <a href="mailto:effinger@sai.uni-heidelberg.de">E-Mail</a><br><br><br>
+                   </div>
+                   <div class="col-lg-3">
+                     <strong>East and Southeast Asia</strong><br>
+                         Staatsbibliothek zu Berlin - PK<br>
+                         Ostasienabteilung<br>
+                         Tel.: +49 (30)266-436001<br>
+                         Mail: <a href="mailto:x-asia@sbb.spk-berlin.de">E-Mail</a><br>
+                   </div>
                 {{pass}}
-                </p>
-
+                  </p>
+              </div>
            </div>
         </div>
     </div>
