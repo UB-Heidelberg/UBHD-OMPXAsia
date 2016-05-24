@@ -9,7 +9,7 @@
     <!-- end header -->
 
 
-    <section id="content">
+    <section id="content" style="padding-top:25px;">
 
         <div class="container">
 
@@ -21,7 +21,7 @@
 
                         <div class="col-lg-3">
 
-                            <div class="box">
+                            <div class="box box-shadow">
                                 {{if session.forced_language =='de': }}
                                 <div class="box-gray aligncenter">
 
@@ -55,7 +55,7 @@
 
       <div class="col-lg-3">
 
-          <div class="box">
+          <div class="box box-shadow">
 
               <div class="box-gray aligncenter">
               {{if session.forced_language =='de': }}
@@ -88,11 +88,11 @@
 
       <div id="boxAktuelles" class="col-lg-6">
 
-          <div class="box">
+          <div class="box box-shadow">
         <div class="box-gray aligncenter" style="overflow-y: scroll">
 
           {{if session.forced_language =='de': }}       
-              <h4>Aktuelles</h4>
+              <h4>Neuigkeiten</h4>
           {{elif session.forced_language =='en': }}
               <h4>News</h4>
           {{pass}}
@@ -106,6 +106,7 @@
                   </div>                        
                   <div class="media-body">      
                       <p class="media-heading">
+                      <span class="aktuelles_datum">20.05.2016</span><br>
         {{if session.forced_language =='de': }}  
             <h5>Lorem ipsum dolor sit amet</h5>
         {{elif session.forced_language =='en': }}
@@ -128,6 +129,7 @@
                   </div>                        
                   <div class="media-body">      
                       <p class="media-heading">
+                      <span class="aktuelles_datum">03.05.2016</span><br>
         {{if session.forced_language =='de': }}  
             <h5>Lorem ipsum dolor sit amet</h5>
         {{elif session.forced_language =='en': }}
@@ -140,7 +142,6 @@
         {{elif session.forced_language =='en': }}
                                 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
            {{pass}}                                   
-            <!--<a href="http://open-access.net/community/open_access_tage/ " target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>-->
                       </p>
                   </div>
               </div>
@@ -149,25 +150,7 @@
                                 
                                 </div>
                                 
-                                <!--<div class="media">
-                                    <div class="media-left pull-left">
-                                        <a href="#">
-                                            <img src="{{=URL(myconf.take('web.application'),'static','images/press/home/cluster.jpg')}}" width="50px"/>
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="media-heading"><strong>DFG-Projekt: Entwicklung eines Geschäftsmodells für Open-Access-Bücher</strong> </p>
-                                        <p>Der Exzellenzcluster „Asien und Europa im globalen Kontext“ der Universität Heidelberg und die Universitätsbibliothek Heidelberg planen die Entwicklung eines innovativen Geschäftsmodells für die frei zugängliche Veröffentlichung wissenschaftlicher Bücher im Internet.
-                                            <a href="http://www.asia-europe.uni-heidelberg.de/en/research/publishing/heidelberg-studies-in-transculturality-an-open-access-book-series.html"  target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>-->
                                                                 <div class="box-bottom">&nbsp;
-   <!--{{if session.forced_language =='de': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">Mehr</span>
-      {{elif session.forced_language =='en': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">More</span>
-                                      {{pass}}-->         
                                 </div>
 
                             </div>
@@ -188,16 +171,16 @@
 
                         <div class="col-lg-3">
 
-                            <div class="box">
+                            <div class="box box-shadow">
 
                                 <div class="box-gray aligncenter">
-   {{if session.forced_language =='de': }}
-                                    <h4>Serien</h4>
-   {{elif session.forced_language =='en': }}
-   <h4>Series</h4>
-                                       {{pass}}
+                                    {{if session.forced_language =='de': }}
+                                    <h4>Demächst</h4>
+                                    {{elif session.forced_language =='en': }}
+                                    <h4>Coming Soon</h4>
+                                    {{pass}}
 
-                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/22/simple/cover.jpg'),_width='145px')}}
+                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/22/simple/cover.jpg'),_width='145px')}}
 
                                 </div>
 
@@ -215,7 +198,7 @@
 
                         <div class="col-lg-3">
 
-                            <div class="box">
+                            <div class="box box-shadow">
 
                                 <div class="box-gray aligncenter">
                                    {{if session.forced_language =='de': }}
@@ -241,7 +224,7 @@
 
                         <div class="col-lg-6" id="boxAktuelles">
 
-                        <div class="box">
+                        <div class="box box-shadow">
                         <div class="box-gray aligncenter">
                         <h4>xAsia - eBOOKS</h4>
                         <p class="boxText">

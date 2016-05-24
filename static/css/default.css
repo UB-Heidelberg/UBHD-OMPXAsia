@@ -49,7 +49,7 @@ header .nav li.active ul.dropdown-menu li.active a{
 .pagination ul > .active > span,
 .flex-control-nav li a:hover, 
 .flex-control-nav li a.active {
-  background-color: #c70c1f;
+  background-color: #fff;
 }
 
 
@@ -230,10 +230,9 @@ ul.clients li:hover {
 
 /* footer */
 footer{
-	background:#ededed;
+	background:#e8e6e1;
 }
 #sub-footer{
-	background:#ededed;
-        border-top:1px solid #d5d5d5;
+	background:#e8e6e1;
 }
 
