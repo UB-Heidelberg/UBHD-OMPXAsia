@@ -1,264 +1,98 @@
-{{extend 'layout.html'}}
+{{extend 'layout.html'}} 
 <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
         $('.flexslider').flexslider();
-    });
-</script>
+    }); 
+</script> 
 <div class="container">
-
-    <!-- end header -->
-
-
-    <section id="content" style="padding-top:25px;">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-<div class="row">
-
-                        <div class="col-lg-3">
-
-                            <div class="box box-shadow">
-                                {{if session.forced_language =='de': }}
-                                <div class="box-gray aligncenter">
-
-                                    <h4>Neuerscheinung</h4>
-
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
-                                </div>
-
-                                <div class="box-bottom">
-
-                                    {{=A(T('More'),_href=URL('catalog','book/60'))}}
-
-                                </div>
-
-                            {{elif session.forced_language =='en': }}
-                        <div class="box-gray aligncenter">
-
-   <h4>New Titles</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
-                                </div>
-
-             <div class="box-bottom">
-
-                  {{=A(T('More Information'),_href=URL('catalog','book/60'))}}
-
+  <!-- end header -->
+  <section id="content" style="padding-top:25px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="box box-shadow"> {{if session.forced_language =='de': }}
+                <div class="box-gray aligncenter"><h4>Neuerscheinung</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/60'))}}
+                </div> {{elif session.forced_language =='en': }}
+                <div class="box-gray aligncenter"><h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/60'))}}
+                </div> {{pass}}
               </div>
-               {{pass}}
+            </div>
+            <div class="col-lg-3">
+              <div class="box box-shadow">
+                <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/58'))}}
+                </div> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/58'))}}
+              </div> {{pass}}
+            </div>
           </div>
-
-      </div>
-
-      <div class="col-lg-3">
-
-          <div class="box box-shadow">
-
-              <div class="box-gray aligncenter">
-              {{if session.forced_language =='de': }}
-                  <h4>Neuerscheinung</h4>
-                  {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
-               </div>
-
-               <div class="box-bottom">
-
-                  {{=A(T('More'),_href=URL('catalog','book/58'))}}
-
-               </div>
-          {{elif session.forced_language =='en': }}
-                <h4>New Titles</h4>
-               {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
-               </div>
-
-               <div class="box-bottom">
-
-                  {{=A(T('More Information'),_href=URL('catalog','book/58'))}}
-
-               </div>
-
-                {{pass}}
-
-
-          </div>
-
-      </div>
-
-      <div id="boxAktuelles" class="col-lg-6">
-
-          <div class="box box-shadow">
-        <div class="box-gray aligncenter" style="overflow-y: scroll">
-
-          {{if session.forced_language =='de': }}       
-              <h4>Neuigkeiten</h4>
-          {{elif session.forced_language =='en': }}
-              <h4>News</h4>
-          {{pass}}
-          
-          
-              <div class="media">
-                  <div class="media-left pull-left">
-                      <a href="">
-<!--                          <img src="{{=URL(myconf.take('web.application'),'static','')}}" width="50px" />-->
-                      </a>
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">
-                      <span class="aktuelles_datum">20.05.2016</span><br>
-        {{if session.forced_language =='de': }}  
-            <h5>Lorem ipsum dolor sit amet</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>Lorem ipsum dolor sit amet</h5> 
-        {{pass}}          
-                      </p>
-                  <p class="boxText">
-        {{if session.forced_language =='de': }}  
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.           
-               {{elif session.forced_language =='en': }}      
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                          {{pass}}                                   
-                                      </p>
-                                    </div>
-                                </div>          
-          
-          <div class="media">
-                  <div class="media-left pull-left">
-                    <!--  <img src="{{=URL(myconf.take('web.application'),'static','')}}" style="width: 50px;" />-->
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">
-                      <span class="aktuelles_datum">03.05.2016</span><br>
-        {{if session.forced_language =='de': }}  
-            <h5>Lorem ipsum dolor sit amet</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>Lorem ipsum dolor sit amet</h5>        
-        {{pass}}   
-                      </p>
-                  <p class="boxText">
-        {{if session.forced_language =='de': }}  
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        {{elif session.forced_language =='en': }}
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-           {{pass}}                                   
-                      </p>
+          <div id="boxAktuelles" class="col-lg-6">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}
+                <div class="media">
+                  <div class="media-left pull-left"> 
+                    <a href=""> 
+                      <!--                          <img src="{{=URL(myconf.take('web.application'),'static','')}}" width="50px" />--></a>
                   </div>
+                  <div class="media-body">
+                    <p class="media-heading"> 
+                      <span class="aktuelles_datum">06.06.2016
+                      </span>
+                      <br>{{if session.forced_language =='de': }}<h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> {{elif session.forced_language =='en': }}<h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> {{pass}}
+                    </p>
+                    <p class="boxText"> {{if session.forced_language =='de': }} CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! {{elif session.forced_language =='en': }} CrossAsia E-Publishing will be present at the 24th European Conference on South Asian Studies in Warsaw. Visit us at the publisher space and get informed on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Warsaw! {{pass}}
+                    </p>
+                  </div>
+                </div>
               </div>
-              
-
-                                
-                                </div>
-                                
-                                                                <div class="box-bottom">&nbsp;
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              <div class="box-bottom">&nbsp;
+              </div>
             </div>
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-<div class="row">
-
-                        <div class="col-lg-3">
-
-                            <div class="box box-shadow">
-
-                                <div class="box-gray aligncenter">
-                                    {{if session.forced_language =='de': }}
-                                    <h4>Demächst</h4>
-                                    {{elif session.forced_language =='en': }}
-                                    <h4>Coming Soon</h4>
-                                    {{pass}}
-
-                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/22/simple/cover.jpg'),_width='145px')}}
-
-                                </div>
-
-                                <div class="box-bottom">
-   {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('catalog','series/sawa'))}}
-      {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('catalog','series/sawa'))}}
-                                      {{pass}}
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-3">
-
-                            <div class="box box-shadow">
-
-                                <div class="box-gray aligncenter">
-                                   {{if session.forced_language =='de': }}
-                                    <h4>Serien</h4>
-                                   {{elif session.forced_language =='en': }}
-                                    <h4>Series</h4>
-                                   {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
-
-                                </div>
-
-                                <div class="box-bottom">&nbsp;
-                                {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('catalog','series/gsa'))}}
-      {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}}
-                                {{pass}}
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6" id="boxAktuelles">
-
-                        <div class="box box-shadow">
-                        <div class="box-gray aligncenter">
-                        <h4>xAsia - eBOOKS</h4>
-                        <p class="boxText">
-{{if session.forced_language =='de': }}
-
-ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit.
-Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
-{{elif session.forced_language =='en': }}
-is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP).
-{{pass}}
-                        </p>
-                        </div>
-
-              <div class="box-bottom">&nbsp;</div>
-                      </div>
-                        </div>
-
-
-
-
-
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+          </div>
         </div>
-
-    </section>
-
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index'))}} {{pass}}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Serien</h4> {{elif session.forced_language =='en': }}<h4>Series</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','series/gsa'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}} {{pass}}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" id="boxAktuelles">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"><h4>xAsia - eBOOKS</h4>
+                <p class="boxText"> {{if session.forced_language =='de': }} ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit. Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP). {{elif session.forced_language =='en': }} is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP). {{pass}}
+                </p>
+              </div>
+              <div class="box-bottom">&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+</section>
 </div>
