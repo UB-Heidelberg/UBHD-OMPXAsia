@@ -138,8 +138,15 @@
                         </ul>
 
                         <ul id="rightTopNav" class="right">
-                               <li id="langMenu"><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>English</a><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>English</a></li>
-                               <li class="divider"></li>
+                               <li>
+    				<form id="pazpar2" action="http://crossasia.org/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
+    					<div id="topSearch">
+    							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Suche" class="infocus" size="10" type="text" />
+    							 	<button id="pz2ButtonTop" class="button small" value="Go"><span class="sprite search-w">&nbsp;</span></button>
+    					</div>
+    				</form>   
+    		         	</li>			
+    			       <li class="divider"></li>
                                <li class="has-dropdown">
                                         <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
@@ -213,8 +220,15 @@
                         </ul>
 
                         <ul id="rightTopNav" class="right">
-                               <li id="langMenu"><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>Deutsch</a><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>Deutsch</a></li>
-                               <li class="divider"></li>
+                               <li>
+    				<form id="pazpar2" action="http://crossasia.org/en/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
+    					<div id="topSearch">
+    							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Search" class="infocus" size="10" type="text" />
+    							 	<button id="pz2ButtonTop" class="button small" value="Go"><span class="sprite search-w" style="margin:0;">&nbsp;</span></button>
+    					</div>
+    				</form>   
+                               </li>			
+    			       <li class="divider"></li>
                                <li class="has-dropdown">
                                         <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
@@ -239,28 +253,6 @@
        </div>
    
     <div class="container-fluid">
-            <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-                    <!-- Slider -->
-<!--
-                    <div id="main-slider" class="flexslider">
-
-                        <ul class="slides">
-                            <li>
-                                <img id="hup-logo" src="{{=URL('static','images/press/home/slideshow/paisley.png')}}" />
-                            </li>
-
-                        </ul>
-
-                    </div>
--->
-            </div>
-        </div>
-    </div>
 
     
     <div class="container">
@@ -360,8 +352,14 @@
                     <div class="container">
             {{if session.forced_language=='de':}}
                         <span>Sie befinden sich hier : </span><ul class="vbottom"><li><a href="http://crossasia.org/" title="zur Seite: CrossAsia"  >CrossAsia</a><span>></span></li><li><a href="http://crossasia.org/service.html" title="zur Seite: Service"  >Service</a><span>></span></li><span title="Hier befinden Sie sich."><a href="http://crossasia.org/service/epublish.html"  class="current">CrossAsia E-Publishing</a></span></ul>
+                        <ul class="sprachwechsel">
+                            <li id="langMenu"><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>English</a><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>English</a></li>
+                        </ul>
             {{elif session.forced_language=='en':}}
                        <span>You are here : </span><ul class="vbottom"><li><a href="http://crossasia.org/en.html" title="to: CrossAsia"  >CrossAsia</a><span>></span></li><li><a href="http://crossasia.org/en/service.html" title="to: Service"  >Service</a><span>></span></li><span title="You are here."><a href="http://crossasia.org/en/service/epublish.html"  class="current">CrossAsia E-Publishing</a></span></ul>
+                       <ul class="sprachwechsel">
+                           <li id="langMenu"><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>Deutsch</a><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>Deutsch</a></li>
+                       </ul>
              {{pass}}
                      </div> 
                 </div>
@@ -419,38 +417,14 @@
 
      <div id="sub-footer"  class="screen">
 
-     <div id="service-navi" class="container">
+     <div class="container">
 
         <div class="row">
 
             <div class="col-lg-12">
-                <div class="row footer_kontakt">
-                        <div class="col-lg-6">
                               <div id="footer_logo_pkp" class="widget">
                                     <a href="https://pkp.sfu.ca/" title="Homepage PKP - Public Knowledge Project"><img class="" alt="Public Knowledge Project" src="http://books.ub.uni-heidelberg.de/lib/pkp/templates/images/pkp_brand.png"></a>
                                </div>
-                         </div>
-                         <div class="col-lg-6">
-                               <ul class="nav nav-pills pull-right">
-                                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
-                                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
-                                     {{if session.forced_language=='de':}}
-                                     <li><a href="http://crossasia.org/service/xasia.html" onfocus="blurLink(this);"  >Über CrossAsia</a></li>
-                                     {{elif session.forced_language=='en':}}
-                                     <li><a href="http://crossasia.org/en/service/xasia.html" onfocus="blurLink(this);"  >About CrossAsia</a></li>
-                                     {{pass}}
-
-
-<!--i
-                                     {{if session.forced_language=='en':}}
-                                     <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
-                                     {{elif session.forced_language=='de':}}
-                                     <li><a href="{{=request.url}}?lang=en" style="padding-left: 10px;">EN</a></li>
-                                     {{pass}}
--->
-                               </ul>
-                        </div>
-                </div>
             </div>
 
         </div>
@@ -465,6 +439,11 @@
                     <div class="row">
 
                         <div class="col-lg-3">
+                          {{if session.forced_language=='de':}}
+                          <span class="footer_logo_beschreibung_ub">Ein Dienst der</span>
+                          {{elif session.forced_language=='en':}}
+                          <span class="footer_logo_beschreibung_ub">A service of</span>
+                          {{pass}}
                           <div id="footer_logo_ub" class="widget"><a href="http://www.ub.uni-heidelberg.de" title="Homepage Universitätsbibliothek Heidelberg"><img alt="Logo - Universitätsbibliothek Heidelberg" src="{{=URL('static','/images/press/LogoUBH.png')}}" /></a></div>
                         </div>
 
@@ -475,10 +454,20 @@
 
 
                         <div class="col-lg-3">
+                          {{if session.forced_language=='de':}}
+                          <span class="footer_logo_beschreibung_sb">In Zusammenarbeit mit</span>
+                          {{elif session.forced_language=='en':}}
+                          <span class="footer_logo_beschreibung_sb">In cooperation with</span>
+                          {{pass}}
                            <div id="footer_logo_sbb" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/LogoSBB.png')}}" /></a></div>
                         </div>
 
                         <div class="col-lg-3">
+                          {{if session.forced_language=='de':}}
+                          <span class="footer_logo_beschreibung_dfg">Gefördert durch</span>
+                          {{elif session.forced_language=='en':}}
+                          <span class="footer_logo_beschreibung_dfg">Supported by</span>
+                          {{pass}}
                            <div id="footer_logo_dfg" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/dfg_logo.png')}}" /></a></div>
                         </div>
              </div>
@@ -486,7 +475,7 @@
      </div>
 
 
-     <div id="footer-nav">
+     <div id="footer-nav" class="container">
         		<div id="copyIconMenu">
           			<div class="footer_xa_icons">
           			<ul>
@@ -500,15 +489,25 @@
     				</ul>
     				</div>
     			</div>
-<!--
-    			<div id="footerRegularMenu">
-         	 	<ul class="footer-nav">
-                              <li><a href="service/xasia.html" onfocus="blurLink(this);"  >Über CrossAsia</a></li>
-                        </ul>
+      
+
+                        <div id="footer_kontakt">
+                               <ul class="nav nav-pills pull-right">
+                                     <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
+                                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
+                                     {{if session.forced_language=='de':}}
+                                     <li><a href="http://crossasia.org/service/xasia.html" onfocus="blurLink(this);"  >Über CrossAsia</a></li>
+                                     {{elif session.forced_language=='en':}}
+                                     <li><a href="http://crossasia.org/en/service/xasia.html" onfocus="blurLink(this);"  >About CrossAsia</a></li>
+                                     {{pass}}
+                               </ul>
                         </div>
--->
-      </div>
- 
+
+        
+
+    </div>
+
+   </div> 
    </footer>
   </div>
     {{end}}

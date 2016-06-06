@@ -445,11 +445,11 @@ section.callaction {
         border-top:1px solid #ddd;
 }
 .box-bottom a {
-	color: #fff;
+	color: #9d1512;
 	font-weight: 700;
 }
 .box-bottom a:hover {
-	color: #eee;
+	color: #9d1512;
 	text-decoration: none;
 }
 
@@ -1634,7 +1634,7 @@ ul.social-network li {
 
 #sub-footer {
 	text-shadow:none;
-	color:#0077bb;
+	color:#a39b94;
 	padding:0;
 	padding-top:0px;
 	margin:20px 0 0 0;
@@ -2212,7 +2212,7 @@ article img.pull-right, article .align-right{
 
 #headerLogo {
   background-image: url(../images/press/header_bild.jpg);
-  height:110px;*/
+  height:115px;*/
   padding:0 !important;
   }
 
@@ -2277,7 +2277,21 @@ header > .col-lg-12 {
   margin-right: -10px;
 }
 
+.social_media a img {
+  -webkit-filter: grayscale(1) opacity(.7);
+  filter: grayscale(1) opacity(.7);
+ }
+
+
+.social_media a:hover img {
+  -webkit-filter: none;
+  filter: none;
+ }
+
+
 .social_media {padding:0 !important;}
+
+
 
 
 .open > .dropdown-menu {
@@ -2338,9 +2352,6 @@ li.active {
   text-align: left;
 }
 
-.box-bottom a:hover {
-  color: #000;
-}
 
 .media-heading {
   margin: 0;
@@ -2448,9 +2459,25 @@ li > h5 {
 #footer_sn {
 }
 
-.footer_kontakt {margin-bottom:0 !important;}
+#footer_kontakt {margin-bottom:0 !important;
+  width:100%;
+  }
+
+#footer_kontakt ul li {
+  line-height: 0.5em !important;
+  }
+
+#footer_kontakt ul li a {
+  padding-right: 0.8em !important;
+  }
 
 .footer_logos {border-top:1px solid #ddd;}
+
+.footer_logo_beschreibung_ub {font-size:0.95em; margin-left:15%;}
+
+.footer_logo_beschreibung_sb {font-size:0.95em; margin-left: 5%;}
+
+.footer_logo_beschreibung_dfg {font-size:0.95em;}
 
 .footer_logo_col {
   width:25%;
@@ -2467,7 +2494,7 @@ li > h5 {
 #footer_logo_sai img {
   padding-right: 0px;
   margin-left:0%;
-  margin-top:3%;
+  margin-top:10%;
 }
 
 #footer_logo_dfg img {  
@@ -2484,8 +2511,17 @@ padding-right: 0px;
 
 #footer_logo_pkp {
   margin-top:0.5em;
-  margin-left:1em;
+  margin-right:1em;
+  margin-bottom:1.5em;
+  float:right;
 }
+
+#footer_logo_pkp img {
+  filter:alpha(opacity=60); 
+  -moz-opacity: 0.60; 
+  opacity: 0.60;
+  width:220px;
+  }
 
 
 #copyIconMenu {
@@ -2496,7 +2532,6 @@ padding-right: 0px;
     width:100%;
     border-top:1px solid #ddd;
     padding-top:1em;
-    padding-bottom:1em;
 }
 
 .footer_xa_icons {float:right;
@@ -2680,6 +2715,36 @@ visibility:visible !important;
 
 #rightTopNav {float:right;}
 #rightTopNav li .dropdown {left:auto !important;right:0 !important;}
+#pz2InputTop {float:left;
+    border-radius: 5px;
+    display: inline;
+    float: left;
+    height: 28px;
+    margin-left: 10px;
+    text-shadow: 0 0 0 #202020, 1px 1px 0 #fff;
+    width: 150px;
+    color: #6b6a6a;
+    }
+#pz2ButtonTop {float:left;
+    border-radius: 5px;
+    float: left;
+    height: 28px;
+    width:38px;
+    margin: 0.6em 0.55em 0  0.55em;
+    top: 7px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    transition: background-color 300ms ease-out 0s;
+    background-color: #b41815;
+    background-image: url("../images/sprite.png");
+    background-position: -146px 5px;
+    background-repeat:no-repeat;
+    border-color: #861210;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    cursor: pointer;
+ }
+
 
 #MainMenu input[type="text"] {
     background: #fafafa;
@@ -2687,9 +2752,9 @@ visibility:visible !important;
     line-height: 2em;
     font-size: 0.875em;
     height: 2em;
-    padding: 0 10px;
+    padding: 0 5px;
     position: relative;
-    top: 8px;
+    top: 7px;
     font-family: inherit;
     border: 1px solid #ccc;
     color: rgba(0,0,0,0.75);
@@ -2760,16 +2825,20 @@ div#body:after {
     float: left;
 }
 
+.sprachwechsel {float:right !important;}
+
 #langMenu {
     margin-right:0.8em;
 }
 
 #langMenu .icon-flag {
-    margin-top: 13px;
-    font-size: 1.4em;
-    margin-right: 13px;
-    color: #fff;
+    font-size: 1em;
+    margin-top:4px;
+    margin-right: 10px;
+    color: #a39b94;
 }
+
+#langMenu a:hover {color: #a39b94 !important;}
 
 a [class^="icon-"], a [class*=" icon-"] { display: inline;}
 [class^="icon-"], [class*=" icon-"] {
@@ -2823,7 +2892,8 @@ a [class^="icon-"], a [class*=" icon-"] { display: inline;}
     content: "";
 }
 
-.sprachwechsel {font-weight:bold;}
+
+span.sprite {width:32px;}
 
 .icon-flag::before {
     content: "\f024";
