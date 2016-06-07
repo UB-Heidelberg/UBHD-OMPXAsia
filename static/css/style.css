@@ -2473,11 +2473,11 @@ li > h5 {
 
 .footer_logos {border-top:1px solid #ddd;}
 
-.footer_logo_beschreibung_ub {font-size:0.95em; margin-left:15%;}
+.footer_logo_beschreibung_ub {font-size:1em; margin-left:15%;}
 
-.footer_logo_beschreibung_sb {font-size:0.95em; margin-left: 5%;}
+.footer_logo_beschreibung_sb {font-size:1em; margin-left: 5%;}
 
-.footer_logo_beschreibung_dfg {font-size:0.95em;}
+.footer_logo_beschreibung_dfg {font-size:1em;}
 
 .footer_logo_col {
   width:25%;
@@ -2936,6 +2936,7 @@ span.sprite {width:32px;}
    color:#b41815;
 }
 
+.back {display:none;}
 
 /******************Responsive Webdesign angepasst an Crossasia.org*************************/
 @media (max-width: 1299px)
@@ -3044,4 +3045,15 @@ span.sprite {width:32px;}
     height: 1px;
     width: 100%;
     }
+
+    ul.left li.moved {visibility: hidden;}
+/*
+    ul.left .has-dropdown {visibility:hidden;}
+  */  
+    ul.left .moved .dropdown {visibility:visible;}
+    
+    ul.left .moved .dropdown:hover {visibility:visible;}
+
+    .back {display: block;}
+
 }

@@ -60,19 +60,38 @@
     middle_column = {0: mc0, 1: mc1, 2: mc2}[
     (left_sidebar_enabled and 1 or 0)+(right_sidebar_enabled and 1 or 0)]
     }}
- 
-  <script type="text/javascript" charset="utf-8">  
-     function toggle_visibility(id) {
-     var e = document.getElementById(id);
-     if(e.style.display == 'block')
-       e.style.display = 'none';
-     else
-       e.style.display = 'block';
-     }
 
-     if(screen.width <= 850) {
-     }
+  <script>
+  $(document).ready(function(){
+    if($(window).width() > 940)
+      {("topNavElements").visible();}
+    else
+      { 
+         $("li.menu-icon").click(function(){
+            $("#topNavElements").toggle(1);
+         });
+         $("li.has-dropdown:first").click(function(){
+            $("li.has-dropdown:first").addClass("moved");
+         });
+         $(".back:first").click(function(){
+            $("li.has-dropdown:first").removeClass("moved");
+         });
+         $("li.has-dropdown:eq(1)").click(function(){
+            $("li.has-dropdown:eq(1)").addClass("moved");
+         });
+         $(".back:eq(1)").click(function(){
+            $("li.has-dropdown:eq(1)").removeClass("moved");
+         });
+         $("li.has-dropdown:eq(2)").click(function(){
+            $("li.has-dropdown:eq(2)").addClass("moved");
+         });
+         $(".back:eq(2)").click(function(){
+            $("li.has-dropdown:eq(2)").removeClass("moved");
+         });
+      }
+  });
   </script>
+
 
   </head>
   <body>
@@ -98,7 +117,7 @@
                           <li class="divider"></li>
                           <li class="toggle-topbar menu-icon">
                               <a href="#">
-                                 <span onclick="toggle_visibility('topNavElements');">Menu</span>
+                                 <span>Menu</span>
                               </a>
                           </li>
                         </ul>
@@ -106,6 +125,7 @@
                         <ul class="left">
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Ressourcen </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/ressourcen/search.html"  >CrossAsia Suche</a></li>
                               <li><a href="http://crossasia.org/ressourcen/databasesearch.html"  >Datenbanken</a></li>
                               <li><a href="http://crossasia.org/ressourcen/sammlungen.html"  >Digitale Sammlungen</a></li>
@@ -118,6 +138,7 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/service/aktuelles.html"  >CrossAsia Aktuelles</a></li>
                               <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://crossasia.org/service/newsletter.html"  >CrossAsia Newsletter</a></li>
@@ -131,6 +152,7 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>Mein CrossAsia </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://crossasia.org/meinxasia/registrierung.html"  >CrossAsia Registrierung</a></li>
                             </ul>
@@ -150,6 +172,7 @@
                                <li class="has-dropdown">
                                         <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
+                                                                <li class="back"><h5><a href="#">« Back</a></h5></li>
                                                                 <li><a href="http://crossasia.org/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registrierung</a></li>
                                                                 <li><div class="login"><form action="http://crossasia.org/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
                         <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Benutzer:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Passwort:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>

@@ -39,8 +39,7 @@
               <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}
                 <div class="media">
                   <div class="media-left pull-left"> 
-                    <a href=""> 
-                      <!--                          <img src="{{=URL(myconf.take('web.application'),'static','')}}" width="50px" />--></a>
+                       <img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
                   </div>
                   <div class="media-body">
                     <p class="media-heading"> 
@@ -61,7 +60,31 @@
                     </p>
                   </div>
                 </div>
+
+              <div class="media">
+                  <div class="media-left pull-left">
+                       <img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
+                  </div>
+                  <div class="media-body">
+                      <p class="media-heading">
+                         {{if session.forced_language =='de': }}
+                                <h5>open-access.net</h5>
+                         {{elif session.forced_language =='en': }}
+                                <h5>open-access.net</h5>
+                         {{pass}}
+                      </p>
+                      <p class="boxText">
+                         {{if session.forced_language =='de': }}
+                                Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
+                         {{elif session.forced_language =='en': }}
+                                Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
+                         {{pass}}
+                      </p>
+                  </div>
               </div>
+            </div>
+
+
               <div class="box-bottom">&nbsp;
               </div>
             </div>
@@ -76,7 +99,7 @@
             <div class="box box-shadow">
               <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px')}}
               </div>
-              <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index'))}} {{pass}}
+              <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
               </div>
             </div>
           </div>
