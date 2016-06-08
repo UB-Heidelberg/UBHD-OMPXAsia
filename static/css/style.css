@@ -140,7 +140,8 @@ h1,h2, h3, h4, h5, h6 {
   padding:1em !important;
   }
 
-.box_logo {text-align:left;}
+.box_logo {float:left;
+  margin-right:1em;}
 
 
 /* ===================================
