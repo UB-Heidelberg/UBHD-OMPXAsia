@@ -2670,7 +2670,7 @@ margin: 0.5cm;
 .top-bar .title-area{position:relative;margin:0}
 .top-bar .name h1{line-height:45px;font-size:1.0625em;margin:0}
 .top-bar .name h1 a{font-weight:bold;color:#fff;width:50%;display:block;padding:0 15px}
-.top-bar-section ul{width:100%;height:auto;display:block;font-size:16px;margin:0}
+.top-bar-section ul{width:auto;height:auto;display:inline;font-size:16px;margin:0}
 .top-bar-section ul li>a{display:block;width:100%;color:#fff;padding:12px 0 12px 0;padding-left:15px;font-size:0.8125em;}
 .top-bar-section .has-dropdown{position:relative}
 .top-bar-section .has-dropdown>a:after{content:"";display:block;width:0;height:0;border:inset 5px;border-color:transparent transparent transparent rgba(255,255,255,0.5);border-left-style:solid;margin-right:15px;margin-top:-4.5px;position:absolute;top:50%;right:0}
@@ -2679,7 +2679,6 @@ margin: 0.5cm;
 .top-bar:before,.top-bar:after{content:" ";display:table}
 .top-bar:after{clear:both}
 .top-bar .title-area{float:left}
-.top-bar-section ul{width:auto;height:auto !important;display:inline}
 .top-bar-section ul li{float:left}
 .top-bar-section li a:not(.button){padding:0 15px;line-height:45px;}
 .top-bar-section .has-dropdown>a{padding-right:35px !important; font-weight:bold;}
@@ -2716,7 +2715,7 @@ visibility:visible !important;
 #MainMenu .top-bar .columns{position:relative;padding-left:0;padding-right:0;float:left}
 
 #rightTopNav {float:right;}
-#rightTopNav li .dropdown {left:auto !important;right:0 !important;}
+#rightTopNav li .dropdown {left:auto;right:0 }
 #pz2InputTop {float:left;
     border-radius: 5px;
     display: inline;
@@ -2953,7 +2952,6 @@ span.sprite {width:32px;}
 
 /*******************CrossAsia Xasia Navigation 940 Pixel Breite****************************/
 
-
 @media (max-width: 940px) 
     {
     #xasia_navi .row .col-lg-12, .col-sm-12, .col-xs-12 {height:100%;}
@@ -2961,30 +2959,12 @@ span.sprite {width:32px;}
     
     #xasia_navi {z-index:10; position: relative;}  
 
-    #topNavElements ul li {
-      width:100% !important;
-    }
+    #topNavElements ul li {width:100% !important;}
     .top-bar {background-color:#000;}
-
-    #MainMenu ul.left li.has-dropdown:hover ul.dropdown {
-    visibility:hidden !important;
-    }
-
-    #MainMenu ul.left li.has-dropdown:hover ul.dropdown li.has-dropdown ul.dropdown {
-    visibility:hidden !important;
-    }
-
-    #MainMenu ul.left li.has-dropdown ul.dropdown li.has-dropdown:hover ul.dropdown {
-    visibility:hidden !important;
-    }
-
-    #MainMenu ul.right li.has-dropdown:hover ul.dropdown {
-    visibility:hidden !important;
-    }
-
-    .top-bar-section .has-dropdown {
-    position: relative;
-    }
+    #MainMenu .top-bar ul>li.has-dropdown a:active,.top-bar ul>li.has-dropdown a:hover{background:rgba(0,0,0,1); text-decoration:none;}
+    .top-bar-section .dropdown, #rightTopNav li.has-dropdown ul.dropdown {position:absolute;left:200%;top:0;visibility:visible;display:block;}
+    .top-bar ul>li.has-dropdown .dropdown li{background:rgba(17,17,17,1);line-height:1;min-width:100%;padding-bottom:5px;float:left}^
+    ul.dropdown { display:none; }
 
     div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
@@ -3020,7 +3000,11 @@ span.sprite {width:32px;}
     display: block;
     width: 16px;
     height: 0;
-    box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;}
+    box-shadow: 0 10px 0 1px #fff,0 16px 0 1px #fff,0 22px 0 1px #fff;
+    text-transform:uppercase;
+    font-size:0.8em;
+    font-weight:bold;
+    }
 
    #rightTopNav {width:100%;}
    
@@ -3047,14 +3031,6 @@ span.sprite {width:32px;}
     height: 1px;
     width: 100%;
     }
-
-    ul.left li.moved {visibility: hidden;}
-/*
-    ul.left .has-dropdown {visibility:hidden;}
-  */  
-    ul.left .moved .dropdown {visibility:visible;}
-    
-    ul.left .moved .dropdown:hover {visibility:visible;}
 
     .back {display: block;}
 

@@ -63,32 +63,27 @@
 
   <script>
   $(document).ready(function(){
-    if($(window).width() > 940)
-      {("topNavElements").visible();}
-    else
-      { 
+      if(($(window).width()) <= 940) {
+         $("#topNavElements").hide(1);
+         var menuBreite = $("#MainMenu").width();
          $("li.menu-icon").click(function(){
+            var hidden = $("#topNavElements").is(":hidden");
             $("#topNavElements").toggle(1);
+            if(hidden == false)
+               {$("li.menu-icon").css( "opacity", "1" );}
+            else
+               {$("li.menu-icon").css( "opacity", "0.5" );}
          });
-         $("li.has-dropdown:first").click(function(){
-            $("li.has-dropdown:first").addClass("moved");
+         $("li.has-dropdown").click(function(){
+            $("li.has-dropdown").animate({left:-menuBreite}, "300");
+            $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
          });
-         $(".back:first").click(function(){
-            $("li.has-dropdown:first").removeClass("moved");
+         $("li.back").click(function(){
+            $("li.has-dropdown").animate({left:"0"}, "300");
+            $(this).parents('.dropdown').animate({left:menuBreite *2}, "300"); 
+            return false;
          });
-         $("li.has-dropdown:eq(1)").click(function(){
-            $("li.has-dropdown:eq(1)").addClass("moved");
-         });
-         $(".back:eq(1)").click(function(){
-            $("li.has-dropdown:eq(1)").removeClass("moved");
-         });
-         $("li.has-dropdown:eq(2)").click(function(){
-            $("li.has-dropdown:eq(2)").addClass("moved");
-         });
-         $(".back:eq(2)").click(function(){
-            $("li.has-dropdown:eq(2)").removeClass("moved");
-         });
-      }
+       } 
   });
   </script>
 
@@ -156,10 +151,11 @@
                               <li><a href="http://crossasia.org/meinxasia/registrierung.html"  >CrossAsia Registrierung</a></li>
                             </ul>
                           </li>
+                          <li class="divider"></li>
                         </ul>
 
                         <ul id="rightTopNav" class="right">
-                               <li>
+                               <li class="has-dropdown">
     				<form id="pazpar2" action="http://crossasia.org/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
     					<div id="topSearch">
     							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Suche" class="infocus" size="10" type="text" />
@@ -169,7 +165,7 @@
     		         	</li>			
     			       <li class="divider"></li>
                                <li class="has-dropdown">
-                                        <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
+                                        <a href="#" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
                                                                 <li class="back"><h5><a href="#">« Back</a></h5></li>
                                                                 <li><a href="http://crossasia.org/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registrierung</a></li>
