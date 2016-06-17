@@ -2656,6 +2656,22 @@ margin: 0.5cm;
 
 }
 
+/****************************Anpassung Bildschirmgröße 1240px ****************************/
+
+@media (max-width: 1240px)
+{
+    body {
+      padding-left:0px !important;
+      padding-right:0px !important;
+    }
+    .container-fluid, .col-md-12 {
+      padding-left:0px !important;
+      padding-right:0px !important;
+    }
+
+}
+
+
 /****************************CrossAsia Xasia Navigation ****************************/
 /* CSS Document*/  
 
@@ -2965,9 +2981,10 @@ span.sprite {width:32px;}
     #topNavElements ul li {width:100% !important;}
     .top-bar {background-color:#000;}
     #MainMenu .top-bar ul>li.has-dropdown a:active,.top-bar ul>li.has-dropdown a:hover{background:rgba(0,0,0,1); text-decoration:none;}
-    .top-bar-section .dropdown, #rightTopNav li.has-dropdown ul.dropdown {position:absolute;left:200%;top:0;visibility:visible;display:block;}
+    .top-bar-section .dropdown, #rightTopNav li.has-dropdown ul.dropdown {position:absolute;left:200%;top:0;visibility:visible;display:block;z-index:0;}
     .top-bar ul>li.has-dropdown .dropdown li{background:rgba(0,0,0,1);line-height:1;min-width:100%;padding-bottom:5px;float:left}^
     ul.dropdown { display:none; }
+    .container {z-index:10;}
 
     div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
@@ -2978,6 +2995,9 @@ span.sprite {width:32px;}
    .icon-unlock::before, .icon-user::before, .icon-cogs::before, .icon-file-text::before {display:none;}
 
    .top-bar .title-area {width:100%;}
+  
+   .title-area {height:45px;}
+
 
    .top-bar .toggle-topbar {
     position: absolute;

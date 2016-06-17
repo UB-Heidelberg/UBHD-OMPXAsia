@@ -66,12 +66,13 @@
       if(($(window).width()) <= 940) {
          $("#topNavElements").hide(1);
          var menuHoehe = $("#MainMenu").height();
+         var titelHoehe = $(".title-area").height();
          $("li.menu-icon").click(function(){
             var hidden = $("#topNavElements").is(":hidden");
             $("#topNavElements").toggle(1);
             if(hidden == false)
                {$("li.menu-icon").css( "opacity", "1" );
-                $("#MainMenu").height(31);
+                $("#MainMenu").height(titelHoehe);
                }
             else
                {$("li.menu-icon").css( "opacity", "0.5" );
@@ -79,31 +80,37 @@
                }
          });
          $("ul.left > li.has-dropdown").click(function(){
-            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
+            var menuBreite = $("#MainMenu").width();
+            $("li.has-dropdown").animate({left:-menuBreite}, "300");
             $(this).siblings().hide();
+            $(".right").hide();
             var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+31);
-            $(this).find('ul.dropdown').animate({left:100 + '%'}, "300");
+            $("#MainMenu").height((unterMenuHoehe)+titelHoehe);
+            $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
          });
          $("ul.right > li.has-dropdown").click(function(){
-            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
+            var menuBreite = $("#MainMenu").width();
+            $("li.has-dropdown").animate({left:-menuBreite}, "300");
             $(".left").hide();
             $(this).siblings().hide();
             var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+31);
-            $(this).find('ul.dropdown').animate({left:100 +'%'}, "300");
+            $("#MainMenu").height((unterMenuHoehe)+titelHoehe);
+            $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
          });
 
          $("li.back").click(function(){
+            var menuBreite = $("#MainMenu").width();
             $("li.has-dropdown").animate({left:"0"}, "300");
-            $(this).parents('.dropdown').animate({left:100 +'%' *2}, "300");
-            $("#MainMenu").height((menuHoehe)-116);
+            $(this).parents('.dropdown').animate({left:menuBreite*2}, "300");
+            $("#MainMenu").height((menuHoehe)-102);
             $(".left").show();
+            $(".right").show();
             $("li.has-dropdown").show();
             $("li.divider").show();
             return false;
          });
-       } 
+       }
+      else {  $("#topNavElements").show(1);}
   });
   </script>
 
@@ -140,7 +147,7 @@
                         <ul class="left">
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Ressourcen </a>
                             <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
+                              <li class="back"><h5><a href="#">« Zurück</a></h5></li>
                               <li><a href="http://crossasia.org/ressourcen/search.html"  >CrossAsia Suche</a></li>
                               <li><a href="http://crossasia.org/ressourcen/databasesearch.html"  >Datenbanken</a></li>
                               <li><a href="http://crossasia.org/ressourcen/sammlungen.html"  >Digitale Sammlungen</a></li>
@@ -153,7 +160,7 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
                             <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
+                              <li class="back"><h5><a href="#">« Zurück</a></h5></li>
                               <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://blog.crossasia.org/"  >CrossAsia Blog</a></li>
                               <li><a href="http://crossasia.org/service/epublish.html"  >CrossAsia E-Publishing</a></li>
@@ -166,7 +173,7 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>Mein CrossAsia </a>
                             <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
+                              <li class="back"><h5><a href="#">« Zurück</a></h5></li>
                               <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://crossasia.org/meinxasia/registrierung.html"  >CrossAsia Registrierung</a></li>
                             </ul>
@@ -187,7 +194,7 @@
                                <li class="has-dropdown">
                                         <a href="#" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
-                                                                <li class="back"><h5><a href="#">« Back</a></h5></li>
+                                                                <li class="back"><h5><a href="#">« Zurück</a></h5></li>
                                                                 <li><a href="http://crossasia.org/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registrierung</a></li>
                                                                 <li><div class="login"><form action="http://crossasia.org/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
                         <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Benutzer:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Passwort:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>
@@ -226,6 +233,7 @@
                         <ul class="left">
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Resources </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/en/ressourcen/search.html"  >CrossAsia Search</a></li>
                               <li><a href="http://crossasia.org/en/ressourcen/databasesearch.html"  >Databases</a></li>
                               <li><a href="http://crossasia.org/en/ressourcen/sammlungen.html"  >Digital Collections</a></li>
@@ -238,6 +246,7 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/en/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://blog.crossasia.org/"  >CrossAsia Blog</a></li>
                               <li><a href="http://crossasia.org/en/service/epublish.html"  >CrossAsia E-Publishing</a></li>
@@ -250,14 +259,16 @@
                           <li class="divider"></li>
                           <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>My CrossAsia </a>
                             <ul class="dropdown">
+                              <li class="back"><h5><a href="#">« Back</a></h5></li>
                               <li><a href="http://crossasia.org/en/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
                               <li><a href="http://crossasia.org/en/meinxasia/registrierung.html"  >CrossAsia Registration</a></li>
                             </ul>
                           </li>
+                          <li class="divider"></li>
                         </ul>
 
                         <ul id="rightTopNav" class="right">
-                               <li>
+                               <li class="has-dropdown">
     				<form id="pazpar2" action="http://crossasia.org/en/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
     					<div id="topSearch">
     							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Search" class="infocus" size="10" type="text" />
@@ -267,8 +278,9 @@
                                </li>			
     			       <li class="divider"></li>
                                <li class="has-dropdown">
-                                        <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
+                                        <a href="#" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
                                                 <ul class="dropdown">
+                                                     <li class="back"><h5><a href="#">« Back</a></h5></li>
                                                                 <li><a href="http://crossasia.org/en/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registration</a></li>
                                                                 <li><div class="login"><form action="http://crossasia.org/en/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
                         <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Username:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Password:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>
