@@ -1,281 +1,129 @@
-{{extend 'layout.html'}}
+{{extend 'layout.html'}} 
 <script type="text/javascript" charset="utf-8">
     $(window).load(function() {
         $('.flexslider').flexslider();
-    });
-</script>
+    }); 
+</script> 
 <div class="container">
-
-    <!-- end header -->
-
-
-    <section id="content">
-
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-12">
-
-<div class="row">
-
-                        <div class="col-lg-3">
-
-                            <div class="box">
-                                {{if session.forced_language =='de': }}
-                                <div class="box-gray aligncenter">
-
-                                    <h4>Neuerscheinung</h4>
-
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
-                                </div>
-
-                                <div class="box-bottom">
-
-                                    {{=A(T('More'),_href=URL('catalog','book/60'))}}
-
-                                </div>
-
-                            {{elif session.forced_language =='en': }}
-                        <div class="box-gray aligncenter">
-
-   <h4>New Titles</h4>
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
-                                </div>
-
-             <div class="box-bottom">
-
-                  {{=A(T('More Information'),_href=URL('catalog','book/60'))}}
-
+  <!-- end header -->
+  <section id="content" style="padding-top:25px;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="box box-shadow"> {{if session.forced_language =='de': }}
+                <div class="box-gray aligncenter"><h4>Neuerscheinung</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/60'))}}
+                </div> {{elif session.forced_language =='en': }}
+                <div class="box-gray aligncenter"><h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/60'))}}
+                </div> {{pass}}
               </div>
-               {{pass}}
+            </div>
+            <div class="col-lg-3">
+              <div class="box box-shadow">
+                <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+                </div>
+                <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/58'))}}
+                </div> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/58'))}}
+              </div> {{pass}}
+            </div>
           </div>
+          <div id="boxAktuelles" class="col-lg-6">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}
+                <div class="media">
+                  <div class="media-left pull-left"> 
+                       <img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+                  </div>
+                  <div class="media-body">
+                    <p class="media-heading"> 
+                      <span class="aktuelles_datum">06.06.2016</span>
+                      <br />
+                      {{if session.forced_language =='de': }}
+                               <h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> 
+                      {{elif session.forced_language =='en': }}
+                               <h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> 
+                      {{pass}}
+                    </p>
+                    <p class="boxText"> 
+                      {{if session.forced_language =='de': }} 
+                               CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! 
+                      {{elif session.forced_language =='en': }} 
+                               CrossAsia E-Publishing will be present at the 24th European Conference on South Asian Studies in Warsaw. Visit us at the publisher space and get informed on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Warsaw! 
+                      {{pass}}
+                    </p>
+                  </div>
+                </div>
 
-      </div>
-
-      <div class="col-lg-3">
-
-          <div class="box">
-
-              <div class="box-gray aligncenter">
-              {{if session.forced_language =='de': }}
-                  <h4>Neuerscheinung</h4>
-                  {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
-               </div>
-
-               <div class="box-bottom">
-
-                  {{=A(T('More'),_href=URL('catalog','book/58'))}}
-
-               </div>
-          {{elif session.forced_language =='en': }}
-                <h4>New Titles</h4>
-               {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
-               </div>
-
-               <div class="box-bottom">
-
-                  {{=A(T('More Information'),_href=URL('catalog','book/58'))}}
-
-               </div>
-
-                {{pass}}
-
-
-          </div>
-
-      </div>
-
-      <div id="boxAktuelles" class="col-lg-6">
-
-          <div class="box">
-        <div class="box-gray aligncenter" style="overflow-y: scroll">
-
-          {{if session.forced_language =='de': }}       
-              <h4>Aktuelles</h4>
-          {{elif session.forced_language =='en': }}
-              <h4>News</h4>
-          {{pass}}
-          
-          
               <div class="media">
                   <div class="media-left pull-left">
-                      <a href="">
-<!--                          <img src="{{=URL(myconf.take('web.application'),'static','')}}" width="50px" />-->
-                      </a>
-                  </div>                        
-                  <div class="media-body">      
+                       <img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
+                  </div>
+                  <div class="media-body">
                       <p class="media-heading">
-        {{if session.forced_language =='de': }}  
-            <h5>Lorem ipsum dolor sit amet</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>Lorem ipsum dolor sit amet</h5> 
-        {{pass}}          
+                         {{if session.forced_language =='de': }}
+                                <h5>open-access.net</h5>
+                         {{elif session.forced_language =='en': }}
+                                <h5>open-access.net</h5>
+                         {{pass}}
                       </p>
-                  <p class="boxText">
-        {{if session.forced_language =='de': }}  
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.           
-               {{elif session.forced_language =='en': }}      
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                          {{pass}}                                   
-                                      </p>
-                                    </div>
-                                </div>          
-          
-          <div class="media">
-                  <div class="media-left pull-left">
-                    <!--  <img src="{{=URL(myconf.take('web.application'),'static','')}}" style="width: 50px;" />-->
-                  </div>                        
-                  <div class="media-body">      
-                      <p class="media-heading">
-        {{if session.forced_language =='de': }}  
-            <h5>Lorem ipsum dolor sit amet</h5>
-        {{elif session.forced_language =='en': }}
-            <h5>Lorem ipsum dolor sit amet</h5>        
-        {{pass}}   
-                      </p>
-                  <p class="boxText">
-        {{if session.forced_language =='de': }}  
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-        {{elif session.forced_language =='en': }}
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-           {{pass}}                                   
-            <!--<a href="http://open-access.net/community/open_access_tage/ " target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>-->
+                      <p class="boxText">
+                         {{if session.forced_language =='de': }}
+                                Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
+                         {{elif session.forced_language =='en': }}
+                                Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
+                         {{pass}}
                       </p>
                   </div>
               </div>
-              
-
-                                
-                                </div>
-                                
-                                <!--<div class="media">
-                                    <div class="media-left pull-left">
-                                        <a href="#">
-                                            <img src="{{=URL(myconf.take('web.application'),'static','images/press/home/cluster.jpg')}}" width="50px"/>
-                                        </a>
-                                    </div>
-                                    <div class="media-body">
-                                        <p class="media-heading"><strong>DFG-Projekt: Entwicklung eines Geschäftsmodells für Open-Access-Bücher</strong> </p>
-                                        <p>Der Exzellenzcluster „Asien und Europa im globalen Kontext“ der Universität Heidelberg und die Universitätsbibliothek Heidelberg planen die Entwicklung eines innovativen Geschäftsmodells für die frei zugängliche Veröffentlichung wissenschaftlicher Bücher im Internet.
-                                            <a href="http://www.asia-europe.uni-heidelberg.de/en/research/publishing/heidelberg-studies-in-transculturality-an-open-access-book-series.html"  target="_blank">&nbsp;<i class="fa fa-external-link"></i></a>
-                                        </p>
-                                    </div>
-                                </div>-->
-                                                                <div class="box-bottom">&nbsp;
-   <!--{{if session.forced_language =='de': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">Mehr</span>
-      {{elif session.forced_language =='en': }}
-                                    <a href="http://heiup.uni-heidelberg.de/#"><span style="color: #EFEFEF;">More</span>
-                                      {{pass}}-->         
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <div class="row">
 
-                <div class="col-lg-12">
-
-<div class="row">
-
-                        <div class="col-lg-3">
-
-                            <div class="box">
-
-                                <div class="box-gray aligncenter">
-   {{if session.forced_language =='de': }}
-                                    <h4>Serien</h4>
-   {{elif session.forced_language =='en': }}
-   <h4>Series</h4>
-                                       {{pass}}
-
-                                    {{=IMG(_src=URL(myconf.take('web.application'),'static','monographs/22/simple/cover.jpg'),_width='145px')}}
-
-                                </div>
-
-                                <div class="box-bottom">
-   {{if session.forced_language =='de': }}
-                                    {{=A(T('More'),_href=URL('catalog','series/sawa'))}}
-      {{elif session.forced_language =='en': }}
-                                    {{=A(T('More Information'),_href=URL('catalog','series/sawa'))}}
-                                      {{pass}}
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-3">
-
-                            <div class="box">
-
-                                <div class="box-gray aligncenter">
-                                   {{if session.forced_language =='de': }}
-                                    <h4>Serien</h4>
-                                   {{elif session.forced_language =='en': }}
-                                    <h4>Series</h4>
-                                   {{pass}}
-                                   {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
-
-                                </div>
-
-                                <div class="box-bottom">&nbsp;
-                                {{if session.forced_language =='de': }}
-                                {{=A(T('More'),_href=URL('catalog','series/gsa'))}}
-      {{elif session.forced_language =='en': }}
-                               {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}}
-                                {{pass}}
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6" id="boxAktuelles">
-
-                        <div class="box">
-                        <div class="box-gray aligncenter">
-                        <h4>CrossAsia E-Books</h4>
-                        <p class="boxText">
-{{if session.forced_language =='de': }}
-
-ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit.
-Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP).
-{{elif session.forced_language =='en': }}
-is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP).
-{{pass}}
-                        </p>
-                        </div>
-
-              <div class="box-bottom">&nbsp;</div>
-                      </div>
-                        </div>
-
-
-
-
-
-
-
-
-                        </div>
-
-                    </div>
-
-                </div>
-
+              <div class="box-bottom">&nbsp;
+              </div>
             </div>
-
+          </div>
         </div>
-
-    </section>
-
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Serien</h4> {{elif session.forced_language =='en': }}<h4>Series</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
+              </div>
+              <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','series/gsa'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}} {{pass}}
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" id="boxAktuelles">
+            <div class="box box-shadow">
+              <div class="box-gray aligncenter"><div class="box_logo">{{=IMG(_src=URL(myconf.take('web.application'),'static','images/home/xasia_books_logo.png'),_width='200px')}}</div>
+                <p class="boxText"> {{if session.forced_language =='de': }} ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit. Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP). {{elif session.forced_language =='en': }} is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP). {{pass}}
+                </p>
+              </div>
+              <div class="box-bottom">&nbsp;
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
 </div>
