@@ -65,22 +65,42 @@
   $(document).ready(function(){
       if(($(window).width()) <= 940) {
          $("#topNavElements").hide(1);
-         var menuBreite = $("#MainMenu").width();
+         var menuHoehe = $("#MainMenu").height();
          $("li.menu-icon").click(function(){
             var hidden = $("#topNavElements").is(":hidden");
             $("#topNavElements").toggle(1);
             if(hidden == false)
-               {$("li.menu-icon").css( "opacity", "1" );}
+               {$("li.menu-icon").css( "opacity", "1" );
+                $("#MainMenu").height(31);
+               }
             else
-               {$("li.menu-icon").css( "opacity", "0.5" );}
+               {$("li.menu-icon").css( "opacity", "0.5" );
+                $("#MainMenu").height(100 +'%');
+               }
          });
-         $("li.has-dropdown").click(function(){
-            $("li.has-dropdown").animate({left:-menuBreite}, "300");
-            $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
+         $("ul.left > li.has-dropdown").click(function(){
+            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
+            $(this).siblings().hide();
+            var unterMenuHoehe = $(this).find('ul.dropdown').height();
+            $("#MainMenu").height((unterMenuHoehe)+31);
+            $(this).find('ul.dropdown').animate({left:100 + '%'}, "300");
          });
+         $("ul.right > li.has-dropdown").click(function(){
+            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
+            $(".left").hide();
+            $(this).siblings().hide();
+            var unterMenuHoehe = $(this).find('ul.dropdown').height();
+            $("#MainMenu").height((unterMenuHoehe)+31);
+            $(this).find('ul.dropdown').animate({left:100 +'%'}, "300");
+         });
+
          $("li.back").click(function(){
             $("li.has-dropdown").animate({left:"0"}, "300");
-            $(this).parents('.dropdown').animate({left:menuBreite *2}, "300"); 
+            $(this).parents('.dropdown').animate({left:100 +'%' *2}, "300");
+            $("#MainMenu").height((menuHoehe)-116);
+            $(".left").show();
+            $("li.has-dropdown").show();
+            $("li.divider").show();
             return false;
          });
        } 
