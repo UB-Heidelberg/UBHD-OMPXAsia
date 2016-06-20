@@ -2252,7 +2252,7 @@ header > .col-lg-12 {
   padding: 0;
 }
 
-.navbar-static-top {z-index:10 !important;}
+.navbar-static-top {z-index:5 !important;}
 
 
 .navbar .nav > li > a {
@@ -2707,7 +2707,7 @@ margin: 0.5cm;
 
 .top-bar ul>li.has-dropdown .dropdown li{background:rgba(17,17,17,0.8);line-height:1;min-width:100%;padding-bottom:5px;float:left}
 #topNavElements ul li a div{float:left}
-.top-bar ul{margin-bottom:0;list-style:none}
+.top-bar ul{list-style:none}
 .top-bar .title-area{position:relative;margin:0}
 .top-bar .name h1{line-height:45px;font-size:1.0625em;margin:0}
 .top-bar .name h1 a{font-weight:bold;color:#fff;width:50%;display:block;padding:0 15px}
@@ -2716,7 +2716,7 @@ margin: 0.5cm;
 .top-bar-section .has-dropdown{position:relative}
 .top-bar-section .has-dropdown>a:after{content:"";display:block;width:0;height:0;border:inset 5px;border-color:transparent transparent transparent rgba(255,255,255,0.5);border-left-style:solid;margin-right:15px;margin-top:-4.5px;position:absolute;top:50%;right:0}
 .top-bar-section .dropdown{position:absolute;left:100%;top:0;visibility:hidden;z-index:99}
-.top-bar{margin-bottom: 1.875em;background:rgba(17,17,17,0.8);*zoom:1;overflow:visible; font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,SimSun,sans-serif;}
+.top-bar{margin-bottom: 1.875em;background:rgba(17,17,17,0.8);overflow:visible; font-family: "Helvetica Neue",Helvetica,Helvetica,Arial,SimSun,sans-serif;}
 .top-bar:before,.top-bar:after{content:" ";display:table}
 .top-bar:after{clear:both}
 .top-bar .title-area{float:left}
@@ -2724,7 +2724,7 @@ margin: 0.5cm;
 .top-bar-section li a:not(.button){padding:0 15px;line-height:45px;}
 .top-bar-section .has-dropdown>a{padding-right:35px !important; font-weight:bold;}
 .top-bar-section .has-dropdown>a:after{content:"";display:block;width:0;height:0;border:inset 5px;border-color:rgba(255,255,255,0.5) transparent transparent transparent;border-top-style:solid;margin-top:-2.5px;top:22.5px}
-.top-bar-section .dropdown{left:0;top:auto;background:transparent;min-width:100%}
+.top-bar-section .dropdown{z-index:10;left:0;top:auto;background:transparent;min-width:100%}
 .top-bar-section .dropdown li a{color:#fff;line-height:1;white-space:nowrap;padding:7px 15px;}
 .top-bar .toggle-topbar {display: none;}
 
@@ -2998,6 +2998,7 @@ span.sprite {width:32px;}
 @media (min-width: 941px)
     {
     #topNavElements {display:block !important;}
+    #header {z-index:0 !important;}
     }
 
 @media (max-width: 940px) 
