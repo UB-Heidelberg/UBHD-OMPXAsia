@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+
+<!-- is (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
@@ -63,38 +63,39 @@
 
   <script>
   $(document).ready(function(){
-      if(($(window).width()) <= 940) {
-         $("#topNavElements").hide(1);
          var menuHoehe = $("#MainMenu").height();
-         var titelHoehe = $(".title-area").height();
          $("li.menu-icon").click(function(){
             var hidden = $("#topNavElements").is(":hidden");
             $("#topNavElements").toggle(1);
             if(hidden == false)
                {$("li.menu-icon").css( "opacity", "1" );
-                $("#MainMenu").height(titelHoehe);
+                $("#xasia_navi").parent().addClass("fixed");
+                $("#header").css({ "height": "200px", "z-index": "0" });
                }
             else
                {$("li.menu-icon").css( "opacity", "0.5" );
-                $("#MainMenu").height(100 +'%');
+                $("#xasia_navi").parent().removeClass();
+                $("#header").css({ "height": "75px", "z-index": "10" });
                }
          });
          $("ul.left > li.has-dropdown").click(function(){
             var menuBreite = $("#MainMenu").width();
+            $(".dropdown").show();
             $("li.has-dropdown").animate({left:-menuBreite}, "300");
             $(this).siblings().hide();
             $(".right").hide();
             var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+titelHoehe);
+            $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
             $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
          });
          $("ul.right > li.has-dropdown").click(function(){
             var menuBreite = $("#MainMenu").width();
+            $(".dropdown").show();
             $("li.has-dropdown").animate({left:-menuBreite}, "300");
             $(".left").hide();
             $(this).siblings().hide();
             var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+titelHoehe);
+            $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
             $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
          });
 
@@ -102,15 +103,14 @@
             var menuBreite = $("#MainMenu").width();
             $("li.has-dropdown").animate({left:"0"}, "300");
             $(this).parents('.dropdown').animate({left:menuBreite*2}, "300");
-            $("#MainMenu").height((menuHoehe)-102);
+            $(".dropdown").hide();
+            $("#MainMenu").height('auto');
             $(".left").show();
             $(".right").show();
             $("li.has-dropdown").show();
             $("li.divider").show();
             return false;
          });
-       }
-      else {  $("#topNavElements").show(1);}
   });
   </script>
 
@@ -122,8 +122,8 @@
     <!-- Navbar ======================================= -->
     <!-- start header -->
 
-       <div class="container">
-       <div id="headerLogo">
+    <div class="container">
+      <div class="fixed">
 <!--------------------------------------XASIA deutsche Navigation--------------------------------------------------------------------------------------------------->
      {{if session.forced_language=='de':}}
      <div id="xasia_navi" class="container">
@@ -294,13 +294,15 @@
         </div>
     </div>
 {{pass}}
-
-<!--
-         <img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
-         <img id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header_print.png')}}" />-->
-       </div> 
-       </div>
-   
+</div>
+<header id="header" class="container">
+    <div class="headimgbg">
+        <img src="{{=URL('static','images/press/schiffsbaukunde_crop.jpg')}}"  alt="Start Hintergrund" class="imgcontainer hide4nojs">
+        <noscript><img src="{{=URL('static','images/press/schiffsbaukunde_crop.jpg')}}"  alt="NoJS Hintergrund" class="imgcontainer"></noscript>
+     </div>
+</header>  
+</div>
+ 
     <div class="container-fluid">
 
     
@@ -386,8 +388,6 @@
 
 
                                 </a></li>
-                                <!-- https://www.addthis.com/get/responsive-sharing-buttons -->
-
 
                             </ul>
                         </div>
@@ -425,12 +425,6 @@
     {{end}}
     <!-- Main ========================================= -->
     <!-- Begin page content -->
-<script type="text/javascript" charset="utf-8">
-    $(window).load(function() {
-        $('.flexslider').flexslider();
-    });
-</script>
-
 
       
 {{if left_sidebar_enabled:}}
