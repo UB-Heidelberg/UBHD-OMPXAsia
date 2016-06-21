@@ -62,15 +62,6 @@
     }}
 
   <script>
-/*  $(window).resize(function(){
-    if(($(window).width()) <= "940"){
-        $('.has-dropdown').addClass("moved");
-    }
-    else
-    {
-    $('.has-dropdown').removeClass("moved");
-    }
-  });*/
   $(document).ready(function(){
          var menuHoehe = $("#MainMenu").height();
          $("li.menu-icon").click(function(){
@@ -88,31 +79,35 @@
                }
          });
          $("ul.left > li.has-dropdown").click(function(){
-            var menuBreite = $("#MainMenu").width();
-            $(".dropdown").show();
-            $("li.has-dropdown").animate({left:-menuBreite}, "300");
-            $(this).siblings().hide();
-            $(".right").hide();
-            var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
-            $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
+            if(($(window).width()) <= "940"){
+              var menuBreite = $("#MainMenu").width();
+              $("ul.dropdown").show();
+              $("li.has-dropdown").animate({left:-menuBreite}, "300");
+              $(this).siblings().hide();
+              $(".right").hide();
+              var unterMenuHoehe = $(this).find('ul.dropdown').height();
+              $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
+              $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
+            }
          });
          $("ul.right > li.has-dropdown").click(function(){
-            var menuBreite = $("#MainMenu").width();
-            $(".dropdown").show();
-            $("li.has-dropdown").animate({left:-menuBreite}, "300");
-            $(".left").hide();
-            $(this).siblings().hide();
-            var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
+            if(($(window).width()) <= "940"){
+              var menuBreite = $("#MainMenu").width();
+              $("ul.dropdown").show();
+              $("li.has-dropdown").animate({left:-menuBreite}, "300");
+              $(".left").hide();
+              $(this).siblings().hide();
+              var unterMenuHoehe = $(this).find('ul.dropdown').height();
+              $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
             $(this).find('ul.dropdown').animate({left:menuBreite}, "300");
+            }
          });
 
          $("li.back").click(function(){
             var menuBreite = $("#MainMenu").width();
             $("li.has-dropdown").animate({left:"0"}, "300");
             $(this).parents('.dropdown').animate({left:menuBreite*2}, "300");
-            $(".dropdown").hide();
+            $("ul.dropdown").hide();
             $("#MainMenu").height('auto');
             $(".left").show();
             $(".right").show();

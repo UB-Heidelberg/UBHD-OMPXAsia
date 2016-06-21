@@ -206,7 +206,6 @@ header .navbar-default{
 }
 #main_menu, #header_menu {height:40px !important;}
 
-
 header .nav li a {
     padding-top:5px !important;
     padding-bottom: 5px !important;
@@ -2065,7 +2064,7 @@ article img.pull-right, article .align-right{
         }
        .col-lg-12, .col-md-12, .container-fluid, footer
         {
-           padding:0 !important;
+           padding:0;
         }
        #main
         {
@@ -2075,6 +2074,9 @@ article img.pull-right, article .align-right{
         {
            padding-left:1em !important;
            padding-right:1em !important;
+        }
+       #breadcrumbNav ul, #langMenuInBreadcrumbline ul {
+        margin-left:1em !important;
         }
        .title_volumes
         {
@@ -2128,6 +2130,13 @@ article img.pull-right, article .align-right{
        }
 }
 
+@media (max-width:1230px) {
+       #sub-footer {margin:0;}
+       .contentbox {padding:1em !important;}
+}
+
+
+
 @media (min-width: 481px) and (max-width: 1230px) {
        body
         {
@@ -2140,7 +2149,7 @@ article img.pull-right, article .align-right{
         }
        .col-lg-12, .col-md-12, footer, .container-fluid
         {
-           padding:0 !important;
+           padding:0;
         }
        #service-navi
         {
@@ -2149,8 +2158,10 @@ article img.pull-right, article .align-right{
         }
        .row
         {
-           margin:0 !important;
+           margin:0em;
         }
+       .contentbox_book, .contentbox_series, .contentbox_seriesbook, .contentbox_seriestitle {margin:1em;}
+
        #content
         {
            padding:10px 0 0 !important;
@@ -2191,7 +2202,7 @@ article img.pull-right, article .align-right{
         }
        #footer_logo_pkp
         {
-           margin-top:30% !important;
+           margin-top:1em !important;
         }
 }
 
@@ -2961,7 +2972,7 @@ span.sprite {width:32px;}
     list-style: outside none none;
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-left:0 !important;
+    margin-left:0;
 }
 #breadcrumbNav * {
     float: left;
@@ -2995,14 +3006,21 @@ span.sprite {width:32px;}
 }
 
 /*******************CrossAsia Xasia Navigation 940 Pixel Breite****************************/
+
+/*****Der folgende Code stellt die Funktionalitäten sicher, wenn die Seite verkleinert benutzt und
+dann auf Desktop-Größe vergrößert wurde***********************************************************/
 @media (min-width: 941px)
     {
     #topNavElements {display:block !important;}
     #header {z-index:0 !important;}
+    .left li.has-dropdown ul.dropdown {display:block !important; left:0 !important;}
+    .right li.has-dropdown ul.dropdown {display:block !important; right:0 !important; left:auto !important;}
     }
 
+/*****Diese Anweisungen dienen der Funktionalitäten auf Tablet- und Smartphone-Größe**************/
 @media (max-width: 940px) 
     {
+
     .navbar-header {background-color:#fff;}
     body {padding:0;}
     #topNavElements {display:none;}
@@ -3015,10 +3033,9 @@ span.sprite {width:32px;}
     #topNavElements ul li {width:100% !important;}
     .top-bar {background-color:#000;margin-bottom:0;}
     #MainMenu .top-bar ul>li.has-dropdown a:active,.top-bar ul>li.has-dropdown a:hover{background:rgba(0,0,0,1); text-decoration:none;}
-    .top-bar-section .dropdown, #rightTopNav li.has-dropdown ul.dropdown {position:absolute;left:200%;top:0;visibility:visible;display:block;z-index:0;}
+    .top-bar-section ul.dropdown, #rightTopNav li.has-dropdown ul.dropdown {position:absolute;left:200%;top:0;visibility:visible;display:block;z-index:0;}
     .top-bar ul>li.has-dropdown .dropdown li{background:rgba(0,0,0,1);line-height:1;min-width:100%;padding-bottom:5px;float:left}^
     ul.dropdown { display:none; }
-    .container {z-index:10;}
 
     div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
     margin: 0;
@@ -3093,5 +3110,4 @@ span.sprite {width:32px;}
     #loginLink {padding-left:0.8em;}
 
     .back {display: block;}
-
 }
