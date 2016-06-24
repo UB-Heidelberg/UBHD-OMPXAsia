@@ -3013,8 +3013,11 @@ dann auf Desktop-Größe vergrößert wurde*************************************
     {
     #topNavElements {display:block !important;}
     #header {z-index:0 !important;}
+    #MainMenu {height:auto !important;}
+    .left li.has-dropdown, .right li.has-dropdown {display:block !important; left:0 !important;}
     .left li.has-dropdown ul.dropdown {display:block !important; left:0 !important;}
     .right li.has-dropdown ul.dropdown {display:block !important; right:0 !important; left:auto !important;}
+    #rightTopNav {display:block !important;}
     }
 
 /*****Diese Anweisungen dienen der Funktionalitäten auf Tablet- und Smartphone-Größe**************/
