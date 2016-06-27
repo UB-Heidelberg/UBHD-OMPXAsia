@@ -63,6 +63,7 @@
 
   <script>
   $(document).ready(function(){
+         $("ul.dropdown").hide();
          var menuHoehe = $("#MainMenu").height();
          $("li.menu-icon").click(function(){
             var hidden = $("#topNavElements").is(":hidden");
@@ -77,6 +78,16 @@
                {$("li.menu-icon").css( "opacity", "0.5" );
                 $("#header").css({ "height": "75px", "z-index": "0" });
                 $("#xasia_navi").parent().removeClass();
+                var visible = $("ul.dropdown").is(":visible");
+                if(visible == true)
+                {
+                   var unterMenuHoehe = $("ul.dropdown:visible").height();
+                   $("#MainMenu").height((unterMenuHoehe)+menuHoehe);
+                }
+                else
+                {
+                   $("#MainMenu").height('auto');
+                }
                }
          });
          $("ul.left > li.has-dropdown").click(function(){
