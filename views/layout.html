@@ -154,7 +154,11 @@
 
                                     </ul>
                                 </li>
-
+                                {{if session.forced_language=='de':}}
+                                  <li><a href="http://crossasia.org/">CrossAsia</a></li>
+                                {{elif session.forced_language=='en':}}
+                                  <li><a href="http://crossasia.org/en.html">CrossAsia</a></li>
+                                {{pass}}    
                             </ul>
                         </div>
 
@@ -280,11 +284,6 @@
                     <div class="row">
 
                         <div class="col-lg-3">
-                          {{if session.forced_language=='de':}}
-                          <span class="footer_logo_beschreibung_ub">Ein Dienst der</span>
-                          {{elif session.forced_language=='en':}}
-                          <span class="footer_logo_beschreibung_ub">A service of</span>
-                          {{pass}}
                           <div id="footer_logo_ub" class="widget"><a href="http://www.ub.uni-heidelberg.de" title="Homepage Universitätsbibliothek Heidelberg"><img alt="Logo - Universitätsbibliothek Heidelberg" src="{{=URL('static','/images/press/LogoUBH.png')}}" /></a></div>
                         </div>
 
@@ -295,21 +294,11 @@
 
 
                         <div class="col-lg-3">
-                          {{if session.forced_language=='de':}}
-                          <span class="footer_logo_beschreibung_sb">In Zusammenarbeit mit</span>
-                          {{elif session.forced_language=='en':}}
-                          <span class="footer_logo_beschreibung_sb">In cooperation with</span>
-                          {{pass}}
-                           <div id="footer_logo_sbb" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/LogoSBB.png')}}" /></a></div>
+                           <div id="footer_logo_xasia" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/xasia_footer_logo.png')}}" /></a></div>
                         </div>
 
                         <div class="col-lg-3">
-                          {{if session.forced_language=='de':}}
-                          <span class="footer_logo_beschreibung_dfg">Gefördert durch</span>
-                          {{elif session.forced_language=='en':}}
-                          <span class="footer_logo_beschreibung_dfg">Supported by</span>
-                          {{pass}}
-                           <div id="footer_logo_dfg" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/dfg_logo.png')}}" /></a></div>
+                           <div id="footer_logo_dfg" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - DFG" src="{{=URL('static','/images/press/dfg_logo.png')}}" /></a></div>
                         </div>
              </div>
          </div>

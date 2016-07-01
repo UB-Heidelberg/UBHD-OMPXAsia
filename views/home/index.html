@@ -13,11 +13,11 @@
           <div class="row">
             <div class="col-lg-3">
               <div class="box box-shadow"> {{if session.forced_language =='de': }}
-                <div class="box-gray aligncenter"><h4>Neuerscheinung</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                <div class="box-gray aligncenter"><h4>Neuerscheinung</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px',_class='titelbild')}}
                 </div>
                 <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/60'))}}
                 </div> {{elif session.forced_language =='en': }}
-                <div class="box-gray aligncenter"><h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px')}}
+                <div class="box-gray aligncenter"><h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog1.jpg'),_width='145px',_class='titelbild')}}
                 </div>
                 <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/60'))}}
                 </div> {{pass}}
@@ -25,10 +25,10 @@
             </div>
             <div class="col-lg-3">
               <div class="box box-shadow">
-                <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+                <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px',_class='titelbild')}}
                 </div>
                 <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/58'))}}
-                </div> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px')}}
+                </div> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog2.jpg'),_width='145px',_class='titelbild')}}
               </div>
               <div class="box-bottom"> {{=A(T('More Information'),_href=URL('catalog','book/58'))}}
               </div> {{pass}}
@@ -97,7 +97,7 @@
         <div class="row">
           <div class="col-lg-3">
             <div class="box box-shadow">
-              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px')}}
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px',_class='titelbild')}}
               </div>
               <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
               </div>
@@ -105,7 +105,7 @@
           </div>
           <div class="col-lg-3">
             <div class="box box-shadow">
-              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Serien</h4> {{elif session.forced_language =='en': }}<h4>Series</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px')}}
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Serien</h4> {{elif session.forced_language =='en': }}<h4>Series</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px',_class='titelbild')}}
               </div>
               <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','series/gsa'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}} {{pass}}
               </div>

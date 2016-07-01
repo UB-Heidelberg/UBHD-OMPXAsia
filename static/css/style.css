@@ -47,7 +47,7 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 
-#main {background-color:#fff;
+#main {background-color:#f6f6f6;
        padding:1.9em;
 }
 
@@ -60,7 +60,7 @@ h1,h2, h3, h4, h5, h6 {
 	position:relative;
         width:88.571em;
         max-width:88.571em;
-        background-color:#fff;
+        background-color:#f6f6f6;
 }
 
 #content .container {width:100%;}
@@ -85,57 +85,59 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 .contentbox {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
   }
 
 .section_contentbox {
-  background-color:#f6f6f6 !important;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff !important;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
   padding-top:0em !important;
   padding-bottom:0em !important;
   }
 .contentbox_book {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
   padding-top:1em;
   margin-bottom:2em;
   }
 
 .contentbox_series {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
   padding-top:1em;
   }
 
 .contentbox_seriestitle {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
   margin-bottom:1em;
   }
 
 .contentbox_seriesbook {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
   margin-bottom:1em;
   padding-top:1em;
   }
 
 .contentbox_title {
-  background-color:#f6f6f6;
-  border-color: #dcdcdc;
-  border-radius: 3px;
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
   padding:1em !important;
   }
 
 .box_logo {float:left;
   margin-right:1em;}
+
+.titelbild {border:1px solid #e8e6e1;}
 
 
 /* ===================================
@@ -196,9 +198,13 @@ header .navbar-collapse  ul.navbar-nav {
 }
 
 header .navbar-default{
-    background-color: #fff;
+    background-color: #f6f6f6;
 }
+
+#headerLogo {margin-bottom:1em;}
 #main_menu, #header_menu {height:40px !important;}
+
+#main_menu .container {height:0;}
 
 header .nav li a {
     padding-top:5px !important;
@@ -230,6 +236,7 @@ header .nav .caret {
         background-color:#f6f6f6 !important;
 }       
 
+.navbar-default .navbar-nav > li > a:hover {background-color:#f6f6f6 !important;}
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
@@ -390,7 +397,7 @@ section.callaction {
 
 #content {
 	position:relative;
-	background:#fff;
+	background:#f6f6f6;
 	padding:0px 10px 0px 10px;
 }
 
@@ -425,13 +432,20 @@ section.callaction {
 
 .box {
 	width: 100%;
+        border: 1px solid #e8e6e1;
+        border-radius: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+        background-color:#fff;
 }
 
 
 .box-gray  {
-	background: #f6f6f6;
 	padding: 20px 20px 30px;
         }
+
+.box-gray img {
+        }
+
 .box-gray  h4,.box-gray  i {
 	margin-bottom: 20px;
 }
@@ -1600,7 +1614,7 @@ footer a:hover {
 	color:#b41815;
 }
 
-.nav > li > a:hover {background-color: #fff !important;}
+.nav > li > a:hover {background-color: #f6f6f6 !important;}
 
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6{
 	color:#0077bb;
@@ -2080,7 +2094,6 @@ article img.pull-right, article .align-right{
         }
        footer #sub-footer .container .col-lg-12 .row .col-lg-3 img
         {
-           width:50%;
            margin-left: 20%;
         }
        #service-navi
@@ -2088,6 +2101,7 @@ article img.pull-right, article .align-right{
            padding-top:1em;
            padding-right:1.5em;
         }
+
        #heiup-logo
         {
            width:auto !important;
@@ -2113,6 +2127,10 @@ article img.pull-right, article .align-right{
 }
 
 /*Anpassungen WWW Heidelberg*/
+
+#service-navi a {color: #a39b94;}
+
+#service-navi a:hover {color: #9d1512;}
 
 @media (min-width:769px) and (max-width: 979px)
        {
@@ -2188,10 +2206,6 @@ article img.pull-right, article .align-right{
            width:25%;
            float:left;
         }
-       footer #sub-footer .container .col-lg-12 .row .col-lg-3 img
-        {
-           width:100%;
-        }
        #footer_logo_pkp
         {
            margin-top:1em !important;
@@ -2260,7 +2274,7 @@ header > .col-lg-12 {
   padding-right: 10px;
   margin-left: 5px;
   margin-right: 10px;
-  font-size:14px !important;
+  font-size:16px !important;
   height:40px;
   line-height:30px;
 } 
@@ -2490,18 +2504,17 @@ li > h5 {
 #footer_logo_sai img {
   padding-right: 0px;
   margin-left:0%;
-  margin-top:10%;
 }
 
 #footer_logo_dfg img {  
 padding-right: 0px;
-  margin-top:13%;
+  margin-top:11%;
 }
 
 
-#footer_logo_sbb img {
-  padding-left: 5%;
-  margin-top:11%;
+#footer_logo_xasia img {
+  padding-left: 10%;
+  margin-top:9%;
 }
 
 
@@ -2524,7 +2537,7 @@ padding-right: 0px;
     color: #a39b94;
     float: right;
     font-size: 1em;
-    background-color:#fff;
+    background-color:#f6f6f6;
     width:100%;
     border-top:1px solid #ddd;
     padding-top:1em;
