@@ -2145,8 +2145,6 @@ article img.pull-right, article .align-right{
        .contentbox {padding:1em !important;}
 }
 
-
-
 @media (min-width: 481px) and (max-width: 1230px) {
        body
         {
@@ -2449,7 +2447,9 @@ i.top-bar .toggle-topbar {
     position: absolute;
     right: 0;
     top: 0;
-}mg.beiratPortrait {
+}
+
+img.beiratPortrait {
   width: 85px;
 }
 
@@ -2485,15 +2485,17 @@ li > h5 {
 
 .footer_logo_beschreibung_ub {font-size:1em; margin-left:15%;}
 
-.footer_logo_beschreibung_sb {font-size:1em; margin-left: 5%;}
+.footer_logo_beschreibung_sb {font-size:1em; margin-left: 10%;}
 
 .footer_logo_beschreibung_dfg {font-size:1em;}
 
+.footer_logo_beschreibung_xa {font-size:1em;margin-left:20%}
+
+
 .footer_logo_col {
-  width:25%;
+  width:20%;
   float:left;
 }
-
 
 #footer_logo_ub img {
   padding-right: 0px;
@@ -2504,6 +2506,7 @@ li > h5 {
 #footer_logo_sai img {
   padding-right: 0px;
   margin-left:0%;
+  margin-top:11%
 }
 
 #footer_logo_dfg img {  
@@ -2511,10 +2514,14 @@ padding-right: 0px;
   margin-top:11%;
 }
 
+#footer_logo_sbb img {
+  padding-left: 10%;
+  margin-top:10%;
+}
 
 #footer_logo_xasia img {
-  padding-left: 10%;
-  margin-top:9%;
+  padding-left: 20%;
+  margin-top:10%;
 }
 
 
@@ -2576,21 +2583,12 @@ ul.footer-nav li {
 }
 
 /******/
-.print {
- display: none;
-}
-
-
+.print { display: none;}
 
 
 
 @media (max-width: 1199px) {
-
-.box-gray {
-    height: auto !important;
-}
-
-
+.box-gray {height: auto !important;}
 }
 
 @media (max-width: 991px) /*verhindert, dass die Hauptnavi zweizeilig umbricht*/ {
@@ -2602,11 +2600,10 @@ ul.footer-nav li {
 }
 
 @media (max-width: 1200px) /*verhindert, dass die Hauptnavi zweizeilig umbricht*/ {
-.navbar .nav > li > a {
-  margin-left: 10px; 
+.navbar .nav > li > a {  margin-left: 10px; }
 }
 
-} 
+
 
 @media print {
 
@@ -2661,5 +2658,10 @@ margin: 0.5cm;
   margin-bottom: 0;
 }
 
+}
+@media (max-width: 1150px) {
+     .footer_logo_col {width:100%;margin-bottom:2em;}
+     .footer_logo_col .widget img {margin:0 0 0 0.5em !important; padding:0 !important;}
+     .footer_logo_col span {margin:0em 0 0 0.5em !important; padding:0 !important;}
 }
 
