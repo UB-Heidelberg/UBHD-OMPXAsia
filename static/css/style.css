@@ -201,7 +201,7 @@ header .navbar-default{
     background-color: #f6f6f6;
 }
 
-#headerLogo {margin-bottom:1em; margin-top:-2em;}
+#headerLogo {margin-bottom:1em; margin-top:-1em;}
 #main_menu, #header_menu {height:40px !important;}
 
 #main_menu .container {height:0;}
