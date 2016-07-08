@@ -1,0 +1,26 @@
+{{extend 'layout.html'}}
+
+<div id="main" class="container">
+    <div class="row">
+        <div class="col-lg-12 contentbox">
+            <h3>  {{if session.forced_language =='de': }}
+                   Centre for Development Studies (ZELF)
+                {{elif session.forced_language =='en': }}
+                   Centre for Development Studies (ZELF)
+            {{pass}}
+            </h3>
+
+            <p>
+            <div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/partner/zelf_logo.jpg'),_width='230px')}}</p></div>
+                {{if session.forced_language =='de': }}
+                <p>Wissenschaftler und Wissenschaftlerinnen des ZELF befassen sich mit politischen, ökonomischen und soziokulturellen Entwicklungen und Transformationsprozessen in den Ländern des Südens. Regionale Schwerpunkte laufender Forschungsarbeiten befinden sich in Süd- und Zentralasien, insbesondere Pakistan, Indien, Nepal, Afghanistan, Tajikistan, Kirgistan und Xinjiang (VR China). Im Fokus stehen Forschungen zu den Formen und Dimensionen sozialer Verwundbarkeit und Wirkungen globalisierter Austauschbeziehungen mit einem Schwerpunkt auf ländliche Regionen. Eine Mehrzahl der am ZELF durchgeführten Forschungsarbeiten konzentriert sich auf periphere Räume mit fragilen Mensch-Umwelt-Beziehungen. Beispiele sind Studien mit einem Fokus auf pastorale Praktiken und Ressourcennutzungsstrategien in Hochgebirgsregionen, zu Sicherheit und Entwicklung oder mit Bezug auf die Governance von Grenzräumen.</p>                
+                {{elif session.forced_language =='en': }}
+                <p>The Centre for Development Studies (ZELF) provides research and teaching in the field of Geographical Development Studies. Our main research interests are related to political, economic and socio-cultural developments and transformation processes in the countries of Central and South Asia. We study the dimensions and forms of social vulnerability, effects of global exchange relations and transformation processes in rural areas, analyse its underlying natural and social causes, and design countermeasures and strategies. Our current research activities focus on rural areas in Pakistan, India, Nepal, Afghanistan, Tajikistan, Kyrgyzstan and People's Republic of China (Xinjiang and Tibet). Most of our research projects are located in peripheral regions where human-environmental relations are under stress, e.g. in mountain regions with a focus on pastoral practices, water management and other resource-oriented strategies. In the field of borderland studies emphasis is put on the impact executed by central governments and development agencies on peripheral regions, e.g. on administration, infrastructure expansion and development projects.</p>
+                {{pass}}
+
+
+            </p>
+        </div>
+    </div>
+  </div>
+ 

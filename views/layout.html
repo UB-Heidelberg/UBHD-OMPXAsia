@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
+
+<!-- is (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="{{=T.accepted_language or 'en'}}"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
     <!-- www.phpied.com/conditional-comments-block-downloads/ -->
@@ -61,52 +61,6 @@
     (left_sidebar_enabled and 1 or 0)+(right_sidebar_enabled and 1 or 0)]
     }}
 
-  <script>
-  $(document).ready(function(){
-      if(($(window).width()) <= 940) {
-         $("#topNavElements").hide(1);
-         var menuHoehe = $("#MainMenu").height();
-         $("li.menu-icon").click(function(){
-            var hidden = $("#topNavElements").is(":hidden");
-            $("#topNavElements").toggle(1);
-            if(hidden == false)
-               {$("li.menu-icon").css( "opacity", "1" );
-                $("#MainMenu").height(31);
-               }
-            else
-               {$("li.menu-icon").css( "opacity", "0.5" );
-                $("#MainMenu").height(100 +'%');
-               }
-         });
-         $("ul.left > li.has-dropdown").click(function(){
-            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
-            $(this).siblings().hide();
-            var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+31);
-            $(this).find('ul.dropdown').animate({left:100 + '%'}, "300");
-         });
-         $("ul.right > li.has-dropdown").click(function(){
-            $("li.has-dropdown").animate({left:-100 +'%'}, "300");
-            $(".left").hide();
-            $(this).siblings().hide();
-            var unterMenuHoehe = $(this).find('ul.dropdown').height();
-            $("#MainMenu").height((unterMenuHoehe)+31);
-            $(this).find('ul.dropdown').animate({left:100 +'%'}, "300");
-         });
-
-         $("li.back").click(function(){
-            $("li.has-dropdown").animate({left:"0"}, "300");
-            $(this).parents('.dropdown').animate({left:100 +'%' *2}, "300");
-            $("#MainMenu").height((menuHoehe)-116);
-            $(".left").show();
-            $("li.has-dropdown").show();
-            $("li.divider").show();
-            return false;
-         });
-       } 
-  });
-  </script>
-
 
   </head>
   <body>
@@ -114,192 +68,46 @@
     <div class="flash alert alert-dismissable">{{=response.flash or ''}}</div>
     <!-- Navbar ======================================= -->
     <!-- start header -->
+    <div id="service-navi" class="container">
 
+        <div class="row">
+
+            <div class="col-lg-12 col-sm-12 col-xs-12">
+
+                <ul class="nav nav-pills pull-right">
+                    <li><a href="{{=URL('contact','index')}}" style="padding-right: 0;">{{=T('Contact')}}</a></li>
+                    <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
+         <!--<li><a href="suche.html">{{=T('Search')}} |</a></li>-->
+                    <!--<li><a href="faq.html">FAQ |</a></li>-->
+                     {{if session.forced_language=='en':}}
+                    <li><a href="{{=request.url}}?lang=de" style="padding-left: 10px;">DE</a></li>
+                    {{elif session.forced_language=='de':}}
+                    <li><a href="{{=request.url}}?lang=en" style="padding-left: 10px;">EN</a></li>
+                    {{pass}}
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
        <div class="container">
-       <div id="headerLogo">
-<!--------------------------------------XASIA deutsche Navigation--------------------------------------------------------------------------------------------------->
-     {{if session.forced_language=='de':}}
-     <div id="xasia_navi" class="container">
-      <div class="row">
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-           <nav class="top-bar" id="MainMenu">
-                        <ul class="title-area">
-                          <li class="name">
-                                <h1>
-                                        <a title="zur Startseite" href="http://crossasia.org/"><span class="xAsiaIcon"></span></a>
-                                </h1>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="toggle-topbar menu-icon">
-                              <a href="#">
-                                 <span>Menu</span>
-                              </a>
-                          </li>
-                        </ul>
-                        <section class="top-bar-section" id="topNavElements">
-                        <ul class="left">
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Ressourcen </a>
-                            <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
-                              <li><a href="http://crossasia.org/ressourcen/search.html"  >CrossAsia Suche</a></li>
-                              <li><a href="http://crossasia.org/ressourcen/databasesearch.html"  >Datenbanken</a></li>
-                              <li><a href="http://crossasia.org/ressourcen/sammlungen.html"  >Digitale Sammlungen</a></li>
-                              <li><a href="http://crossasia.org/ressourcen/tp.html"  >Themen Portale</a></li>
-                              <li><a href="http://crossasia.org/ressourcen/ogea/ogeasearch.html"  >Online Guide East Asia</a></li>
-                              <li><a href="http://crossasia.org/ressourcen/archive.html"  >eGovernment Archive</a></li>
-
-                            </ul>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
-                            <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
-                              <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
-                              <li><a href="http://blog.crossasia.org/"  >CrossAsia Blog</a></li>
-                              <li><a href="http://crossasia.org/service/epublish.html"  >CrossAsia E-Publishing</a></li>
-                              <li><a href="http://crossasia.org/service/dod.html"  >CrossAsia DoD</a></li>
-                              <li><a href="http://crossasia.org/service/blv.html"  >Kataloge & Blauer Leihverkehr</a></li>
-                              <li><a href="http://crossasia.org/service/lab.html"  >CrossAsia Lab</a></li>
-                              <li><a href="http://crossasia.org/service/xasia.html"  >Über CrossAsia</a></li>
-                            </ul>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>Mein CrossAsia </a>
-                            <ul class="dropdown">
-                              <li class="back"><h5><a href="#">« Back</a></h5></li>
-                              <li><a href="http://crossasia.org/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
-                              <li><a href="http://crossasia.org/meinxasia/registrierung.html"  >CrossAsia Registrierung</a></li>
-                            </ul>
-                          </li>
-                          <li class="divider"></li>
-                        </ul>
-
-                        <ul id="rightTopNav" class="right">
-                               <li class="has-dropdown">
-    				<form id="pazpar2" action="http://crossasia.org/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
-    					<div id="topSearch">
-    							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Suche" class="infocus" size="10" type="text" />
-    							 	<button id="pz2ButtonTop" class="button small" value="Go"><span class="sprite search-w">&nbsp;</span></button>
-    					</div>
-    				</form>   
-    		         	</li>			
-    			       <li class="divider"></li>
-                               <li class="has-dropdown">
-                                        <a href="#" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
-                                                <ul class="dropdown">
-                                                                <li class="back"><h5><a href="#">« Back</a></h5></li>
-                                                                <li><a href="http://crossasia.org/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registrierung</a></li>
-                                                                <li><div class="login"><form action="http://crossasia.org/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
-                        <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Benutzer:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Passwort:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>
-                        </form></div></li>
-                                                </ul>
-                                 </li>
-                        </ul>
-                </section>
-                </nav>
-          </div>
-        </div>
-    </div>
-
-<!--------------------------------------XASIA englische Navigation--------------------------------------------------------------------------------------------------->
-{{elif session.forced_language=='en':}}
-
-
-<div id="xasia_navi" class="container">
-      <div class="row">
-          <div class="col-lg-12 col-sm-12 col-xs-12">
-           <nav class="top-bar" id="MainMenu">
-                        <ul class="title-area">
-                          <li class="name">
-                                <h1>
-                                        <a title="zur Startseite" href="http://crossasia.org/en.html"><span class="xAsiaIcon"></span></a>
-                                </h1>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="toggle-topbar menu-icon">
-                              <a href="#">
-                                 <span onclick="toggle_visibility('topNavElements');">Menu</span>
-                              </a>
-                          </li>
-                        </ul>
-                        <section class="top-bar-section" id="topNavElements">
-                        <ul class="left">
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-file-text hide-for-small"></div>Resources </a>
-                            <ul class="dropdown">
-                              <li><a href="http://crossasia.org/en/ressourcen/search.html"  >CrossAsia Search</a></li>
-                              <li><a href="http://crossasia.org/en/ressourcen/databasesearch.html"  >Databases</a></li>
-                              <li><a href="http://crossasia.org/en/ressourcen/sammlungen.html"  >Digital Collections</a></li>
-                              <li><a href="http://crossasia.org/en/ressourcen/tp.html"  >Thematic Portals</a></li>
-                              <li><a href="http://crossasia.org/en/ressourcen/ogea/ogeasearch.html"  >Online Guide East Asia</a></li>
-                              <li><a href="http://crossasia.org/en/ressourcen/archive.html"  >CrossAsia Archive</a></li>
-
-                            </ul>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-cogs hide-for-small"></div>Service </a>
-                            <ul class="dropdown">
-                              <li><a href="http://crossasia.org/en/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
-                              <li><a href="http://blog.crossasia.org/"  >CrossAsia Blog</a></li>
-                              <li><a href="http://crossasia.org/en/service/epublish.html"  >CrossAsia E-Publishing</a></li>
-                              <li><a href="http://crossasia.org/en/service/dod.html"  >CrossAsia DoD</a></li>
-                              <li><a href="http://crossasia.org/en/service/blv.html"  >Catalogues & Blauer Leihverkehr</a></li>
-                              <li><a href="http://crossasia.org/en/service/lab.html"  >CrossAsia Lab</a></li>
-                              <li><a href="http://crossasia.org/en/service/xasia.html"  >About CrossAsia</a></li>
-                            </ul>
-                          </li>
-                          <li class="divider"></li>
-                          <li class="has-dropdown"><a href="#" onClick="return false;"> <div class="icon-user hide-for-small"></div>My CrossAsia </a>
-                            <ul class="dropdown">
-                              <li><a href="http://crossasia.org/en/meinxasia/xasiaforum.html"  >CrossAsia Forum</a></li>
-                              <li><a href="http://crossasia.org/en/meinxasia/registrierung.html"  >CrossAsia Registration</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-
-                        <ul id="rightTopNav" class="right">
-                               <li>
-    				<form id="pazpar2" action="http://crossasia.org/en/ressourcen/search.html?tx_pazpar2_pazpar2%5Bcontroller%5D=Pazpar2" method="get">
-    					<div id="topSearch">
-    							 	<input id="pz2InputTop" name="tx_pazpar2_pazpar2[queryString]" placeholder="Search" class="infocus" size="10" type="text" />
-    							 	<button id="pz2ButtonTop" class="button small" value="Go"><span class="sprite search-w" style="margin:0;">&nbsp;</span></button>
-    					</div>
-    				</form>   
-                               </li>			
-    			       <li class="divider"></li>
-                               <li class="has-dropdown">
-                                        <a href="/" id="loginLink"><div class="icon-unlock">&nbsp;</div>Login</a>
-                                                <ul class="dropdown">
-                                                                <li><a href="http://crossasia.org/en/meinxasia/registrierung.html" onfocus="blurLink(this);"  >CrossAsia Registration</a></li>
-                                                                <li><div class="login"><form action="http://crossasia.org/en/meinxasia/anmeldung.html" id="mailform" name="mailform" enctype="multipart/form-data" method="post" target="_top" onsubmit="return validateForm('mailform','user,Benutzer\x3A,pass,Passwort\x3A','','','')"><div style="display:none;"><input type="hidden" name="logintype" id="mailformlogintype" value="login" /><input type="hidden" name="pid" value="2" /><input type="hidden" name="no_cache" value="1" /></div>
-                        <div class="csc-loginform"><div class="csc-mailform-field"><label for="mailformuser">Username:</label> <input type="text" name="user" id="mailformuser" size="20" value="" /></div><div class="csc-mailform-field"><label for="mailformpass">Password:</label> <input type="password" name="pass" id="mailformpass" size="20" value="" /></div><div class="csc-mailform-field"> <input type="submit" name="submit" id="mailformsubmit" value="Anmelden" class="csc-mailform-submit button" /></div></div>
-                        </form></div></li>
-                                                </ul>
-                                 </li>
-                        </ul>
-                </section>
-                </nav>
-          </div>
-        </div>
-    </div>
-{{pass}}
-
-<!--
+       <div id="headerLogo" class="col-lg-12 print-url">
          <img id="heiup-logo" class="screen" src="{{=URL('static','images/press/schriftzug_header.png')}}" />
-         <img id="heiup-logo-print" class="print" src="{{=URL('static','images/press/schriftzug_header_print.png')}}" />-->
-       </div> 
        </div>
-   
-    <div class="container-fluid">
+       </div>
+
+    <div class="container">
+
 
     
-    <div class="container">
 
         <header>
             <div class="col-lg-12" id="header_menu">
                 <div class="navbar navbar-default navbar-static-top" id="main_menu" style="width: 100%">
                     <div class="container">
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">4
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">6
                                 <span class="icon-bar"></span>
 
                             </button>
@@ -331,6 +139,7 @@
                                       {{elif session.forced_language=='en':}}
                                         <li><a href="{{=URL('partner', 'index/asdgfg')}}">South Asia Study Group</a></li>
                                       {{pass}}
+                                        <li><a href="{{=URL('partner', 'index/zelf')}}">Centre for Development Studies</a></li>
                                     </ul>
                                 </li>
 
@@ -346,7 +155,11 @@
 
                                     </ul>
                                 </li>
-
+                                {{if session.forced_language=='de':}}
+                                  <li><a href="http://crossasia.org/">CrossAsia</a></li>
+                                {{elif session.forced_language=='en':}}
+                                  <li><a href="http://crossasia.org/en.html">CrossAsia</a></li>
+                                {{pass}}    
                             </ul>
                         </div>
 
@@ -374,8 +187,6 @@
 
 
                                 </a></li>
-                                <!-- https://www.addthis.com/get/responsive-sharing-buttons -->
-
 
                             </ul>
                         </div>
@@ -384,23 +195,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-12 ">
-                <div id="breadcrumbNav">
-                    <div class="container">
-            {{if session.forced_language=='de':}}
-                        <span>Sie befinden sich hier : </span><ul class="vbottom"><li><a href="http://crossasia.org/" title="zur Seite: CrossAsia"  >CrossAsia</a><span>></span></li><li><a href="http://crossasia.org/service.html" title="zur Seite: Service"  >Service</a><span>></span></li><span title="Hier befinden Sie sich."><a href="http://crossasia.org/service/epublish.html"  class="current">CrossAsia E-Publishing</a></span></ul>
-                        <ul class="sprachwechsel">
-                            <li id="langMenu"><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>English</a><a href="{{=request.url}}?lang=en" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>English</a></li>
-                        </ul>
-            {{elif session.forced_language=='en':}}
-                       <span>You are here : </span><ul class="vbottom"><li><a href="http://crossasia.org/en.html" title="to: CrossAsia"  >CrossAsia</a><span>></span></li><li><a href="http://crossasia.org/en/service.html" title="to: Service"  >Service</a><span>></span></li><span title="You are here."><a href="http://crossasia.org/en/service/epublish.html"  class="current">CrossAsia E-Publishing</a></span></ul>
-                       <ul class="sprachwechsel">
-                           <li id="langMenu"><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  style="display:none;"><div class="icon-flag"></div>Deutsch</a><a href="{{=request.url}}?lang=de" onfocus="blurLink(this);"  class="sprachwechsel"><div class="icon-flag"></div>Deutsch</a></li>
-                       </ul>
-             {{pass}}
-                     </div> 
-                </div>
-             </div>
         </header>
 
 
@@ -413,13 +207,28 @@
     {{end}}
     <!-- Main ========================================= -->
     <!-- Begin page content -->
-<script type="text/javascript" charset="utf-8">
-    $(window).load(function() {
-        $('.flexslider').flexslider();
-    });
-</script>
 
+    <div class="container-fluid">
+            <div class="container">
 
+            <div class="row">
+
+                <div class="col-lg-12">
+
+                    <!-- Slider -->
+
+                    <div id="main-slider" class="flexslider">
+
+                        <ul class="slides">
+                            <li>
+                                <img id="hup-logo" src="{{=URL('static','images/press/paisley.png')}}" />
+                            </li>
+                        </ul>
+
+                    </div>
+            </div>
+        </div>
+      </div>
       
 {{if left_sidebar_enabled:}}
         <div class="col-md-3 left-sidebar">
@@ -475,7 +284,7 @@
 
                     <div class="row">
 
-                        <div class="col-lg-3">
+                          <div class="footer_logo_col">
                           {{if session.forced_language=='de':}}
                           <span class="footer_logo_beschreibung_ub">Ein Dienst der</span>
                           {{elif session.forced_language=='en':}}
@@ -485,64 +294,41 @@
                         </div>
 
 
-                        <div class="col-lg-3">
-                           <div id="footer_logo_sai" class="widget"><a href="http://www.dfg.de" title="Deutsche Forschungsgesellschaft"><img alt="Logo - Deutsche Forschungsgesellschaft" src="{{=URL('static','/images/press/LogoSAI.png')}}" /></a></div>
+                        <div class="footer_logo_col">
+                           <div id="footer_logo_sai" class="widget"><a href="http://www.sai.uni-heidelberg.de/" title="Deutsche Forschungsgesellschaft"><img alt="Logo - Südasieninstitut" src="{{=URL('static','/images/press/LogoSAI.png')}}" /></a></div>
                         </div>
 
 
-                        <div class="col-lg-3">
+                        <div class="footer_logo_col">
                           {{if session.forced_language=='de':}}
                           <span class="footer_logo_beschreibung_sb">In Zusammenarbeit mit</span>
                           {{elif session.forced_language=='en':}}
                           <span class="footer_logo_beschreibung_sb">In cooperation with</span>
                           {{pass}}
-                           <div id="footer_logo_sbb" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/LogoSBB.png')}}" /></a></div>
+                           <div id="footer_logo_sbb" class="widget"><a href="http://staatsbibliothek-berlin.de/" title="Homepage Staatsbibliothek zu Berlin"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/LogoSBB.png')}}" /></a></div>
                         </div>
 
-                        <div class="col-lg-3">
+                        <div class="footer_logo_col">
+                          {{if session.forced_language=='de':}}
+                          <span class="footer_logo_beschreibung_xa">Partner von</span>
+                          {{elif session.forced_language=='en':}}
+                          <span class="footer_logo_beschreibung_xa">Partner of</span>
+                          {{pass}}
+                        <div id="footer_logo_xasia" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/xasia_footer_logo.png')}}" /></a></div>
+                        </div>
+
+                        <div class="footer_logo_col">
                           {{if session.forced_language=='de':}}
                           <span class="footer_logo_beschreibung_dfg">Gefördert durch</span>
                           {{elif session.forced_language=='en':}}
                           <span class="footer_logo_beschreibung_dfg">Supported by</span>
                           {{pass}}
-                           <div id="footer_logo_dfg" class="widget"><a href="http://crossasia.org/" title="Homepage CrossAsia"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/dfg_logo.png')}}" /></a></div>
+                           <div id="footer_logo_dfg" class="widget"><a href="http://www.dfg.de/" title="Homepage Deutsche Forschungsgemeinschaft"><img alt="Logo - CrossAsia" src="{{=URL('static','/images/press/dfg_logo.png')}}" /></a></div>
                         </div>
+
              </div>
          </div>
      </div>
-
-
-     <div id="footer-nav" class="container">
-        		<div id="copyIconMenu">
-          			<div class="footer_xa_icons">
-          			<ul>
-          				<li id="copyRight"><span>&copy;2016 Copyright CrossAsia</span></li>
-          			</ul>
-          			<ul>
-          				<li class="navIcon"><a title="Print" href="javascript:window.print()"><i class="icon-print">&nbsp;</i></a></li>
-    					<li class="navIcon"><a href="https://www.facebook.com/sharer.php" class="facebook" target="_blank"><i id="share" title="Share" class="icon-share">&nbsp;</i></a></li>
-    					<li class="navIcon"><a title="favorite" href="" id="bookmarkme" rel="sidebar"><i class="icon-star">&nbsp;</i></a></li>
-    					<li class="navIcon"><a title="RSS" href="/index.php?id=110"><i class="icon-rss">&nbsp;</i></a></li>
-    				</ul>
-    				</div>
-    			</div>
-      
-
-                        <div id="footer_kontakt">
-                               <ul class="nav nav-pills pull-right">
-                                     <li><a target="_blank" href="http://crossasia.org/meinxasia/kontakt.html" style="padding-right: 0;">{{=T('Contact')}}</a></li>
-                                     <li><a href="{{=URL('contact','imprint')}}" style="padding-right: 0;">{{=T('Legal Notice')}}</a></li>
-                                     {{if session.forced_language=='de':}}
-                                     <li><a href="http://crossasia.org/service/xasia.html" onfocus="blurLink(this);"  >Über CrossAsia</a></li>
-                                     {{elif session.forced_language=='en':}}
-                                     <li><a href="http://crossasia.org/en/service/xasia.html" onfocus="blurLink(this);"  >About CrossAsia</a></li>
-                                     {{pass}}
-                               </ul>
-                        </div>
-
-        
-
-    </div>
 
    </div> 
    </footer>
