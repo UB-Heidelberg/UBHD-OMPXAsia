@@ -132,9 +132,9 @@ Hannah Uprety untersucht in ihrer Masterarbeit <em>{{=A(T('Between Exploitation 
           </div>
           <div class="col-lg-3">
             <div class="box box-shadow">
-              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Serien</h4> {{elif session.forced_language =='en': }}<h4>Series</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/catalog3.jpg'),_width='145px',_class='titelbild')}}
+              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming soon</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/franke2016.jpg'),_width='145px',_class='titelbild')}}
               </div>
-              <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','series/gsa'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','series/gsa'))}} {{pass}}
+              <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','index#franke'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','index#franke_en'))}} {{pass}}
               </div>
             </div>
           </div>

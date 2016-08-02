@@ -73,7 +73,7 @@
             <div class="col-lg-3">
                 <article>
                     <div class="post-image">
-  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='300')}}
+  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='300',_class='titelbild')}}
                     </div>
                 </article>
             </div>
@@ -139,13 +139,13 @@
         <div class="row contentbox_book">
             <div class="col-lg-3">
                 <article>
-                    <div class="post-image"></div>
+                    <div class="post-image">{{=IMG(_src=URL('static','images/catalog/franke2016.jpg'),_width='300',_class='titelbild')}}</div>
                 </article>
             </div>
             <div class="col-lg-9">
                 {{if session.forced_language =='de': }}
                 <article>
-                    <div class="post-heading"><a id="otter"></a>
+                    <div class="post-heading"><a id="franke"></a>
                         <h3>Martina Franke</h3>
                         <h4>Hoffnungsträger und Sorgenkind Südasien:<br />Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973</h4>
                     </div>
@@ -161,7 +161,7 @@
                 </article>
                 {{elif session.forced_language =='en': }}
                 <article>
-                    <div class="post-heading"><a id="otter_en"></a>
+                    <div class="post-heading"><a id="franke_en"></a>
                         <h3>Martina Franke</h3>
                         <h4>Hoffnungsträger und Sorgenkind Südasien:<br />Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973</h4>
                     </div>
