@@ -2104,7 +2104,7 @@ article img.pull-right, article .align-right{
 
        #heiup-logo
         {
-           width:auto !important;
+           width:230px !important;
         }
        #main-slider
         {
@@ -2127,6 +2127,8 @@ article img.pull-right, article .align-right{
 }
 
 /*Anpassungen WWW Heidelberg*/
+
+.bildrahmen, .post-image img {border:1px solid #cdcbcc} 
 
 #service-navi a {color: #a39b94;}
 
@@ -2229,7 +2231,7 @@ article img.pull-right, article .align-right{
   }
 */
 #heiup-logo {
-  width: 100%;
+  width: 230px;
  /* padding: 0 0.5em;*/
 } 
 
