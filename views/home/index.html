@@ -4,143 +4,118 @@
         $('.flexslider').flexslider();
     }); 
 </script> 
-<div class="container">
-  <!-- end header -->
-  <section id="content" style="padding-top:25px;">
-    <div class="container">
-      <div class="row news_row">
 
+<div class="row news-row">
+    <div class="col-lg-12">
+		<div class="row">
             <div class="col-lg-3">
-              <div class="box box-shadow"> 
-                <div class="box-gray aligncenter">{{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{elif session.forced_language =='en': }}<h4>New Titles</h4>{{pass}}
-				{{=IMG(_src=URL('static','files/presses/4/monographs/126/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-                </div>
-                <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/126'))}}</div>    
-              </div>
-            </div>
-			
-            <div class="col-lg-3">
-              <div class="box box-shadow">
-                <div class="box-gray aligncenter"> 
-				   {{if session.forced_language =='de': }}<h4>Serien</h4>{{elif session.forced_language =='en': }}<h4>Series</h4>{{pass}}
-				   {{=IMG(_src=URL('static','files/presses/4/monographs/124/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+				<div class="box box-shadow"> 
+					<div class="box-gray aligncenter">{{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{elif session.forced_language =='en': }}<h4>New Titles</h4>{{pass}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/126/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/126'))}}</div>    
 				</div>
-                <div class="box-bottom">{{=A(T('More'),_href=URL('catalog','series/bgp'))}}</div> 
-              </div>
 			</div>
-         
-          <div id="boxAktuelles" class="col-lg-6">
-            <div class="box box-shadow">
-              <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}
-                
-                 <div class="media">
-                  <div class="media-left pull-left"> 
-                       <img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-                  </div>
-                  <div class="media-body">
-                    <p class="media-heading"> 
-                      <span class="aktuelles_datum">25.07.2016</span>
-                      <br />
-                      {{if session.forced_language =='de': }}
-                               <h5>Neuerscheinung zum Thema Arbeitsmigration</h5> 
-                      {{elif session.forced_language =='en': }}
-                               <h5>New publication on labour migration</h5> 
-                      {{pass}}
-                    </p>
-                    <p class="boxText"> 
-                      {{if session.forced_language =='de': }} 
-                              Im Vorfeld der näher rückenden FIFA-Weltmeisterschaft in Katar wächst das mediale Interesse an der großen Rolle, die ausländische Arbeitskräfte für das rasante Wachstum der Golfstaaten-Metropolen spielen.<br />
-Hannah Uprety untersucht in ihrer Masterarbeit <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> wie sich diese meist männlichen Migranten und ihre Familien in transnationale Formen der Lebensführung einfinden und wie ihre Identitäten sich entlang dieses Prozesses verändert.
-                      {{elif session.forced_language =='en': }} 
-                               In light of the upcoming FIFA world championship in Qatar, increasing international attention has turned to the large role of foreign workers in the rapid growth of many Gulf cities, as well as the often problematic working and living conditions of these laborers.<br />
-                               In her thesis <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> Hannah Uprety investigates how these mostly male migrants and their families navigate through transnational lifestyles and how their identities are transformed alongside them.
-                      {{pass}}
-                    </p>
-                  </div>
-                </div>
-                
-                <div class="media">
-                  <div class="media-left pull-left"> 
-                       <img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-                  </div>
-                  <div class="media-body">
-                    <p class="media-heading"> 
-                      <span class="aktuelles_datum">06.06.2016</span>
-                      <br />
-                      {{if session.forced_language =='de': }}
-                               <h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> 
-                      {{elif session.forced_language =='en': }}
-                               <h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> 
-                      {{pass}}
-                    </p>
-                    <p class="boxText"> 
-                      {{if session.forced_language =='de': }} 
-                               CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! 
-                      {{elif session.forced_language =='en': }} 
-                               CrossAsia E-Publishing will be present at the 24th European Conference on South Asian Studies in Warsaw. Visit us at the publisher space and get informed on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Warsaw! 
-                      {{pass}}
-                    </p>
-                  </div>
-                </div>
+			
+			<div class="col-lg-3">
+				<div class="box box-shadow">
+					<div class="box-gray aligncenter"> 
+					   {{if session.forced_language =='de': }}<h4>Serien</h4>{{elif session.forced_language =='en': }}<h4>Series</h4>{{pass}}
+					   {{=IMG(_src=URL('static','files/presses/4/monographs/124/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+					</div>
+					<div class="box-bottom">{{=A(T('More'),_href=URL('catalog','series/bgp'))}}</div> 
+				</div>
+			</div>
+			
+			<div id="boxAktuelles" class="col-lg-6">
+				<div class="box box-shadow">
+				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}					
+					 <div class="media">
+						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
+						  <div class="media-body">
+							<p class="media-heading"><span class="aktuelles_datum">25.07.2016</span><br />
+							  {{if session.forced_language =='de': }}<h5>Neuerscheinung zum Thema Arbeitsmigration</h5>{{elif session.forced_language =='en': }}<h5>New publication on labour migration</h5>{{pass}}
+							</p>
+							<p class="boxText"> 
+							  {{if session.forced_language =='de': }} 
+									  Im Vorfeld der näher rückenden FIFA-Weltmeisterschaft in Katar wächst das mediale Interesse an der großen Rolle, die ausländische Arbeitskräfte für das rasante Wachstum der Golfstaaten-Metropolen spielen.<br />
+		Hannah Uprety untersucht in ihrer Masterarbeit <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> wie sich diese meist männlichen Migranten und ihre Familien in transnationale Formen der Lebensführung einfinden und wie ihre Identitäten sich entlang dieses Prozesses verändert.
+							  {{elif session.forced_language =='en': }} 
+									   In light of the upcoming FIFA world championship in Qatar, increasing international attention has turned to the large role of foreign workers in the rapid growth of many Gulf cities, as well as the often problematic working and living conditions of these laborers.<br />
+									   In her thesis <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> Hannah Uprety investigates how these mostly male migrants and their families navigate through transnational lifestyles and how their identities are transformed alongside them.
+							  {{pass}}
+							</p>
+						  </div>
+					</div>
+					
+					<div class="media">
+					  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
+						  <div class="media-body">
+							<p class="media-heading"><span class="aktuelles_datum">06.06.2016</span><br />
+							  {{if session.forced_language =='de': }}<h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> {{elif session.forced_language =='en': }}<h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> {{pass}}
+							</p>
+							<p class="boxText"> 
+							  {{if session.forced_language =='de': }} 
+									   CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! 
+							  {{elif session.forced_language =='en': }} 
+									   CrossAsia E-Publishing will be present at the 24th European Conference on South Asian Studies in Warsaw. Visit us at the publisher space and get informed on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Warsaw! 
+							  {{pass}}
+							</p>
+						  </div>
+					</div>
 
-              <div class="media">
-                  <div class="media-left pull-left">
-                       <img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" />
-                  </div>
-                  <div class="media-body">
-                      <p class="media-heading">
-                         {{if session.forced_language =='de': }}
-                                <h5>open-access.net</h5>
-                         {{elif session.forced_language =='en': }}
-                                <h5>open-access.net</h5>
-                         {{pass}}
-                      </p>
-                      <p class="boxText">
-                         {{if session.forced_language =='de': }}
-                                Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
-                         {{elif session.forced_language =='en': }}
-                                Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
-                         {{pass}}
-                      </p>
-                  </div>
-              </div>
-            </div>
-
-
-              <div class="box-bottom">&nbsp;
-              </div>
-            </div>
-          </div>	  
-    </div>
-
-    <div class="row news_row">
-          <div class="col-lg-3">
-            <div class="box box-shadow">
-              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px',_class='bildrahmen')}}
-              </div>
-              <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3">
-            <div class="box box-shadow">
-              <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming soon</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/franke2016.jpg'),_width='145px',_class='bildrahmen')}}
-              </div>
-              <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','index#franke'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','index#franke_en'))}} {{pass}}
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" id="boxAktuelles">
-            <div class="box box-shadow">
-              <div class="box-gray aligncenter"><div class="box_logo">{{=IMG(_src=URL(myconf.take('web.application'),'static','images/home/logo_ebooks.png'),_width='200px')}}</div>
-                <p class="boxText"> {{if session.forced_language =='de': }} ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit. Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP). {{elif session.forced_language =='en': }} is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP). {{pass}}
-                </p>
-              </div>
-              <div class="box-bottom">&nbsp;
-              </div>
-            </div>
-          </div>
-    </div>
+				  <div class="media">
+					  <div class="media-left pull-left"><img src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" /></div>
+					  <div class="media-body"><p class="media-heading">{{if session.forced_language =='de': }}<h5>open-access.net</h5>{{elif session.forced_language =='en': }}<h5>open-access.net</h5>{{pass}}</p>
+						  <p class="boxText">
+							 {{if session.forced_language =='de': }}
+									Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
+							 {{elif session.forced_language =='en': }}
+									Are you aware of the platform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? It offers detailed information on the subject of Open Access and a practical implementation guide. open-access.net provides well-edited, customized concepts, information on legal, organizational and technical framework conditions, shares concrete experiences with the realization, and introduces initiatives, services and position papers.
+							 {{pass}}
+						  </p>
+					  </div>
+				  </div>
+				</div>
+				<div class="box-bottom">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-</section>
+
+<div class="row news-row">
+    <div class="col-lg-12">
+		<div class="row">
+            <div class="col-lg-3">
+				<div class="box box-shadow">
+				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px',_class='bildrahmen')}}
+				  </div>
+				  <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-lg-3">
+				<div class="box box-shadow">
+				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming soon</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/franke2016.jpg'),_width='145px',_class='bildrahmen')}}
+				  </div>
+				  <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','index#franke'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','index#franke_en'))}} {{pass}}
+				  </div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6">
+				<div class="box box-shadow">
+				  <div class="box-gray aligncenter"><div class="box_logo">{{=IMG(_src=URL(myconf.take('web.application'),'static','images/home/logo_ebooks.png'),_width='200px')}}</div>
+					<p class="boxText"> {{if session.forced_language =='de': }} ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit. Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP). {{elif session.forced_language =='en': }} is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP). {{pass}}</p>
+				  </div>
+				  <div class="box-bottom">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
+
+
+

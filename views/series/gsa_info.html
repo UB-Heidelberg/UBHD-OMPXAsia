@@ -1,58 +1,60 @@
 {{extend 'layout.html'}}
 
-<div id="main" class="container">
-    <div class="row contentbox_partner">
-        <div class="col-lg-12">
-            <h3>  {{if session.forced_language =='de': }}
-                Geographien Südasiens  
-                {{elif session.forced_language =='en': }}
-                Geographien Südasiens
-            {{pass}}
-            </h3>
-		</div>	
-
-
-        {{if session.forced_language =='de': }}
-		<div class="col-lg-9">
-		    <p>Der Arbeitskreis Südasien hat die Schriftenreihe „Geographien Südasiens“ gegründet, um Einblicke in aktuelle geographische Forschung zu Südasien zu ermöglichen. In der Schriftenreihe werden die Vorträge auf den Jahrestagungen des Arbeitskreises in Form von Extended Abstracts in jeweils einem Sammelband zusammengefasst. Zusätzlich besteht darüber hinaus die Möglichkeit, neuere Beiträge zur Südasienforschung in zusätzlichen Bänden ausführlicher zu behandeln. Der Tagungsband wird von den Sprechern des AK herausgegeben. Interessenten für Publikationen wenden sich bitte an: <span style="white-space: nowrap;">julia.poerting@asia-europe.uni-heidelberg.de</span>.</p>
-            <p>Weitere Informationen zur Arbeit des AK Südasien in der Deutschen Gesellschaft für Geographie (DGfG) finden Sie auf der Homepage des <a href="http://www.geographien-suedasiens.de/" title="Homepage">Arbeitskreises Südasien</a>.</p>
-            <div class="widget">
-                        <ul class="tags">
-
-                            <li>
-
-                               <p><a href="{{=URL('catalog', 'series/gsa')}}">{{=T('Volumes')}}</a></p>
-
-                            </li>
-
-                        </ul>
-            </div> 
-        </div> 		
-		
-		<div class="col-lg-3">
-		    <p>{{=IMG(_src=URL('static','images/series/gsa_logo.png'),_width='230px')}}</p>
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>  {{if session.forced_language =='de': }}
+					Geographien Südasiens  
+					{{elif session.forced_language =='en': }}
+					Geographien Südasiens
+				{{pass}}
+				</h3>
+			</div>	
 		</div>
-		{{elif session.forced_language =='en': }}
-		<div class="col-lg-9">
-		    <p>The series “Geographien Südasiens”, edited by the board members of the Study Group, makes the timely publication of current research possible and gives insights in the broad expertise of the Study Group’s members. It comprises extended abstracts that build on conferences papers presented at the annual conferences. It is also possible to publish theses and themed issues in this series. Anyone interested in publications please contact: <span style="white-space: nowrap;">julia.poerting@asia-europe.uni-heidelberg.de</span>.</p>
-            <p>Weitere Informationen zur Arbeit des AK Südasien in der Deutschen Gesellschaft für Geographie (DGfG) finden Sie auf der Homepage des <a href="http://www.geographien-suedasiens.de/" title="Homepage">Arbeitskreises Südasien</a>.</p>
-            <div class="widget">
-                        <ul class="tags">
-
-                            <li>
-                               <p><a href="{{=URL('catalog', 'series/gsa')}}">{{=T('Volumes')}}</a></p>
-                            </li>
-
-                        </ul>
-            </div>
-        </div> 		
 		
-		<div class="col-lg-3">
-		    <p>{{=IMG(_src=URL('static','images/series/gsa_logo.png'),_width='230px')}}</p>
+		<div class="row">
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">
+				<p>Der Arbeitskreis Südasien hat die Schriftenreihe „Geographien Südasiens“ gegründet, um Einblicke in aktuelle geographische Forschung zu Südasien zu ermöglichen. In der Schriftenreihe werden die Vorträge auf den Jahrestagungen des Arbeitskreises in Form von Extended Abstracts in jeweils einem Sammelband zusammengefasst. Zusätzlich besteht darüber hinaus die Möglichkeit, neuere Beiträge zur Südasienforschung in zusätzlichen Bänden ausführlicher zu behandeln. Der Tagungsband wird von den Sprechern des AK herausgegeben. Interessenten für Publikationen wenden sich bitte an: <span style="white-space: nowrap;">julia.poerting@asia-europe.uni-heidelberg.de</span>.</p>
+				<p>Weitere Informationen zur Arbeit des AK Südasien in der Deutschen Gesellschaft für Geographie (DGfG) finden Sie auf der Homepage des <a href="http://www.geographien-suedasiens.de/" title="Homepage">Arbeitskreises Südasien</a>.</p>
+				<div class="widget">
+							<ul class="tags">
+
+								<li>
+
+								   <p><a href="{{=URL('catalog', 'series/gsa')}}">{{=T('Volumes')}}</a></p>
+
+								</li>
+
+							</ul>
+				</div> 
+			</div> 		
+			
+			<div class="col-lg-3">
+				<p>{{=IMG(_src=URL('static','images/series/gsa_logo.png'),_width='230px')}}</p>
+			</div>
+			{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">
+				<p>The series “Geographien Südasiens”, edited by the board members of the Study Group, makes the timely publication of current research possible and gives insights in the broad expertise of the Study Group’s members. It comprises extended abstracts that build on conferences papers presented at the annual conferences. It is also possible to publish theses and themed issues in this series. Anyone interested in publications please contact: <span style="white-space: nowrap;">julia.poerting@asia-europe.uni-heidelberg.de</span>.</p>
+				<p>Weitere Informationen zur Arbeit des AK Südasien in der Deutschen Gesellschaft für Geographie (DGfG) finden Sie auf der Homepage des <a href="http://www.geographien-suedasiens.de/" title="Homepage">Arbeitskreises Südasien</a>.</p>
+				<div class="widget">
+							<ul class="tags">
+
+								<li>
+								   <p><a href="{{=URL('catalog', 'series/gsa')}}">{{=T('Volumes')}}</a></p>
+								</li>
+
+							</ul>
+				</div>
+			</div> 		
+			
+			<div class="col-lg-3">
+				<p>{{=IMG(_src=URL('static','images/series/gsa_logo.png'),_width='230px')}}</p>
+			</div>
+			{{pass}}
+
 		</div>
-		{{pass}}
-
-		
     </div>
 </div>
 
