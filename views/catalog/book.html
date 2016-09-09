@@ -3,10 +3,8 @@
 {{from ompdal import OMPDAL}}
 
 
-<div id="main" class="container">
-	<section id="content">
-	  <div style="height: 20px"></div>
-	  <div class="container contentbox_title">
+<div class="row">	
+	<div class="col-lg-12 contentbox-12">	
 	    <div class="row">
 	      <div class="col-lg-3">
 	        <article>
@@ -55,7 +53,7 @@
 					{{file_types= ['pdf','xml']}}
 					{{chapter_html = stats.getChapterHTMLTable(submission_id, file_types,"width: inherit; padding:0; font-size:11px")}}
 					<div id="oas-widget" class="applied-to-ojs" style="margin-top: 1.2em">
-						<div class="btn btn-default" id="statistik-button">{{=T('Statistics since 07.03.16')}}</div> <br/>
+						<div class="btn btn-default" id="statistik-button">{{=T('Statistics')}}</div> <br/>
 						<div style="display:none" class="table" id="oas">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#full" data-toggle="tab"><i class="icon-briefcase"></i> {{=T('Book')}}</a></li>
@@ -223,8 +221,7 @@
 	          </div>
 	        </article>
 	      </div>
-	    </div>
-	  </div>
-	</section>
-	<div id="vgwpixel"></div>
+		</div>
+	</div>
 </div>
+<div id="vgwpixel"></div>

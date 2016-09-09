@@ -1,7 +1,7 @@
 {{extend 'layout.html'}}
-<div id="main" class="container">
-  <div class="row">
-    <div class="col-lg-12 contentbox"><h3>  {{if session.forced_language =='de': }} Informationen für Autoren {{elif session.forced_language =='en': }} Information for Authors {{pass}}</h3>
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	<h3>  {{if session.forced_language =='de': }} Informationen für Autoren {{elif session.forced_language =='en': }} Information for Authors {{pass}}</h3>
       <p> {{if session.forced_language =='de': }}
         <p>Wenn Sie Interesse daran haben, Ihre <b>Monographie</b> / Ihr <b>Sammelwerk</b> / Ihre <b>Schriftenreihe</b> als <b>Primärpublikation</b> („goldener Weg“) oder auch als <b>Sekundärpublikation</b> („grüner Weg“) auf <b>CrossAsia-eBooks</b> zu veröffentlichen, senden Sie uns bitte Ihren Buchvorschlag zu. Gerne vereinbaren wir auch einen Termin für ein Informationsgespräch (<a href="{{=URL(myconf.take('web.application'),'contact','index')}}" style="padding-right: 0;">Kontaktinformationen</a>)
         </p><h4>Unser Angebot für Sie:</h4>
@@ -45,6 +45,5 @@
           <li><b>Important information for authors: Authors are responsible for obtaining permission to use all content that they do not produce themselves</b>. Such content can include images, videos, data, audio files, or charts. Any material that is not the sole creation of the author may be used only with the express permission of the copyright holder. <b>CrossAsia-eBooks</b> assumes no liability for the use of third-party content.
           </li> {{pass}}
       </p>
-    </div>
   </div>
 </div>

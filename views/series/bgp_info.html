@@ -1,37 +1,60 @@
 {{extend 'layout.html'}}
 
-<div id="main" class="container">
-    <div class="row">
-        <div class="col-lg-12 contentbox">
-            <h3>
-                {{if session.forced_language =='de': }}  
-                Berlin Geographical Papers (seit Band 36; ehemals Occasional Papers Geographie)   
-                {{elif session.forced_language =='en': }}
-                Berlin Geographical Papers (since Volume 36; before titled ‘Occasional Papers Geographie’)
-                {{pass}}
-            </h3>
-            <div id="infoBoxRechts" class="col-lg-3"><p>{{=IMG(_src=URL('static','images/partner/zelf_logo.jpg'),_width='230px')}}</p></div>
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>
+					{{if session.forced_language =='de': }}  
+					Berlin Geographical Papers (seit Band 36; ehemals Occasional Papers Geographie)   
+					{{elif session.forced_language =='en': }}
+					Berlin Geographical Papers (since Volume 36; before titled ‘Occasional Papers Geographie’)
+					{{pass}}
+				</h3>
+			</div>
+		</div>
 
-                {{if session.forced_language =='de': }}
-                <p>Die Reihe der Berlin Geographical Papers veröffentlicht die Ergebnisse von aktuellen Forschungsprojekten am Centre for Development Studie der Freien Universität Berlin. Der regionale Schwerpunkt liegt auf Asien mit besonderem Fokus auf Süd- und Zentralasien. Die Reihe hat das Ziel der schnellen Kommunikation von Forschungsergebnissen an eine interessierte Öffentlichkeit.</p>
-                {{elif session.forced_language =='en': }}
-                <p>Berlin Geographical Papers series attempts to publish scientific results from ongoing research projects at the Centre for Development Studies, Freie Universitaet Berlin. The regional research focus is directed on Asia, and more specifically on South and Central Asia. The results are related to geographical development studies in a broader sense. The series aims to make research findings accessible to an interested public without delay and as open source.</p>
-                {{pass}}
+		<div class="row">	
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">	
+				  <p>Die Reihe der Berlin Geographical Papers veröffentlicht die Ergebnisse von aktuellen Forschungsprojekten am Centre for Development Studie der Freien Universität Berlin. Der regionale Schwerpunkt liegt auf Asien mit besonderem Fokus auf Süd- und Zentralasien. Die Reihe hat das Ziel der schnellen Kommunikation von Forschungsergebnissen an eine interessierte Öffentlichkeit.</p>               
+				  <div class="widget">
+							<ul class="tags">
 
-                <div class="widget">
-                        <ul class="tags">
+								<li>
 
-                            <li>
+								   <p><a href="{{=URL('catalog', 'series/bgp')}}">{{=T('Volumes')}}</a></p>
 
-                               <p><a href="{{=URL('catalog', 'series/bgp')}}">{{=T('Volumes')}}</a></p>
+								</li>
 
-                            </li>
+							</ul>
+				  </div>        
+			</div>	
 
+			<div class="col-lg-3">
+				  <p>{{=IMG(_src=URL('static','images/partner/zelf_logo.jpg'),_width='230px')}}</p>
+			</div>		
+			{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">	
+				  <p>Berlin Geographical Papers series attempts to publish scientific results from ongoing research projects at the Centre for Development Studies, Freie Universitaet Berlin. The regional research focus is directed on Asia, and more specifically on South and Central Asia. The results are related to geographical development studies in a broader sense. The series aims to make research findings accessible to an interested public without delay and as open source.</p>
+				  <div class="widget">
+							<ul class="tags">
 
+								<li>
 
-                        </ul>
-                    </div>
-          </div>
-     </div>
+								   <p><a href="{{=URL('catalog', 'series/bgp')}}">{{=T('Volumes')}}</a></p>
+
+								</li>
+
+							</ul>
+				  </div>
+			</div>	
+
+			<div class="col-lg-3">
+				  <p>{{=IMG(_src=URL('static','images/partner/zelf_logo.jpg'),_width='230px')}}</p>
+			</div>	
+			{{pass}}
+       </div>
+    </div>
 </div>
 

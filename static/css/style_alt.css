@@ -27,7 +27,7 @@ body {
 	font-weight:300;
 	line-height:1.6em;
 	color:#656565;
-    background-color:#e8e6e1 !important;
+        background-color:#e8e6e1 !important;
 }
 
 a:active {
@@ -39,6 +39,7 @@ a:active {
 }
 
 h1,h2, h3, h4, h5, h6 {
+	font-family: 'Noto Sans', sans-serif;
 	font-weight: 700;
 	line-height: 1.1em;
 	color: #333;
@@ -46,6 +47,9 @@ h1,h2, h3, h4, h5, h6 {
 }
 
 
+#main {background-color:#f6f6f6;
+       padding:1.9em;
+}
 
 /* ===================================
 2. layout
@@ -54,9 +58,9 @@ h1,h2, h3, h4, h5, h6 {
 .container {
 	padding:0 20px 0 20px;
 	position:relative;
-    width:88.571em;
-    max-width:88.571em;
-    background-color:#f6f6f6;
+        width:88.571em;
+        max-width:88.571em;
+        background-color:#f6f6f6;
 }
 
 #content .container {width:100%;}
@@ -66,6 +70,86 @@ h1,h2, h3, h4, h5, h6 {
 	margin:0;	
 	padding:0;
 }
+
+
+.row,.row-fluid {
+	margin-bottom:0px;
+}
+
+.row .row,.row-fluid .row-fluid{
+	margin-bottom:30px;
+}
+
+.row.nomargin,.row-fluid.nomargin {
+	margin-bottom:0;
+}
+
+.news_row {margin-bottom:2em;}
+
+.contentbox {
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
+  margin-left:-15px;
+  margin-right:-15px;
+  padding:15px;
+  }
+
+.section_contentbox {
+  background-color:#fff !important;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
+  padding-top:0em !important;
+  padding-bottom:0em !important;
+  }
+.contentbox_book {
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
+  padding:1em;
+  margin-bottom:2em;
+  margin-left:-25px;
+  margin-right:-25px;
+  }
+  
+  .contentbox_partner {
+  background-color:#fff;
+  border: 1px solid #e8e6e1;
+  border-radius: 5px;
+  padding:1em;
+  margin:2em -15px;
+  }
+
+.contentbox_seriestitle {
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
+  margin-bottom:1em;
+  margin-left:-25px;
+  margin-right:-25px;
+  padding-left:1em;
+  padding-right:1em;
+  }
+
+.contentbox_seriesbook {
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
+  margin-bottom:1em;
+  padding-top:1em;
+  }
+
+.contentbox_title {
+  background-color:#fff;
+  border:1px solid #e8e6e1;
+  border-radius: 5px;
+  padding:1em !important;
+  }
+
+.box_logo {float:left;
+  margin-right:1em;}
+
+.titelbild {border:1px solid #e8e6e1;}
 
 
 /* ===================================
@@ -98,13 +182,11 @@ img.img-polaroid {
 
 /* --- header -- */
 
-#service-navi .container {padding:0 !important;}
 
-#heiup-logo {width: 230px; margin-bottom:1em;} 
+header .navbar {
+    margin-bottom: 0;
 
-#headerBild .container {padding:0;}
-
-#headerBild .container img {width: 100%;}
+}
 
 .navbar-default {
     border: none;
@@ -117,6 +199,7 @@ img.img-polaroid {
     font-weight: 700;
     line-height: 1em;
 	letter-spacing: -1px;
+    margin-top: 30px;
     padding: 0 0 0 15px;
 }
 
@@ -126,16 +209,23 @@ header .navbar-collapse  ul.navbar-nav {
     margin-right: 0;
 }
 
+header .navbar-default{
+    background-color: #f6f6f6;
+}
+
+#headerLogo {margin-bottom:1em; margin-top:-1em;}
+#main_menu, #header_menu {height:40px !important;}
+
+#main_menu .container {height:0;}
 
 header .nav li a {
     padding-top:5px !important;
     padding-bottom: 5px !important;
 }
 
+
 header .navbar {
-	background-color:transparent !important;
-	margin-bottom: 0;
-	min-height:0;
+    min-height: 100px;
    }
 
 .dropdown-menu li a:hover {
@@ -206,7 +296,7 @@ header ul.nav li a {
 header ul.nav li ul li a {	
 	font-size:12px;
 	border:none;
-	font-weight:700;
+	font-weight:300;
 	text-transform:uppercase;
 }
 
@@ -269,44 +359,66 @@ ul.nav li.dropdown a {
 	display:none;
 }
 
+/* ===================================
+5. Section: Featured
+==================================== */
+
+#featured{
+	width: 100%;
+	background:#fcfcfc;
+	position:relative;
+	margin:0;
+	padding:0;
+}
+
+/* ===================================
+6. Sliders
+==================================== */
+/* --- flexslider --- */
+
+#featured .flexslider {
+	padding:0;
+	/*margin: 50px 0 30px;*/ 
+	background: #fff; 
+	position: relative; 
+	zoom: 1;
+}
+
+.flexslider ul li {display:block !important;}
+
+.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
+.flex-caption { bottom: 35px; background-color: rgba(0, 0, 0, 0.8); color: #fff; margin: 0; padding: 25px 25px 25px 30px; position: absolute; right: 0; width: 295px;}
+.flex-caption h3 {color: #fff; letter-spacing: 1px; margin-bottom: 8px; text-transform: uppercase;}
+.flex-caption p {margin: 0 0 15px;}
+
+
+
+/* ===================================
+7. Section: call action
+==================================== */
+section.callaction {
+	background:#f9f9f9;
+	padding:50px 0 0 0;
+}
+
+
 
 /* ===================================
 8. Section: Content
 ==================================== */
 
-
-.row {
-	margin:0px -10px;
-}
-
-.news_row {margin-bottom:2em;}
-
-
 #content {
 	position:relative;
+	background:#f6f6f6;
+	padding:0px 10px 0px 10px;
 }
+
+
 
 #content img {
 	max-width:100%;
 	height:auto;
 }
-
-.contentbox-12 {
-  background-color:#fff;
-  border: 1px solid #e8e6e1;
-  border-radius: 5px;
-  padding:15px;
-  margin-bottom:20px;
-  }
-  
-.news-row {margin:0 -30px 20px -30px;}
-
-
-.box_logo {float:left;
-  margin-right:1em;}
-
-.titelbild {border:1px solid #e8e6e1;}
-
 
 .separator {width:100%;
             height:1px;
@@ -1502,8 +1614,8 @@ ul.time-post li.time{
 ================================ */
 
 footer{
+	padding:5px 0 0 0;
 	color:#a39b94;
-	background-color:transparent !important;
 }
 
 footer a {
@@ -1544,10 +1656,8 @@ ul.social-network li {
 	color:#a39b94;
 	padding:0;
 	padding-top:0px;
-	background-color:transparent !important;
+	margin:20px 0 0 0;
 }
-
-#sub-footer .container {border-bottom: 1px solid #ddd;}
 
 #sub-footer p {
 	margin:0;
@@ -1827,6 +1937,7 @@ article img.pull-right, article .align-right{
 		border-bottom: none;
 	}
 	.navbar-header {
+		margin-top: 20px;
 		border-bottom: none;
 	}
 	
@@ -1949,6 +2060,10 @@ article img.pull-right, article .align-right{
 		float:left;
 	}
 
+	.flexslider .flex-caption {
+		display:none;
+	}
+
 
 	.cta-text {
 		margin:0 auto;
@@ -1965,7 +2080,7 @@ article img.pull-right, article .align-right{
         {
            width:100% !important;
         }
-       .col-lg-12, footer
+       .col-lg-12, .col-md-12, .container-fluid, footer
         {
            padding:0;
         }
@@ -1975,19 +2090,28 @@ article img.pull-right, article .align-right{
 		   padding-right:1em !important;
         }
 		
-		#content {padding:0 !important;}
+       #main .row ul
+               {
+           padding-left:1em !important;
+           padding-right:1em !important;
+        }
 		
-
+		#main .row ul.tags
+               {
+           padding-left:0em !important;
+           padding-right:0em !important;
+        }
+		
 		.widget ul.tags li a {width:100%!important; display:block;margin-bottom:0.2em;}
 		
-		.row {padding-left:15px; padding-right:15px;}
-		
-		.news-row {padding-left:30px !important; padding-right:30px !important;}
-		
-		.news-row .col-lg-12 .row .col-lg-3 {margin-bottom:0.5em; }
-		
-		.news-row .col-lg-12 .row .col-lg-6 {margin-bottom:0.5em; padding:0;}
+		.news_row {padding:0 !important;}
 
+		.news_row .col-lg-3 {margin-bottom:1.5em;}
+		
+		.news_row .col-lg-6 {padding:0 !important;}
+		
+		.contentbox_partner {margin-left:5px; margin-right:5px;}
+		
        #breadcrumbNav ul, #langMenuInBreadcrumbline ul {
         margin-left:1em !important;
         }
@@ -2003,14 +2127,26 @@ article img.pull-right, article .align-right{
         {
            margin-left: 20%;
         }
+       #service-navi
+        {
+           padding-top:1em;
+           padding-right:1.5em;
+        }
 
-      #headerBild   {display:none;}
-	  
+       #heiup-logo
+        {
+           width:230px !important;
+        }
+       #main-slider
+        {
+           display:none;
+        }
        #infoBoxRechts
         {
            width:100%;
            margin:0;
         }
+    .row {padding-left:15px; padding-right:15px;}
 
 }
 
@@ -2025,7 +2161,7 @@ article img.pull-right, article .align-right{
 
 .bildrahmen, .post-image img {border:1px solid #cdcbcc} 
 
-#service-navi a {color: #a39b94; font-weight:500;}
+#service-navi a {color: #a39b94;}
 
 #service-navi a:hover {color: #9d1512;}
 
@@ -2041,11 +2177,6 @@ article img.pull-right, article .align-right{
        #sub-footer {margin:0em;}
        .contentbox {padding:15px !important;margin:0px;}
 	   .col-lg-3, .col-lg-9 {padding:0 !important;}   
-	   .contentbox-12 {padding:15px !important;}
-}
-
-@media (min-width: 768px) and (max-width: 942px) {
-	.navbar .nav > li > a {font-size:12px !important; padding:0 2px !important;}
 }
 
 @media (min-width: 481px) and (max-width: 1230px) {
@@ -2055,10 +2186,9 @@ article img.pull-right, article .align-right{
            padding-right:3%;
         }
 		
+	#headerLogo {margin-left:15px;}
 	
 	.news_row .col-lg-3 {margin-left:15px; margin-right:15px;}
-	
-	.col-lg-6 {padding:0 !important;}
 	
        .container, .col-lg-9, #boxAktuelles
         {
@@ -2068,17 +2198,32 @@ article img.pull-right, article .align-right{
         {
            padding:0;
         }
-
+       #service-navi
+        {
+           padding-top:1em;
+           padding-right:1.5em;
+        }
        .row
         {
            margin:0em;
         }
+       .contentbox_book, .contentbox_seriesbook, .contentbox_partner {margin:1em;}
 	   
+	   .contentbox_seriestitle {margin:0 0px}
+	   
+
        #content
+        {
+           padding:10px 0 0 !important;
+        }
+       #main
         {
            padding:0 !important;
         }
-
+       #main .row
+        {
+           padding:1em !important;
+        }
        .title_volumes
         {
            margin-left:0.4em;
@@ -2104,6 +2249,11 @@ article img.pull-right, article .align-right{
 	
 }
 
+
+.container {
+  padding: 0;
+}
+
 .flex-caption {
   min-height: 16em;
 }
@@ -2115,13 +2265,28 @@ article img.pull-right, article .align-right{
 
 /*** Kopfbereich ***/
 
-
+/*
+#headerLogo {
+  background-image: url(../images/press/header_bild.jpg);
+  height:115px;
+  padding:0 !important;
+  }
+*/
+#heiup-logo {
+  width: 230px;
+ /* padding: 0 0.5em;*/
+} 
 
 
 
 header {
   margin-top: 0em;
 }  
+
+header .navbar {
+  min-height: 0;
+}
+
 
 /*header .navbar-collapse ul.navbar-nav {
   float: left;
@@ -2135,7 +2300,7 @@ header > .col-lg-12 {
 
 
 .navbar-static-top  .container {
-  padding: 0 5px;
+  padding: 0;
 }
 
 .navbar-static-top {z-index:5 !important;}
@@ -2146,7 +2311,7 @@ header > .col-lg-12 {
   padding-right: 10px;
   margin-left: 5px;
   margin-right: 10px;
-  font-size:15px;
+  font-size:16px !important;
   height:40px;
   line-height:30px;
 } 
@@ -2367,7 +2532,6 @@ li > h5 {
 .footer_logo_col {
   width:20%;
   float:left;
-  padding-top:1em;
 }
 
 #footer_logo_ub img {
@@ -2399,7 +2563,9 @@ padding-right: 0px;
 
 
 #footer_logo_pkp {
-  margin:1em;
+  margin-top:0.5em;
+  margin-right:1em;
+  margin-bottom:1.5em;
   float:right;
 }
 
@@ -2534,6 +2700,5 @@ margin: 0.5cm;
      .footer_logo_col {width:100%;margin-bottom:2em;}
      .footer_logo_col .widget img {margin:0 0 0 0.5em !important; padding:0 !important;}
      .footer_logo_col span {margin:0em 0 0 0.5em !important; padding:0 !important;}
-	 #footer_logo_pkp {float:left !important; margin-left:0 !important;}
 }
 
