@@ -51,13 +51,11 @@
 	            {{pass}}
 				<!--stats block begin-->
 					<div id="oas-widget" class="applied-to-ojs" style="margin-top: 1.2em">
-                {{statics_note=T('')}}
-						<div class="btn btn-default" id="statistik-button" data-trigger="hover" data-content="{{=statics_note}}">{{=T('Statistics')}}</div> <br/>
+						<div class="btn btn-default" id="statistik-button">{{=T('Statistics')}}</div> <br/>
 						<div style="display:none" class="table" id="oas">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#full" data-toggle="tab"><i class="icon-briefcase"></i> {{=T('Book')}}</a></li>
-										<li class=""><a href="#chapters" data-toggle="tab">{{=T('Chapters')}}</a></li>
-									</ul>
+										<li class=""><a href="#chapters" data-toggle="tab">{{=T('Chapters')}}</a></li>																</ul>
 							<div class="tab-content">
 								<div class="tab-pane active" id="full">
 									<div class="table">
@@ -69,8 +67,8 @@
 								<div class="stats_chapter_cell">{{=B(file_type.upper())}}</div>                            {{file_type = 'xml' if file_type == 'html' else file_type }}
 				{{fid=str(submission.submission_id)+'-'+str(full_file.attributes['file_id'])+'-'+str(file_type)}}
 				{{file_ids.append(fid)}}
-                            <div id="{{=fid}}" class="chapter_file full_file" style="padding-left:1em"></div>
-													<div id="{{=submission.submission_id}}-{{=full_file.attributes['file_id']}}-{{=file_type}}" class="chapter_file full_file"></div>
+
+<div id="{{=fid}}" class="chapter_file full_file" style="padding-left:1em"></div>																						<div id="{{=submission.submission_id}}-{{=full_file.attributes['file_id']}}-{{=file_type}}" class="chapter_file full_file"></div>
 												</div>
 
 												{{pass}}
@@ -129,7 +127,7 @@
 											</div>
 										</div>
 									</div>
-
+								</div>
 
 
 
@@ -138,7 +136,6 @@
 					$('#statistik-button').click(function(){
 					$('#oas').slideToggle()
 					});
-                  
 					</script>
 				<script src="{{=URL('static','js/stats.js')}}"></script>
 
@@ -146,9 +143,8 @@
 	          </div>
 	        </div>
 	      </div>
-				</div>
 
-				<div class="col-lg-9">
+</div>		<div class="col-lg-9">
 	        <article>
 	          	<div class="">
 	              {{for pf in digital_publication_formats:}}
@@ -287,6 +283,7 @@
 	      </div>
 		</div>
 	</div>
+
+</section>
+	<div id="vgwpixel"></div>
 </div>
-</div>
-<div id="vgwpixel"></div>
