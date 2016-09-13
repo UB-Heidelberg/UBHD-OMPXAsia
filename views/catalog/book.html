@@ -69,7 +69,7 @@
 				{{fid=str(submission.submission_id)+'-'+str(full_file.attributes['file_id'])+'-'+str(file_type)}}
 				{{file_ids.append(fid)}}
 
-<div id="{{=fid}}" class="chapter_file full_file" style="padding-left:1em"></div>																						<div id="{{=submission.submission_id}}-{{=full_file.attributes['file_id']}}-{{=file_type}}" class="chapter_file full_file"></div>
+<div id="{{=fid}}" class="chapter_file full_file" style="padding-left:1em"></div>																																			<div id="{{=submission.submission_id}}-{{=full_file.attributes['file_id']}}-{{=file_type}}" class="chapter_file full_file"></div>
 												</div>
 
 												{{pass}}
@@ -146,7 +146,7 @@
 	        </div>
 	      </div>
 
-</div>						<div class="col-lg-9">
+</div>										<div class="col-lg-9">
 	        <article>
 	          	<div class="">
 	              {{for pf in digital_publication_formats:}}
