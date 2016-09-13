@@ -49,6 +49,7 @@
 	            	<div class="separator" style="margin-top: 1.2em"></div>
 	            	<p style="margin-top: 1.2em">{{=XML(submission_settings.getLocalizedValue('source', locale))}}</p>
 	            {{pass}}
+	            
 				<!--stats block begin-->
 					<div id="oas-widget" class="applied-to-ojs" style="margin-top: 1.2em">
 						<div class="btn btn-default" id="statistik-button">{{=T('Statistics')}}</div> <br/>
@@ -76,7 +77,7 @@
 											</div>
 										</div>
 										<div class="tab-pane" id="chapters">
-											{{if len(chapters) > 0:}}
+										
 										<div id="statsTableChapters" class="table">
 									<div class="stats_chapter_row statss_table_head">
 													<div class="stats_chapter_cell"></div>
@@ -102,10 +103,8 @@
 														{{file_type = 'xml' if file_type == 'html' else file_type }}
 														{{fid=str(submission.submission_id)+'-'+str(c_file.attributes['file_id'])+'-'+str(file_type)}}
  
-                           {{file_ids.append(fid)}}
- 	            						<div id="{{=fid}}" class="chapter_file">
-
-														</div>
+                                                        {{file_ids.append(fid)}}
+ 	            						<div id="{{=fid}}" class="chapter_file"></div>
 														{{pass}}
 														{{pass}}
 													</div>
@@ -123,7 +122,7 @@
 													{{pass}}
 												</div>
 												<!-- statsTableChapters -->
-												{{pass}}
+											
 											</div>
 										</div>
 									</div>
@@ -284,6 +283,6 @@
 		</div>
 	</div>
 
-</section>
+
 	<div id="vgwpixel"></div>
 </div>
