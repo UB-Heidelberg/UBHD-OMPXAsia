@@ -11,9 +11,9 @@
             <div class="col-lg-3">
 				<div class="box box-shadow"> 
 					<div class="box-gray aligncenter">{{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{elif session.forced_language =='en': }}<h4>New Titles</h4>{{pass}}
-					{{=IMG(_src=URL('static','files/presses/4/monographs/126/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/158/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
 					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/126'))}}</div>    
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/158'))}}</div>    
 				</div>
 			</div>
 			
@@ -30,7 +30,24 @@
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}					
-					 <div class="media">
+					 
+            <div class="media">
+						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
+						  <div class="media-body">
+							<p class="media-heading"><span class="aktuelles_datum">15.09.2016</span><br />
+							  {{if session.forced_language =='de': }}<h5>Neu erschienen</h5>{{elif session.forced_language =='en': }}<h5>Newly published</h5>{{pass}}
+							</p>
+							<p class="boxText"> 
+							  {{if session.forced_language =='de': }} 
+									  Der vierte Tagungsband <em>{{=A(T('Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien'),_href=URL('catalog','book/158'))}}</em> Die auf der Jahrestagung präsentierten Forschungsergebnisse werden in Form von Extended Abstracts veröffentlicht und geben Einblicke in aktuelle Forschung zu Südasien. Der Sammelband enthält Beiträge zu Ernährungssicherheit, Umweltveränderungen in den Backwaters von Kerala, Urbanisierung in Leh u.v.m. 
+							  {{elif session.forced_language =='en': }} 
+                The fourth conference proceedings <em>{{=A(T('Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien'),_href=URL('catalog','book/158'))}}</em>. The conference proceedings are published in form of extended abstracts and provide information on current research on South Asia. The volumes contains articles on food security, environmental change, urbanisation in Leh and more.
+							  {{pass}}
+							</p>
+						  </div>
+					</div>
+           
+           <div class="media">
 						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
 							<p class="media-heading"><span class="aktuelles_datum">25.07.2016</span><br />
