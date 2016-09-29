@@ -52,6 +52,7 @@
 'Adresszeile3': 'Adresszeile3',
 'Advisory Board': 'Beirat',
 'Ajax Recipes': 'Ajax Rezepte',
+'Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien': 'Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien',
 'Altersempfehlung': 'Altersempfehlung',
 'and': 'und',
 'Ansichtsexemplar': 'Ansichtsexemplar',
