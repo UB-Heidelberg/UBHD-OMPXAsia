@@ -130,6 +130,7 @@
 'Deployment Recipes': 'Entwicklungsrezepte',
 'Description': 'Beschreibung',
 'design': 'Design',
+'Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien': 'Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien',
 'DISK': 'DISK',
 'Disk Cache Keys': 'Disk Cache Keys',
 'Disk Cleared': 'Disk gelöscht',

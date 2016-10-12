@@ -19,11 +19,10 @@
 			
 			<div class="col-lg-3">
 				<div class="box box-shadow">
-					<div class="box-gray aligncenter"> 
-					   {{if session.forced_language =='de': }}<h4>Serien</h4>{{elif session.forced_language =='en': }}<h4>Series</h4>{{pass}}
-					   {{=IMG(_src=URL('static','files/presses/4/monographs/166/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
-					</div>
-					<div class="box-bottom">{{=A(T('More'),_href=URL('catalog','series/bgp'))}}</div> 
+				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{pass}}  {{=IMG(_src=URL('static','files/presses/4/monographs/129/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+				  </div>
+				  <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/129'))}}
+				  </div>
 				</div>
 			</div>
 			
@@ -31,11 +30,26 @@
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}					
 					 
+			<div class="media">
+						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
+						  <div class="media-body">
+							<p class="media-heading"><span class="aktuelles_datum">12.10.2016</span><br />
+							  {{if session.forced_language =='de': }}<h5>Neu erschienen</h5>{{elif session.forced_language =='en': }}<h5>Newly published</h5>{{pass}}
+							</p>
+							<p class="boxText"> 
+							  {{if session.forced_language =='de': }} 
+							        Der Marburger Indologe Felix Otter untersucht in seiner Dissertation <em>{{=A(T('Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien'),_href=URL('catalog','book/129'))}}</em> die Wiederbelebungsversuche von Vāstuvidyā im Kontext ideologischer und geistesgeschichtlicher Entwicklungen mit Methoden der Textanalyse. Das Verhältnis der revitalisierten Version(en) von Vāstuvidyā zu den vorkolonialen vāstuśāstras, ebenso die Relevanz der Apologetik der einheimischen Wissenschaften für die Revitalisierung von Vāstuvidyā sowie die Diskursstrategien, die im revitalistischen Vāstu-Schrifttum zur Anwendung kommen, bilden die zentralen Themen des Buches.
+                              {{elif session.forced_language =='en': }} 
+									In his dissertation <em>{{=A(T('Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien'),_href=URL('catalog','book/129'))}}</em> the Marburg Indologist Felix Otter examines several attempts at revitalisation of Vāstuvidyā since the first half of the 20th century in the context of ideological and historical developments with the methods of textual analysis. The relationship between the revived version(s) of Vāstuvidyā with the precolonial formulations of the lore, the relevance of the apologetic discourse of the indigenous sciences for the revitalisation of Vāstuvidyā, and the discourse strategies employed in colonial and post-colonial Vāstu literature are the central themes of the book.{{pass}}
+							</p>
+						  </div>
+					</div>		 
+					 
             <div class="media">
 						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
 							<p class="media-heading"><span class="aktuelles_datum">15.09.2016</span><br />
-							  {{if session.forced_language =='de': }}<h5>Neu erschienen</h5>{{elif session.forced_language =='en': }}<h5>Newly published</h5>{{pass}}
+							  {{if session.forced_language =='de': }}<h5>Neuerscheinung zum Thema Vāstuvidyā</h5>{{elif session.forced_language =='en': }}<h5>New publication on Vāstuvidyā</h5>{{pass}}
 							</p>
 							<p class="boxText"> 
 							  {{if session.forced_language =='de': }} 
@@ -104,12 +118,14 @@
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
-            <div class="col-lg-3">
+
+			<div class="col-lg-3">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming Soon</h4> {{pass}}  {{=IMG(_src=URL('static','images/catalog/otter2016.jpg'),_width='145px',_class='bildrahmen')}}
-				  </div>
-				  <div class="box-bottom"> {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog', 'index#otter'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog', 'index#otter_en'))}} {{pass}}
-				  </div>
+					<div class="box-gray aligncenter"> 
+					   {{if session.forced_language =='de': }}<h4>Serien</h4>{{elif session.forced_language =='en': }}<h4>Series</h4>{{pass}}
+					   {{=IMG(_src=URL('static','files/presses/4/monographs/166/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+					</div>
+					<div class="box-bottom">{{=A(T('More'),_href=URL('catalog','series/bgp'))}}</div> 
 				</div>
 			</div>
 			
