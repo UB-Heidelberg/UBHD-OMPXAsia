@@ -28,11 +28,30 @@
 			
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}					
-					 <div class="media">
-                    <div class="media-left pull-left">
+				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}	
+          
+           <div class="media">
+           <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-                    </div>
+           </div>
+					<div class="media-body">
+                      <p class="media-heading"><span class="aktuelles_datum">12.01.2017</span><br>
+                      {{if session.forced_language =='de': }} <h5>Zwei Neuerscheinungen bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>Two new books on CrossAsia-eBooks</h5>{{pass}}</p> 
+
+                      <p class="boxText">{{if session.forced_language =='de': }}In seiner <em>{{=A(T('Bibliography of Online Resources on Chinese Strategy, Security and Military Matters'),_href=URL('catalog','book/191'))}}</em>  bietet der deutsche Sinologe Oliver Corff einen Überlick über Online-Materialien zur chinesischen Strategie, Sicherheit und Militärwesen. Die Bibliographie wird in regelmäßigen Abständen aktualisiert.<br />
+                      The <em>{{=A(T('Satsaṅgijīvanam by Śatānanda'),_href=URL('catalog','book/185'))}}</em> beschreibt das Leben von Swami Sahajananda (1781-1830), dem Gründer der Swaminarayan Bewegung, der von seinen Anhängern als Verkörperung Krishnas angesehen wird. Es handelt sich um ein bedeutendes Dokument zur religiösen Situation des Hinduismus im Gujarat seiner Zeit. Das umfangreiche, auf Sanskrit abgefasste Werk wird hier in einer englischen Zusammenfassung von Jaydev A. Jani und Peter Schreiner präsentiert.
+                      {{elif session.forced_language =='en': }}                     
+                      In his <em>{{=A(T('Bibliography of Online Resources on Chinese Strategy, Security and Military Matters'),_href=URL('catalog','book/191'))}}</em> the German Sinologist Oliver Corff presents an overview of the material available online on these subjects. The bibliography will be updated on a regular basis.<br />
+                      The <em>{{=A(T('Satsaṅgijīvanam by Śatānanda'),_href=URL('catalog','book/185'))}}</em> describes the biography of Swami Sahajananda (1781-1830), the founder of the Swaminarayan Movement, considered by his followers as an embodiment of Krishna. The <em>Satsaṅgijīvanam</em> is an important document for the religious situation in the Gujarat of its time. The extensive work is composed in Sanskrit and is here presented in an English summary by Jaydev A. Jani and Peter Schreiner.        
+                      {{pass}}
+                      </p>
+          </div>
+			     </div> 
+          				
+					 <div class="media">
+           <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+           </div>
 					<div class="media-body">
                       <p class="media-heading"><span class="aktuelles_datum">24.10.2016</span><br>
                       {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}}</p> 
@@ -42,8 +61,8 @@
                       On occasion of the open acces week, 24-30 October 2016, the University Library invites you in your lunch break to inform you about the <a href="http://www.ub.uni-heidelberg.de/Englisch/service/openaccess/Welcome.html" title="Information on Open Access publishing options at Heidelberg University">various publishing options</a> Heidelberg University offers. Start: 1 pm in the <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=altstadt&sprache=en" title="site plan manuscript reading room of Heidelberg University Library">manuscript reading room (round chamber)</a> of the library.           
                       {{pass}}
                       </p>
-                    </div>
-			</div> 
+          </div>
+			     </div> 
 			
 			<div class="media">
 						  <div class="media-left pull-left"><img src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
