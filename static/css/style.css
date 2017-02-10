@@ -2502,16 +2502,15 @@ ul.footer-nav li {
 
 
 #heiup-logo-print {
-  border: 1px solid #B5152B;
   margin: 0 auto;
   padding: 20px;
+  width:200px;
+  float:left;
 }
-
-
 
 .print-url::after {
   color: #656565 !important;
-  content: "http://heiup.uni-heidelberg.de";
+  content: "http://crossasia-books.ub.uni-heidelberg.de/xasia";
   float: right;
   font-size: 9pt;
 }
