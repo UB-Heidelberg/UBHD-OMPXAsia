@@ -5,7 +5,9 @@
 	    <div class="row">
 			<div class="col-lg-12">
 				<h3>  {{if session.forced_language =='de': }}
+					   Draupadi Verlag &ndash; Literatur aus aller Welt
 					{{elif session.forced_language =='en': }}
+					   Draupadi Verlag &ndash; Literature from all parts of the world
 				{{pass}}
 				</h3>
 			</div>	
@@ -19,6 +21,8 @@
 				</div>
 						
 				<div class="col-lg-3">
+					<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/partner/logo_draupadi.jpg'),_width='230px')}}</p>
+					</div>                                                          
 				</div>		
 
 				{{elif session.forced_language =='en': }}
@@ -28,6 +32,7 @@
 				</div>
 						
 				<div class="col-lg-3">
+					<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/partner/logo_draupadi.jpg'),_width='230px')}}</p>
 					</div>
 				</div>	
 
