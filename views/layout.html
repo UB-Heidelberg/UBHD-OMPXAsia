@@ -90,7 +90,7 @@
       raise HTTP(404,"statistik plugin not defined : add piwik_plugin=1  or 0 in appconfig.ini")
 
     }}
-
+                                                    
 </head>
   <body>
     <!--[if lt IE 8]><p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
@@ -154,6 +154,12 @@
 										<li><a href="{{=URL('partner', 'index/asdgfg')}}">South Asia Study Group</a></li>
 									  {{pass}}
 										<li><a href="{{=URL('partner', 'index/zelf')}}">Centre for Development Studies</a></li>
+                    {{if session.forced_language=='de':}}
+                    <li><a href="{{=URL('partner', 'index/draupadi')}}">Draupadi-Verlag</a></li>
+                    {{elif session.fordced_language=='en':}}
+                    <li><a href="{{=URL('partner', 'index/draupadi')}}">Draupadi Verlag</a></li>
+                    {{pass}}
+                                   
 									</ul>
 							</li>
 
