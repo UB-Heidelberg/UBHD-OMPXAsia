@@ -184,6 +184,7 @@
 'Hello World': 'Hallo Welt',
 'Hello World  ## Kommentar': 'Hallo Welt  ',
 'Hello World## Kommentar': 'Hallo Welt',
+'Hoffnungsträger und Sorgenkind Südasien: Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973': 'Hoffnungsträger und Sorgenkind Südasien: Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973',
 'Home': 'Home',
 'How did you get here?': 'Wie sind Sie hier her gelangt?',
 'How to cite this title': 'Empfohlene Zitierweise',
