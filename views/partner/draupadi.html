@@ -4,55 +4,84 @@
     <div class="col-lg-12 contentbox-12">
 	    <div class="row">
 			<div class="col-lg-12">
-				<h3>  {{if session.forced_language =='de': }}
+				<h3>{{if session.forced_language =='de': }}
 					   Draupadi Verlag &ndash; Literatur aus aller Welt
 					{{elif session.forced_language =='en': }}
 					   Draupadi Verlag &ndash; Literature from all parts of the world
-				{{pass}}
+					{{pass}}
 				</h3>
 			</div>	
-		</div>	
-
-        <div class="row">
-                {{if session.forced_language =='de': }}
-				
-				<div class="col-lg-10">
-					 <p>Der Draupadi Verlag wurde im Herbst 2003 gegründet. Ziel des Verlags war es, die südasiatischen Literaturen im deutschsprachigen Raum bekannter zu machen. Außerdem sollten Sachbücher über Südasien publiziert werden. Inzwischen wurden mehr als 110 Titel veröffentlicht. Im Laufe der Zeit wurde das Verlagsprogramm immer mehr erweitert. Es erschienen auch Titel von deutschen und afrikanischen Autorinnen und Autoren. Doch Schwerpunkt blieb Südasien. 18 Werke wurden direkt vom Hindi ins Deutsche übersetzt, 8 aus dem Bengalischen, 3 aus Tamil und 2 aus Malayalam. Einige südasiatische Romane wurden auch aus dem Englischen ins Deutsche übertragen.</p>
-          <h4>Kontakt</h4>
-          <p>Draupadi Verlag<br />
-          Dossenheimer Landstr. 103<br />
-          69121 Heidelberg<br />
-          Tel.: +49 6221 412990<br />
-          Fax: +49 322 23722343<br />
-          E-Mail: <a href="mailto:info@draupadi-verlag.de">info@draupadi-verlag.de</a><br />
-          Internet: <a href="http://www.draupadi-verlag.de/" title="Homepage Draupadi Verlag">www.draupadi-verlag.de</a></p>
-
-				</div>
-						
-				<div class="col-lg-2">
-					<p>{{=IMG(_src=URL('static','images/partner/logo_draupadi.jpg'),_width='150px')}}</p>                                                          
-				</div>		
-
-				{{elif session.forced_language =='en': }}
-				
-				<div class="col-lg-10">
-					 <p>Draupadi Verlag was founded in autumn 2003. It is the aim of this publishing house to make South Asian Literature better known in the German speaking countries. More than 110 titles have been published so far. In the course of time the program has been enlarged and titles of German and African authors also have been published. But the focus remained on South Asia. 18 books were translated directly from Hindi to German, 8 from Bengali, 3 from Tamil and 2 from Malayalam. Some South Asian novels have been translated from English to German.</p>
-          <h4>Contact</h4>
-          <p>Draupadi Verlag<br />
-          Dossenheimer Landstr. 103<br />
-          69121 Heidelberg<br />
-          Phone: +49 6221 412990<br />
-          Fax: +49 322 23722343<br />
-          E-Mail: <a href="mailto:info@draupadi-verlag.de">info@draupadi-verlag.de</a><br />
-          Internet: <a href="http://www.draupadi-verlag.de/" title="Homepage Draupadi Verlag">www.draupadi-verlag.de</a></p>
-				</div>
-						
-				<div class="col-lg-2">
-					<p>{{=IMG(_src=URL('static','images/partner/logo_draupadi.jpg'),_width='150px')}}</p>
-				</div>	
-
-                {{pass}}
-		</div>		
+			
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">                
+                <p>Der <b>Draupadi Verlag</b> wurde im Herbst 2003 gegründet. Ziel des Verlags war es, die südasiatischen Literaturen im deutschsprachigen Raum bekannter zu machen. Außerdem sollten Sachbücher über Südasien publiziert werden. Inzwischen wurden mehr als 110 Titel veröffentlicht. Im Laufe der Zeit wurde das Verlagsprogramm immer mehr erweitert. Es erschienen auch Titel von deutschen und afrikanischen Autorinnen und Autoren. Doch Schwerpunkt blieb Südasien. 18 Werke wurden direkt vom Hindi ins Deutsche übersetzt, 8 aus dem Bengalischen, 3 aus Tamil und 2 aus Malayalam. Einige südasiatische Romane wurden auch aus dem Englischen ins Deutsche übertragen.</p>
+                <p>Über <b>CrossAsia-eBooks</b> werden in Auswahl Fachbücher des <b>Draupadi Verlags</b> zu Südasien, bei denen keine Neuauflage geplant ist, als Online-Publikation im Open Access zur Verfügung gestellt. Die gedruckte Ausgabe kann über den Verlag direkt bestellt werden.</p>
+                <hr>
+                <div class="row">
+                <div class="col-lg-2"><a href="{{=URL('catalog','index#kunz')}}">{{=IMG(_src=URL('static','images/catalog/kunz2017.jpg'),_width='80px', _class='bildrahmen')}}</a>
+                </div>
+                <div class="col-lg-9">
+                <b>Hans-Martin Kunz</b><br>                 
+                {{=A('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)',_href=URL('catalog','index#kunz'))}}<br>
+                Heidelberg: Draupadi Verlag, 2014 <br>
+                <b>Online-Ausgabe erscheint im Juli 2017</b>
+                </div>
+                </div>  
+ 
+			</div>        
+					
+					
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+				<p>{{=IMG(_src=URL('static','images/partner/drapaudi_logo.png'),_width='230px')}}</p>
+					   
+							  <p><b>Kontakt</b><br>
+							  Draupadi Verlag<br>
+							  Dossenheimer Landstr. 103<br />
+							  69121 Heidelberg<br />
+							  Tel.: +49 6221 412990<br />
+							  Fax: +49 322 23722343<br />
+							  E-Mail: <a href="mailto:info@draupadi-verlag.de">info@draupadi-verlag.de</a><br />
+							  Internet: <a href="http://www.draupadi-verlag.de/" title="Homepage Draupadi Verlag">www.draupadi-verlag.de</a></p>
+				</div>                
+			</div>
+			
+			{{elif session.forced_language =='en': }}
+			
+			<div class="col-lg-9">                
+                <p>Draupadi Verlag was founded in autumn 2003. It is the aim of this publishing house to make South Asian Literature better known in the German speaking countries. More than 110 titles have been published so far. In the course of time the program has been enlarged and titles of German and African authors also have been published. But the focus remained on South Asia. 18 books were translated directly from Hindi to German, 8 from Bengali, 3 from Tamil and 2 from Malayalam. Some South Asian novels have been translated from English to German.</p>
+                <hr>
+                <div class="row">
+                <div class="col-lg-2"><a href="{{=URL('catalog','index#kunz')}}">{{=IMG(_src=URL('static','images/catalog/kunz2017.jpg'),_width='80px', _class='bildrahmen')}}</a>
+                </div>
+                <div class="col-lg-9">
+                <b>Hans-Martin Kunz</b><br>                 
+                {{=A('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)',_href=URL('catalog','index#kunz'))}}<br>
+                Heidelberg: Draupadi Verlag, 2014<br>
+                <b>Online-Ausgabe erscheint im Juli 2017</b>
+                </div>
+                </div>  
+ 
+			</div>        
+					
+					
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+				<p>{{=IMG(_src=URL('static','images/partner/logo_draupadi.jpg'),_width='230px')}}</p>
+					   
+							  <p><b>Contact</b><br>
+							  Draupadi Verlag<br>
+							  Dossenheimer Landstr. 103<br />
+							  69121 Heidelberg<br />
+							  Phone: +49 6221 412990<br />
+							  Fax: +49 322 23722343<br />
+							  E-Mail: <a href="mailto:info@draupadi-verlag.de">info@draupadi-verlag.de</a><br />
+							  Internet: <a href="http://www.draupadi-verlag.de/" title="Homepage Draupadi Verlag">www.draupadi-verlag.de</a></p>
+				</div>                
+			</div>
+			{{pass}}
+	
+		</div>			
 
     </div>
  </div>
