@@ -135,6 +135,7 @@
 'Deployment Recipes': 'Entwicklungsrezepte',
 'Description': 'Beschreibung',
 'design': 'Design',
+'Development as Spectacle: Understanding Post-War Urban Development in Colombo, Sri Lanka': 'Development as Spectacle: Understanding Post-War Urban Development in Colombo, Sri Lanka',
 'Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien': 'Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien',
 'DISK': 'DISK',
 'Disk Cache Keys': 'Disk Cache Keys',
