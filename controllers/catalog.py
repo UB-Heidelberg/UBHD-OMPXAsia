@@ -15,36 +15,48 @@ from datetime import datetime
 
 
 def series():
-    ignored_submission_id = myconf.take('omp.ignore_submissions') if myconf.take('omp.ignore_submissions') else -1
-    
+
+    ignored_submission_id = myconf.take('omp.ignore_submissions') if myconf.take(
+        'omp.ignore_submissions') else -1
+
     if not request.args:
-        redirect( URL('home', 'index'))
+        redirect(URL('home', 'index'))
     series_path = request.args[0]
-    
+
     ompdal = OMPDAL(db, myconf)
-    
+
     press = ompdal.getPress(myconf.take('omp.press_id'))
     if not press:
         redirect(URL('home', 'index'))
-    
+
     series_row = ompdal.getSeriesByPathAndPress(series_path, press.press_id)
-    
+
     # If series path is unknown
     if not series_row:
         redirect(URL('home', 'index'))
-        
-    series = OMPItem(series_row, OMPSettings(ompdal.getSeriesSettings(series_row.series_id)))
-    submission_rows = ompdal.getSubmissionsBySeries(series_row.series_id, ignored_submission_id=ignored_submission_id, status=3)
-    
+
+    series = OMPItem(series_row, OMPSettings(
+        ompdal.getSeriesSettings(series_row.series_id)))
+    submission_rows = ompdal.getSubmissionsBySeries(
+        series_row.series_id, ignored_submission_id=ignored_submission_id, status=3)
+
     submissions = []
     for submission_row in submission_rows:
-        authors = [OMPItem(author, OMPSettings(ompdal.getAuthorSettings(author.author_id))) for author in ompdal.getAuthorsBySubmission(submission_row.submission_id)]
-        editors = [OMPItem(editor, OMPSettings(ompdal.getAuthorSettings(editor.author_id))) for editor in ompdal.getEditorsBySubmission(submission_row.submission_id)]
+        authors = [OMPItem(author, OMPSettings(ompdal.getAuthorSettings(author.author_id)))
+                   for author in ompdal.getAuthorsBySubmission(submission_row.submission_id)]
+        editors = [OMPItem(editor, OMPSettings(ompdal.getAuthorSettings(editor.author_id)))
+                   for editor in ompdal.getEditorsBySubmission(submission_row.submission_id)]
         submission = OMPItem(submission_row,
-                             OMPSettings(ompdal.getSubmissionSettings(submission_row.submission_id)),
+                             OMPSettings(ompdal.getSubmissionSettings(
+                                 submission_row.submission_id)),
                              {'authors': authors, 'editors': editors}
-        )
-        
+                             )
+
+        category_row = ompdal.getCategoryBySubmissionId(submission_row.submission_id)
+        if category_row:
+            submission.associated_items['category'] = OMPItem(
+                category_row, OMPSettings(ompdal.getCategorySettings(category_row.category_id)))
+
         submissions.append(submission)
 
     submissions = sorted(submissions, cmp=seriesPositionCompare, reverse=True)
@@ -58,7 +70,7 @@ def index():
     press = ompdal.getPress(myconf.take('omp.press_id'))
 
     if not press:
-        redirect(URL('home', 'index'))            
+        redirect(URL('home', 'index'))
     press_settings = OMPSettings(ompdal.getPressSettings(press.press_id))
 
     ignored_submission_id = myconf.take('omp.ignore_submissions') if myconf.take(
