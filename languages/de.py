@@ -366,6 +366,8 @@
 'Rückenart': 'Rückenart',
 'Satsaṅgijīvanam by Śatānanda': 'Satsaṅgijīvanam by Śatānanda',
 'Save model as...': 'Speichere Vorlage als...',
+'Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)': 'Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)',
+'Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen Indien': 'Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen Indien',
 'Search': 'Suche',
 'Semantic': 'Semantik',
 'Send': 'Verschicken',

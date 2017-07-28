@@ -35,6 +35,27 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
+                      <p class="media-heading"><span class="aktuelles_datum">28.07.2017</span><br>
+                      {{if session.forced_language =='de': }} <h5>Kooperation zwischen dem Draupadi Verlag und CrossAsia-eBooks </h5>{{elif session.forced_language =='en': }} <h5>Cooperation between Draupadi Verlag and CrossAsia-eBooks </h5>{{pass}}</p>
+
+                      <p class="boxText">{{if session.forced_language =='de': }}Der <a href="http://www.draupadi-verlag.de" title="Homepage Draupadi-Verlag">Draupadi-Verlag</a> in Heidelberg und CrossAsia-eBooks haben im Frühjahr 2017 vereinbart, ausgewählte Sachbücher über Südasien aus dem Verlagsprogramm, bei denen keine Neuauflage geplant ist, zusätzlich zur gedruckten Ausgabe als Open-Access Publikation auf CrossAsia-eBooks zur Verfügung zu stellen.<br>                   
+                      Als erstes Buch wurde nun die 2014 veröffentlichte Dissertation <i>{{=A(T('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)'),_href=URL('catalog','book/228'))}}</i> des Heidelberger Ethnologen Hans-Martin Kunz auf CrossAsia-eBooks als Open-Access-Publikation bereitgestellt. Die gedruckte Ausgabe kann weiterhin über den Buchhandel oder direkt beim Draupadi-Verlag erworben werden.<br>
+                      Für Herbst 2017 ist die Open-Access-Veröffentlichung des 2008 beim Draupadi-Verlag erschienenen Buches <i>Die Birhor. Ethnographie und die Folgen. Ein indischer &bdquo;Stamm&rdquo; im Spiegel kolonialer und postkolonialer Beschreibungen</i> von Markus Schleiter geplant.
+                      {{elif session.forced_language =='en': }}    
+                      The <a href="http://www.draupadi-verlag.de" title="Homepage Draupadi publishing house">Draupadi publishing house</a> in Heidelberg and CrossAsia-eBooks started in Spring 2017 a co-operation to publish electronic Open Access versions of selected books on South Asia that appeared originally as print editions and are not scheduled for reprint.<br>
+The first Draupadi title offered by CrossAsia-eBooks is <i>{{=A(T('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)'),_href=URL('catalog','book/228'))}}</i>, a PhD dissertation by the ethnologist Hans-Martin Kunz. The print edition is still available in bookshops or directly at the Draupadi publishing house.<br>
+The next electronic publication of a Draupadi book will be Markus Schleiter’s <i>Die Birhor. Ethnographie und die Folgen. Ein indischer &bdquo;Stamm&rdquo; im Spiegel kolonialer und postkolonialer Beschreibungen</i> (2008). It is planned to appear in autumn 2017.	  
+                      {{pass}}
+                      </p>
+          </div>
+			  </div> 
+
+
+		   <div class="media">
+           <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+           </div>
+					<div class="media-body">
                       <p class="media-heading"><span class="aktuelles_datum">27.06.2017</span><br>
                       {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}</p>
 
@@ -44,7 +65,7 @@
                       {{pass}}
                       </p>
           </div>
-			     </div> 
+			  </div> 
 
 		   <div class="media">
            <div class="media-left pull-left">
