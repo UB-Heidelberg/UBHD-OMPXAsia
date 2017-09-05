@@ -30,6 +30,22 @@
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}	
 				  
+			<div class="media">
+           <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+           </div>
+					<div class="media-body">
+                      <p class="media-heading"><span class="aktuelles_datum">05.09.2017</span><br>
+                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}</p>
+
+                      <p class="boxText">{{if session.forced_language =='de': }}Mit {{=A(T('Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā'),_href=URL('catalog','book/269'))}} legt der Indologe Jürgen Neuß erstmals einen umfassenden Überblick über die erhaltenen historischen Überreste in Oṃkāreśvar-Māndhātā, dem wichtigsten hinduistischen Pilgerort im Narmadā-Tal vor. Obschon der Ort bereits seit der Mitte des neunzehnten Jahrhunderts als archäologische Fundstätte bekannt ist, wurde bis heute übersehen, dass die historischen Überreste weit umfangreicher und in sich geschlossener sind, als die wenigen publizierten archäologischen Berichte, die sich zudem nur mit wenigen Einzelbauwerken beschäftigen, vermuten lassen. Dieses Buch liefert den lange überfälligen Überblick über das gesamte Areal, das im Wesentlichen aus drei historischen Siedlungsbereichen besteht. In deren Zentrum steht eine wohlstrukturierte Festungsanlage, Māndhātr̥durga, die die einzige erhaltene befestigte Stadtanlage der Paramāras of Dhāra im gesamten Narmadā-Tal darstellt.
+                      {{elif session.forced_language =='en': }}    
+                      In {{=A(T('Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā'),_href=URL('catalog','book/269'))}} the Indologist Jürgen Neuß offers for the first time a comprehensive survey of the extant historic remains at Oṃkāreśvar-Māndhātā, the most important place of pilgrimage in the Narmadā valley. Although the place has been known as an archaeological site since the middle of the nineteenth century, it has till date been overlooked that the remains are much more extensive and coherent than the rarely published archaeological notes, that deal with only a few monuments, suggest. This book provides a long overdue survey of the whole area which in essence represents a conglom-eration of three historic settlements. At the center lies a thoroughly structured fortification, Māndhātr̥durga, which represents the only preserved fortified city of the Paramāras of Dhāra in the Narmadā valley presently known to us.
+                      {{pass}}
+                      </p>
+          </div>
+			  </div> 	  
+				  
 		   <div class="media">
            <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
@@ -228,10 +244,10 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 
 			<div class="col-lg-3">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Demnächst</h4> {{elif session.forced_language =='en': }}<h4>Coming soon</h4> {{pass}} {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/neuss2017.jpg'),_width='145px',_class='bildrahmen')}}
-				  </div>
-				  <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','index#neuss'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','index#neuss_en'))}} {{pass}}
-				  </div>
+				  <div class="box-gray aligncenter">{{if session.forced_language =='de': }}<h4>Neuerscheinung</h4>{{elif session.forced_language =='en': }}<h4>New Titles</h4>{{pass}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/269/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/269'))}}</div>  
 				</div>
 			</div>
 			

@@ -272,6 +272,8 @@
 'More Information': 'Mehr',
 'Mwst.': 'Mwst.',
 'My Sites': 'Meine Seiten',
+'Māndhāt&#7771;durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā': 'Māndhāt&#7771;durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā',
+'Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā': 'Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā',
 'Name': 'Name',
 'New': 'Neu',
 'New in': 'Neu in',
