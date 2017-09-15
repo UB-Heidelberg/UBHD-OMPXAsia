@@ -274,7 +274,7 @@ function hideAnnoBlock() {
 	$("#anno-block").hide()
 }
 
-document.styleSheets[0].insertRule(`.annoeditor-viewer .media-body > div > * { height: 20px !important }`, 0)
+document.styleSheets[0].insertRule(`.annoeditor-viewer .media-body > div:first-child > * { height: 20px !important }`, 0)
 document.styleSheets[0].insertRule(`.panel-title a:hover { color: white !important }`, 0)
 
 $(function() {
