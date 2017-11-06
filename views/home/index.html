@@ -19,9 +19,9 @@
 			
 			<div class="col-lg-3">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{pass}}  {{=IMG(_src=URL('static','files/presses/4/monographs/292/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
+				  <div class="box-gray aligncenter"> {{if session.forced_language =='de': }}<h4>Neuerscheinung</h4> {{elif session.forced_language =='en': }}<h4>New Titles</h4> {{pass}}  {{=IMG(_src=URL('static','files/presses/4/monographs/300/simple/cover.jpg'),_width='145px', _class='bildrahmen')}}
 				  </div>
-				  <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/292'))}}
+				  <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/300'))}}
 				  </div>
 				</div>
 			</div>
@@ -29,6 +29,23 @@
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"> {{if session.forced_language =='de': }}<h4>Neuigkeiten</h4> {{elif session.forced_language =='en': }}<h4>News</h4> {{pass}}	
+
+			<div class="media">
+           <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+           </div>
+					<div class="media-body">
+                      <p class="media-heading"><span class="aktuelles_datum">06.11.2017</span><br>
+                      {{if session.forced_language =='de': }} <h5>CrossAsia-eBooks präsentiert den 8. Band der Geographien Südasiens</h5>{{elif session.forced_language =='en': }} <h5>CrossAsia-eBooks presents the 8th volume of the series Geographien Südasiens</h5>{{pass}}</p>
+
+                      <p class="boxText">{{if session.forced_language =='de': }}Mit dieser Open-Access-Publikation stehen Ihnen <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">Extended Abstracts der 7.&nbsp;Jahrestagung des AK Südasien 2017</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Bildung, Konsum und Wertschöpfungsketten, Rurale Welten, Urbane Welten und Entwicklungsforschung und Tourismus als PDF downloaden.
+                      {{elif session.forced_language =='en': }}    
+                      This open-access publication offers you extended abstracts of the  <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">7.&nbsp;Jahrestagung des AK Südasien 2017</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Bildung, Konsum und Wertschöpfungsketten, Rurale Welten, Urbane Welten und Entwicklungsforschung und Tourismus als PDF downloaden.
+                      {{pass}}
+                      </p>
+          </div>
+			  </div> 
+
 				  
 			<div class="media">
            <div class="media-left pull-left">
