@@ -2042,6 +2042,10 @@ article img.pull-right, article .align-right{
 }
 
 /*Anpassungen WWW Heidelberg*/
+#nav-social-media {
+ height: 30px;
+ margin-right: 15px;
+}
 
 .bildrahmen, .post-image img {border:1px solid #cdcbcc} 
 
@@ -2179,10 +2183,6 @@ header > .col-lg-12 {
 
 #header_sn {
   padding: 0.7em 2.7em 0 0;
-}
-
-#nav-social-media {
-  margin-right: -10px;
 }
 
 .social_media a:hover img {
