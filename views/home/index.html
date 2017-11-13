@@ -11,7 +11,7 @@
             <div class="col-lg-3">
 				<div class="box box-shadow"> 
 					<div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-					{{=IMG(_src=URL('static','files/presses/4/monographs/228/simple/cover.jpg'),_style='width:145px', _class='bildrahmen')}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/228/simple/cover.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
 					</div>
 					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/228'))}}</div>    
 				</div>
@@ -20,7 +20,7 @@
 			<div class="col-lg-3">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-          {{=IMG(_src=URL('static','files/presses/4/monographs/300/simple/cover.jpg'),_style='width:145px', _class='bildrahmen')}}
+          {{=IMG(_src=URL('static','files/presses/4/monographs/300/simple/cover.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
 				  </div>
 				  <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/300'))}}
 				  </div>
@@ -36,8 +36,12 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">06.11.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>CrossAsia-eBooks präsentiert den 8. Band der Geographien Südasiens</h5>{{elif session.forced_language =='en': }} <h5>CrossAsia-eBooks presents the 8th volume of the series Geographien Südasiens</h5>{{pass}}</p>
+                      <p class="media-heading">06.11.2017</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>CrossAsia-eBooks präsentiert den 8. Band der Geographien Südasiens</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>CrossAsia-eBooks presents the 8th volume of the series Geographien Südasiens</h5>
+                      {{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}Mit dieser Open-Access-Publikation stehen Ihnen <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">Extended Abstracts der 7.&nbsp;Jahrestagung des AK Südasien 2017</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Bildung, Konsum und Wertschöpfungsketten, Rurale Welten, Urbane Welten und Entwicklungsforschung und Tourismus als PDF downloaden.
                       {{elif session.forced_language =='en': }}    
@@ -53,8 +57,12 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">05.09.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}</p>
+                      <p class="media-heading">05.09.2017</p>
+                      {{if session.forced_language =='de': }} 
+                      <h5>Neuerscheinung bei CrossAsia-eBooks</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>New publication on CrossAsia-eBooks</h5>
+                      {{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}Mit {{=A(T('Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā'),_href=URL('catalog','book/269'))}} legt der Indologe Jürgen Neuß erstmals einen umfassenden Überblick über die erhaltenen historischen Überreste in Oṃkāreśvar-Māndhātā, dem wichtigsten hinduistischen Pilgerort im Narmadā-Tal vor. Obschon der Ort bereits seit der Mitte des neunzehnten Jahrhunderts als archäologische Fundstätte bekannt ist, wurde bis heute übersehen, dass die historischen Überreste weit umfangreicher und in sich geschlossener sind, als die wenigen publizierten archäologischen Berichte, die sich zudem nur mit wenigen Einzelbauwerken beschäftigen, vermuten lassen. Dieses Buch liefert den lange überfälligen Überblick über das gesamte Areal, das im Wesentlichen aus drei historischen Siedlungsbereichen besteht. In deren Zentrum steht eine wohlstrukturierte Festungsanlage, Māndhātr̥durga, die die einzige erhaltene befestigte Stadtanlage der Paramāras of Dhāra im gesamten Narmadā-Tal darstellt.
                       {{elif session.forced_language =='en': }}    
@@ -69,8 +77,8 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">28.07.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Kooperation zwischen dem Draupadi Verlag und CrossAsia-eBooks </h5>{{elif session.forced_language =='en': }} <h5>Cooperation between Draupadi Verlag and CrossAsia-eBooks </h5>{{pass}}</p>
+                      <p class="media-heading">28.07.2017</p>
+                      {{if session.forced_language =='de': }} <h5>Kooperation zwischen dem Draupadi Verlag und CrossAsia-eBooks </h5>{{elif session.forced_language =='en': }} <h5>Cooperation between Draupadi Verlag and CrossAsia-eBooks </h5>{{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}Der <a href="http://www.draupadi-verlag.de" title="Homepage Draupadi-Verlag">Draupadi-Verlag</a> in Heidelberg und CrossAsia-eBooks haben im Frühjahr 2017 vereinbart, ausgewählte Sachbücher über Südasien aus dem Verlagsprogramm, bei denen keine Neuauflage geplant ist, zusätzlich zur gedruckten Ausgabe als Open-Access Publikation auf CrossAsia-eBooks zur Verfügung zu stellen.<br>                   
                       Als erstes Buch wurde nun die 2014 veröffentlichte Dissertation <i>{{=A(T('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)'),_href=URL('catalog','book/228'))}}</i> des Heidelberger Ethnologen Hans-Martin Kunz auf CrossAsia-eBooks als Open-Access-Publikation bereitgestellt. Die gedruckte Ausgabe kann weiterhin über den Buchhandel oder direkt beim Draupadi-Verlag erworben werden.<br>
@@ -90,8 +98,8 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">27.06.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}</p>
+                      <p class="media-heading">27.06.2017</p>
+                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}In seiner Studie {{=A(T('Development as Spectacle: Understanding Post-War Urban Development in Colombo, Sri Lanka'),_href=URL('catalog','book/270'))}} untersucht Marc Herter die nachkriegszeitliche Stadtentwicklung in Colombo. Auf der Grundlage von Guy Debords Buch mit dem Titel &bdquo;Die Gesellschaft des Spektakels&rdquo; wird die Thematik der Neugestaltung der urbanen Landschaft als Konsumlandschaft einer postindustriellen Gesellschaft aufgegriffen. Im internationalen Standortwettbewerb um Ansehen und Geschäftsinvestitionen greifen Stadtplaner vermehrt auf Stararchitektur als Werkzeug zur Markenbildung eines Standorts zurück. So erhofft sich das nachkriegszeitliche Sri Lanka von den größten sozialen Herausforderungen betreffend ethnischer Segregation, Armut oder Ethno-Nationalismus mittels eines durch infrastrukturelle Großinvestitionen induzierten Wirtschaftswachstums ablenken zu können. Anhand von Arcade Independence Square, eines neu entwickelten luxuriösen Einkaufszentrums in Colombo, zeigt diese Studie auf, wie die Regierung mit ihrer nachkriegszeitlichen Stadtentwicklungsagenda von solchen Problemen abwenden will. 
                       {{elif session.forced_language =='en': }}    
@@ -106,8 +114,8 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">13.04.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung zu &bdquo;Medical Travel Facilitators&rdquo;</h5>{{elif session.forced_language =='en': }} <h5>New publication on &ldquo;Medical Travel Facilitators&rdquo;</h5>{{pass}}</p> 
+                      <p class="media-heading">13.04.2017</p>
+                      {{if session.forced_language =='de': }} <h5>Neuerscheinung zu &bdquo;Medical Travel Facilitators&rdquo;</h5>{{elif session.forced_language =='en': }} <h5>New publication on &ldquo;Medical Travel Facilitators&rdquo;</h5>{{pass}} 
 
                       <p class="boxText">{{if session.forced_language =='de': }}In ihrer Masterarbeit <a href="{{=URL('catalog','book/251')}}" title="Link zum Buch">The Work of Medical Travel Facilitators: Caring For and Caring About International Patients in Delhi</a> untersucht Sarah Hartmann die Rolle von &bdquo;Medical Travel Facilitators&rdquo;. Diese spielen in der Realisierung transnationaler Gesundheitsmärkte eine wichtige Rolle, denn sie unterstützen Personen auf der Suche nach medizinischen Behandlungen im Ausland. Über ihre Arbeit an Medizintourismus-Destinationen wie Delhi in Indien ist bislang aber nur wenig bekannt. Ethnographische Forschung zeigt, dass &bdquo;medical travel facilitators&rdquo; in Delhi ein breites Tätigkeitsspektrum abdecken, um PatientInnen umfassend und individuell zu unterstützen. Ihre Arbeit, so die Argumentation, kann als Care-Arbeit konzeptualisiert werden. 
                       {{elif session.forced_language =='en': }}    
@@ -123,8 +131,8 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">30.03.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}</p> 
+                      <p class="media-heading">30.03.2017</p>
+                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}} 
 
                       <p class="boxText">{{if session.forced_language =='de': }}Die Historikerin Martina Franke untersucht in ihrer Dissertation <em>{{=A(T('Hoffnungsträger und Sorgenkind Südasien: Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973'),_href=URL('catalog','book/177'))}}</em> die Wahrnehmung der Länder Südasiens in einer sich wandelnden westdeutschen politischen Öffentlichkeit. Die medial transportierten Bilder von Jawaharlal Nehru, dem ersten indischen Ministerpräsidenten, und die Sichtweisen auf Ereignisse wie den indisch-portugiesischen Konflikt um Goa oder die deutsch-indische Zusammenarbeit am Stahlwerk in Rourkela verdeutlichen unterschiedliche Perspektiven. Die Wahrnehmung der politischen Entwicklung in Südasien bis Anfang der 1970er Jahre stand im Zusammenhang mit den Debatten um die Vergabe und Verwendung von Entwicklungshilfe. Dabei prägten generationelle Zugehörigkeiten und unterschiedliche Lebenserfahrungen die Eigen- und Fremdwahrnehmung.
                       {{elif session.forced_language =='en': }}                     
@@ -139,8 +147,8 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">12.01.2017</span><br>
-                      {{if session.forced_language =='de': }} <h5>Zwei Neuerscheinungen bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>Two new books on CrossAsia-eBooks</h5>{{pass}}</p> 
+                      <p class="media-heading">12.01.2017</p>
+                      {{if session.forced_language =='de': }} <h5>Zwei Neuerscheinungen bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>Two new books on CrossAsia-eBooks</h5>{{pass}} 
 
                       <p class="boxText">{{if session.forced_language =='de': }}In seiner <em>{{=A(T('Bibliography of Online Resources on Chinese Strategy, Security and Military Matters'),_href=URL('catalog','book/191'))}}</em>  bietet der deutsche Sinologe Oliver Corff einen Überlick über Online-Materialien zur chinesischen Strategie, Sicherheit und Militärwesen. Die Bibliographie wird in regelmäßigen Abständen aktualisiert.<br />
                       The <em>{{=A(T('Satsaṅgijīvanam by Śatānanda'),_href=URL('catalog','book/185'))}}</em> beschreibt das Leben von Swami Sahajananda (1781-1830), dem Gründer der Swaminarayan Bewegung, der von seinen Anhängern als Verkörperung Krishnas angesehen wird. Es handelt sich um ein bedeutendes Dokument zur religiösen Situation des Hinduismus im Gujarat seiner Zeit. Das umfangreiche, auf Sanskrit abgefasste Werk wird hier in einer englischen Zusammenfassung von Jaydev A. Jani und Peter Schreiner präsentiert.
@@ -157,10 +165,10 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
-                      <p class="media-heading"><span class="aktuelles_datum">24.10.2016</span><br>
-                      {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}}</p> 
+                      <p class="media-heading">24.10.2016</p>
+                      {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}} 
 
-                      <p class="boxText">{{if session.forced_language =='de': }}Anlässlich der Open-Access-Woche 2016 vom 24.10. bis 30.10. lädt die UB Sie in Ihrer Mittagspause dazu ein, sich über die <a href="http://www.ub.uni-heidelberg.de/service/openaccess/Welcome.html" title="Informationen über die Publikationsmöglichkeiten im Open Access an der Universität Heidelberg">vielfältigen Publikationsmöglichkeiten im Open Access</a>, die die Uni Heidelberg bereitstellt, zu informieren. Beginn: 13 Uhr im <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=&sprache=de" title="Lageplan: Handschriftenlesesaal der UB Heidelberg">Handschriftenlesesaal (Rundzimmer)</a> der UB. [<a href="http://www.ub.uni-heidelberg.de/bilder/oa/oa-woche_plakat_A4.pdf">&rsaquo;&rsaquo;Veranstaltungsübersicht</a>]
+                      <p class="boxText">{{if session.forced_language =='de': }}Anlässlich der Open-Access-Woche 2016 vom 24.10. bis 30.10. lädt die UB Sie in Ihrer Mittagspause dazu ein, sich über die <a href="http://www.ub.uni-heidelberg.de/service/openaccess/Welcome.html" title="Informationen über die Publikationsmöglichkeiten im Open Access an der Universität Heidelberg">vielfältigen Publikationsmöglichkeiten im Open Access</a>, die die Uni Heidelberg bereitstellt, zu informieren. Beginn: 13 Uhr im <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&amp;zweig=&amp;sprache=de" title="Lageplan: Handschriftenlesesaal der UB Heidelberg">Handschriftenlesesaal (Rundzimmer)</a> der UB. [<a href="http://www.ub.uni-heidelberg.de/bilder/oa/oa-woche_plakat_A4.pdf">&rsaquo;&rsaquo;Veranstaltungsübersicht</a>]
                       {{elif session.forced_language =='en': }}                     
                       On occasion of the open acces week, 24-30 October 2016, the University Library invites you in your lunch break to inform you about the <a href="http://www.ub.uni-heidelberg.de/Englisch/service/openaccess/Welcome.html" title="Information on Open Access publishing options at Heidelberg University">various publishing options</a> Heidelberg University offers. Start: 1 pm in the <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=altstadt&sprache=en" title="site plan manuscript reading room of Heidelberg University Library">manuscript reading room (round chamber)</a> of the library.           
                       {{pass}}
@@ -171,9 +179,9 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 			<div class="media">
 						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
-							<p class="media-heading"><span class="aktuelles_datum">12.10.2016</span><br />
+							<p class="media-heading">12.10.2016</p>
 							  {{if session.forced_language =='de': }}<h5>Neu erschienen</h5>{{elif session.forced_language =='en': }}<h5>Newly published</h5>{{pass}}
-							</p>
+							
 							<p class="boxText"> 
 							  {{if session.forced_language =='de': }} 
 							        Der Marburger Indologe Felix Otter untersucht in seiner Dissertation <em>{{=A(T('Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien'),_href=URL('catalog','book/129'))}}</em> die Wiederbelebungsversuche von Vāstuvidyā im Kontext ideologischer und geistesgeschichtlicher Entwicklungen mit Methoden der Textanalyse. Das Verhältnis der revitalisierten Version(en) von Vāstuvidyā zu den vorkolonialen vāstuśāstras, ebenso die Relevanz der Apologetik der einheimischen Wissenschaften für die Revitalisierung von Vāstuvidyā sowie die Diskursstrategien, die im revitalistischen Vāstu-Schrifttum zur Anwendung kommen, bilden die zentralen Themen des Buches.
@@ -186,9 +194,9 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
             <div class="media">
 						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
-							<p class="media-heading"><span class="aktuelles_datum">15.09.2016</span><br />
+							<p class="media-heading">15.09.2016</p>
 							  {{if session.forced_language =='de': }}<h5>Neuerscheinung bei &bdquo;Geographien Südasiens&rdquo;</h5>{{elif session.forced_language =='en': }}<h5>New publication "Geographien Südasiens"</h5>{{pass}}
-							</p>
+							
 							<p class="boxText"> 
 							  {{if session.forced_language =='de': }} 
 									  Der vierte Tagungsband <em>{{=A(T('Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien'),_href=URL('catalog','book/158'))}}</em> Die auf der Jahrestagung präsentierten Forschungsergebnisse werden in Form von Extended Abstracts veröffentlicht und geben Einblicke in aktuelle Forschung zu Südasien. Der Sammelband enthält Beiträge zu Ernährungssicherheit, Umweltveränderungen in den Backwaters von Kerala, Urbanisierung in Leh u.v.m. 
@@ -202,9 +210,9 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
            <div class="media">
 						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
-							<p class="media-heading"><span class="aktuelles_datum">25.07.2016</span><br />
+							<p class="media-heading">25.07.2016</p>
 							  {{if session.forced_language =='de': }}<h5>Neuerscheinung zum Thema Arbeitsmigration</h5>{{elif session.forced_language =='en': }}<h5>New publication on labour migration</h5>{{pass}}
-							</p>
+							
 							<p class="boxText"> 
 							  {{if session.forced_language =='de': }} 
 									  Im Vorfeld der näher rückenden FIFA-Weltmeisterschaft in Katar wächst das mediale Interesse an der großen Rolle, die ausländische Arbeitskräfte für das rasante Wachstum der Golfstaaten-Metropolen spielen.<br />
@@ -220,9 +228,9 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 					<div class="media">
 					  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
 						  <div class="media-body">
-							<p class="media-heading"><span class="aktuelles_datum">06.06.2016</span><br />
+							<p class="media-heading">06.06.2016</p>
 							  {{if session.forced_language =='de': }}<h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> {{elif session.forced_language =='en': }}<h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> {{pass}}
-							</p>
+							
 							<p class="boxText"> 
 							  {{if session.forced_language =='de': }} 
 									   CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! 
@@ -235,7 +243,7 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 
 				  <div class="media">
 					  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" /></div>
-					  <div class="media-body"><p class="media-heading">{{if session.forced_language =='de': }}<h5>open-access.net</h5>{{elif session.forced_language =='en': }}<h5>open-access.net</h5>{{pass}}</p>
+					  <div class="media-body"><p class="media-heading"></p>{{if session.forced_language =='de': }}<h5>open-access.net</h5>{{elif session.forced_language =='en': }}<h5>open-access.net</h5>{{pass}}
 						  <p class="boxText">
 							 {{if session.forced_language =='de': }}
 									Kennen Sie die Plattform <b><a href="https://www.open-access.net/startseite/" title="Homepage open-access.net">open-access.net</a></b>? Sie bietet umfassende Information über das Thema Open Access und praktische Umsetzungshilfen an. open-access.net macht Konzepte, rechtliche, organisatorische und technische Rahmenbedingungen, konkrete Erfahrungen bei der Umsetzung, Initiativen, Dienste, Dienstleistungsanbieter und Positionspapiere gut aufbereitet zugänglich.
@@ -260,7 +268,7 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 			<div class="col-lg-3">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-					{{=IMG(_src=URL('static','files/presses/4/monographs/269/simple/cover.jpg'),_style='width:145px', _class='bildrahmen')}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/269/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen')}}
 					</div>
 					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/269'))}}</div>  
 				</div>
@@ -269,16 +277,21 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 			<div class="col-lg-3">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter"> <h4>{{=T('Coming Soon')}}</h4>
-          {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/martin2017.jpg'),_style='width:145px',_class='bildrahmen')}}
+          {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/martin2017.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
 				  </div>
-				  <div class="box-bottom">&nbsp; {{if session.forced_language =='de': }} {{=A(T('More'),_href=URL('catalog','index#martin'))}} {{elif session.forced_language =='en': }} {{=A(T('More Information'),_href=URL('catalog','index#martin_en'))}} {{pass}}
+				  <div class="box-bottom">
+          {{if session.forced_language =='de': }}
+          {{=A(T('More'),_href=URL('catalog','index#martin'))}}
+          {{elif session.forced_language =='en': }}
+          {{=A(T('More'),_href=URL('catalog','index#martin_en'))}}
+          {{pass}}
 				  </div>
 				</div>
 			</div>
 			
 			<div class="col-lg-6">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"><div class="box_logo">{{=IMG(_src=URL(myconf.take('web.application'),'static','images/home/logo_ebooks.png'),_width='200px')}}</div>
+				  <div class="box-gray aligncenter"><div class="box_logo">{{=IMG(_src=URL(myconf.take('web.application'),'static','images/home/logo_ebooks.png'),_alt='',_style='width:200px')}}</div>
 					<p class="boxText"> {{if session.forced_language =='de': }} ist die Open-Access-Publikationsplattform von CrossAsia für wissenschaftliche E-Books aus dem Bereich der Asienwissenschaften. Wir unterstützen Open Access als Publikationsmodell für die Verbreitung von Forschungsergebnissen und veröffentlichen sowohl Erstpublikationen („goldener Weg“) als auch Zweitveröffentlichungen („grüner Weg“). Das kostenfreie Angebot richtet sich an Asienwissenschaftlerinnen und Asienwissenschaftler weltweit. Zum Einsatz kommt die Open-Source-Software OMP des Public Knowledge Project (PKP). {{elif session.forced_language =='en': }} is the Open Access publication platform of CrossAsia designed for publishing academic E-Books in Asian Studies. We support the Open Access publishing model for distributing research results and publish therefore primary publications (“gold”) as well as secondary publications (“green”). This offer is free of charges and open for scholars worldwide in the field of Asian Studies. For managing the editorial workflow we use the Open Source Software OMP developed by the Public Knowledge Project (PKP). {{pass}}</p>
 				  </div>
 				  <div class="box-bottom">&nbsp;</div>
