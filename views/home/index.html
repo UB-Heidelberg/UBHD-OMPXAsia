@@ -11,9 +11,9 @@
             <div class="col-lg-3">
 				<div class="box box-shadow"> 
 					<div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-					{{=IMG(_src=URL('static','files/presses/4/monographs/228/simple/cover.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
+					{{=IMG(_src=URL('static','files/presses/4/monographs/273/simple/cover.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
 					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/228'))}}</div>    
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/273'))}}</div>    
 				</div>
 			</div>
 			
@@ -36,6 +36,27 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
            </div>
 					<div class="media-body">
+                      <p class="media-heading">27.11.2017</p>
+                      {{if session.forced_language =='de': }} 
+                      <h5>Neuerscheinung bei CrossAsia-eBooks</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>New publication on CrossAsia-eBooks</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}Über den indischen König Vikrama liegt eine Reihe von Erzählungen in verschiedenen indischen Sprachen vor. Daneben finden sich auch persische Fassungen aus der Zeit, als Persisch in Indien als Literatur- und Verwaltungssprache genutzt wurde. In der vorliegenden Untersuchung  <a href="{{=URL('catalog','book/273')}}" title="Informationen über Neuerscheinung: Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus">Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus</a> befasst sich Anna Martin mit diesen persischen Versionen. Im Fokus der Betrachtung steht eine Bearbeitung aus dem 17. Jahrhundert, die der Autor Kišandās erstellte und „Kišans Unterhaltungsstück (Kišanbilās) nannte.
+                      {{elif session.forced_language =='en': }}    
+                      There exist many tales about the Indian king Vikrama in different Indian languages. Persian versions emerged during the 16th century, when the Persian language was one of the many literary languages and also functioned as administrative language in India. In her study <a href="{{=URL('catalog','book/273')}}" title="Information on new title: Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus">Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus</a> Anna Martin examines a 17th century Persian adaptation of the Vikrama story called the Kišanbilās („Kišan’s dalliance“) by an author named Kišandās.
+                      {{pass}}
+                      </p>
+          </div>
+			  </div>
+
+
+			<div class="media">
+           <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+           </div>
+					<div class="media-body">
                       <p class="media-heading">06.11.2017</p>
                       {{if session.forced_language =='de': }}
                       <h5>CrossAsia-eBooks präsentiert den 8. Band der Geographien Südasiens</h5>
@@ -45,7 +66,7 @@
 
                       <p class="boxText">{{if session.forced_language =='de': }}Mit dieser Open-Access-Publikation stehen Ihnen <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">Extended Abstracts der 7.&nbsp;Jahrestagung des AK Südasien 2017</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Bildung, Konsum und Wertschöpfungsketten, Rurale Welten, Urbane Welten und Entwicklungsforschung und Tourismus als PDF downloaden.
                       {{elif session.forced_language =='en': }}    
-                      This open-access publication offers you extended abstracts of the  <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">7.&nbsp;Jahrestagung des AK Südasien 2017</a>. As with previous volumes you can download the whole volume or individual articles as PDF. The volume contains articles on migration, education, consumption and value chains, rural and urban worlds as well as tourism and development research.
+                      This open-access publication offers you extended abstracts of the  <a href="{{=URL('catalog','book/300')}}" title="Information on new title: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">7.&nbsp;Jahrestagung des AK Südasien 2017</a>. As with previous volumes you can download the whole volume or individual articles as PDF. The volume contains articles on migration, education, consumption and value chains, rural and urban worlds as well as tourism and development research.
                       {{pass}}
                       </p>
           </div>
@@ -276,15 +297,11 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 			
 			<div class="col-lg-3">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"> <h4>{{=T('Coming Soon')}}</h4>
-          {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/martin2017.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
+				  <div class="box-gray aligncenter"> <h4>{{=T('Forthcoming')}}</h4>
+          {{=IMG(_src=URL(myconf.take('web.application'),'static','images/catalog/zotter2017.jpg'),_alt='',_style='width:145px',_class='bildrahmen')}}
 				  </div>
 				  <div class="box-bottom">
-          {{if session.forced_language =='de': }}
-          {{=A(T('More'),_href=URL('catalog','index#martin'))}}
-          {{elif session.forced_language =='en': }}
-          {{=A(T('More'),_href=URL('catalog','index#martin_en'))}}
-          {{pass}}
+          {{=A(T('More'),_href=URL('catalog','index#forthcoming'))}}
 				  </div>
 				</div>
 			</div>
