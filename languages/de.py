@@ -76,6 +76,7 @@
 'bei HB:': 'bei HB:',
 'Bei PB ist nur square möglich.': 'Bei PB ist nur square möglich.',
 'bei PB: ': 'bei PB: ',
+'Beiheft': 'Beiheft',
 'Belletristik': 'Belletristik',
 'Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region': 'Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region',
 'Bibliography of Online Resources on Chinese Strategy, Security and Military Matters': 'Bibliography of Online Resources on Chinese Strategy, Security and Military Matters',
