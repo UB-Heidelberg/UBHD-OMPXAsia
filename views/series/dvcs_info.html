@@ -1,0 +1,60 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>
+					{{if session.forced_language =='de': }}  
+					Das Jahrbuch der Deutschen Vereinigung für Chinastudien   
+					{{elif session.forced_language =='en': }}
+					Das Jahrbuch der Deutschen Vereinigung für Chinastudien
+					{{pass}}
+				</h3>
+			</div>
+		</div>
+
+		<div class="row">	
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">	
+				  <p>Das Jahrbuch der DVCS ist ein etabliertes wissenschaftliches Medium für deutschsprachige sinologische Forschung. Der erste Band erschien 1995. Die Jahrbücher sind entsprechend den Schwerpunkten jeweiliger Jahrestagungen thematisch ausgerichtet und decken ein breites inhaltliches Spektrum ab. Sie erscheinen in Druckform beim Harrassowitz Verlag (Wiesbaden) und können dort direkt bestellt werden (https://www.harrassowitz-verlag.de/reihe_393.ahtml). Ab 2018 werden die gedruckten Neuerscheinungen nach Ablauf einer Sperrfrist von zwölf Monaten sowie frühere Ausgaben als Online-Publikation im Open Access zur Verfügung gestellt.</p>               
+				  <div class="widget">
+							<ul class="tags">
+
+								<li>
+
+								   <p><a href="{{=URL('catalog', 'series/dvcs')}}">{{=T('Volumes')}}</a></p>
+
+								</li>
+
+							</ul>
+				  </div>        
+			</div>	
+
+			<div class="col-lg-3">
+				  <p>{{=IMG(_src=URL('static','images/partner/dvcs_logo.png'),_width='230px')}}</p>
+			</div>		
+			{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">	
+				  <p>Das Jahrbuch der DVCS ist ein etabliertes wissenschaftliches Medium für deutschsprachige sinologische Forschung. Der erste Band erschien 1995. Die Jahrbücher sind entsprechend den Schwerpunkten jeweiliger Jahrestagungen thematisch ausgerichtet und decken ein breites inhaltliches Spektrum ab. Sie erscheinen in Druckform beim Harrassowitz Verlag (Wiesbaden) und können dort direkt bestellt werden (https://www.harrassowitz-verlag.de/reihe_393.ahtml). Ab 2018 werden die gedruckten Neuerscheinungen nach Ablauf einer Sperrfrist von zwölf Monaten sowie frühere Ausgaben als Online-Publikation im Open Access zur Verfügung gestellt.</p>
+				  <div class="widget">
+							<ul class="tags">
+
+								<li>
+
+								   <p><a href="{{=URL('catalog', 'series/bgp')}}">{{=T('Volumes')}}</a></p>
+
+								</li>
+
+							</ul>
+				  </div>
+			</div>	
+
+			<div class="col-lg-3">
+				  <p>{{=IMG(_src=URL('static','images/partner/dvcs_logo.png'),_width='230px')}}</p>
+			</div>	
+			{{pass}}
+       </div>
+    </div>
+</div>
+
