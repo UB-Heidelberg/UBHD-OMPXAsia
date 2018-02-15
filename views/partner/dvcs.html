@@ -1,0 +1,71 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>{{if session.forced_language =='de': }}
+					   Deutsche Vereinigung für Chinastudien e. V. (DVCS)
+					{{elif session.forced_language =='en': }}
+					   Deutsche Vereinigung für Chinastudien e. V. (DVCS)
+					{{pass}}
+				</h3>
+			</div>	
+			
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">                
+                <p>Die Deutsche Vereinigung für Chinastudien e. V. (DVCS) mit Sitz im Berlin versteht sich als Vereinigung für Chinawissenschaftler/innen aus dem gesamten deutschsprachigen Raum. 
+Die von ihr alljährlich veranstalteten Tagungen dienen der Vorstellung neuer Forschungsergebnisse sowie dem fachlichen Dialog nicht nur der Mitglieder untereinander, sondern mit allen an China Interessierten. Ein besonderes Anliegen der DVCS ist es, dem sinologischen Nachwuchs ein Diskussionsforum zu eröffnen, sowie ein organisatorisches Dach für Forschungsprojekte zu bieten und Publikationsmöglichkeiten zu schaffen.
+Weitere Informationen zu den Vereinsaktivitäten bzw. Vereinsgeschichte finden Sie auf der <a href="http://www.ruhr-uni-bochum.de/oaw/dvcs/index.html" title="Link zur Homepage">Homepage</a> der Deutschen Vereinigung für Chinastudien.</p>
+ 
+			</div>        
+					
+					
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+				<p>{{=IMG(_src=URL('static','images/partner/dvcs_logo.jpg'),_width='230px')}}</p>
+					   
+							  <p><b>Kontakt</b><br>
+							  Prof. Dr. Christian Soffel (Vorsitzender)<br>
+							  E-Mail: <a href="mailto:soffel@uni-trier.de">soffel@uni-trier.de</a><br /><br />
+							  Dr. Maria Khayutina (stellvertretende Vorsitzende)<br />
+							  E-Mail: <a href="mailto:maria.khayutina@ostasien.fak12.uni-muenchen.de">maria.khayutina@ostasien.fak12.uni-muenchen.de</a><br /><br />
+							  Dr. Rüdiger Breuer (Kassenwart)<br />
+							  E-Mail: <a href="mailto:ruediger.breuer@ruhr-uni-bochum.de">ruediger.breuer@ruhr-uni-bochum.de</a><br /><br />
+							  Internet: <a href="http://www.ruhr-uni-bochum.de/oaw/dvcs/vorstand.html" title="Homepage DVCS Verlag">http://www.ruhr-uni-bochum.de/oaw/dvcs/vorstand.html</a></p>
+				</div>                
+			</div>
+			
+			{{elif session.forced_language =='en': }}
+			
+			<div class="col-lg-9">                
+                <p>Die Deutsche Vereinigung für Chinastudien e. V. (DVCS) mit Sitz im Berlin versteht sich als Vereinigung für Chinawissenschaftler/innen aus dem gesamten deutschsprachigen Raum. 
+Die von ihr alljährlich veranstalteten Tagungen dienen der Vorstellung neuer Forschungsergebnisse sowie dem fachlichen Dialog nicht nur der Mitglieder untereinander, sondern mit allen an China Interessierten. Ein besonderes Anliegen der DVCS ist es, dem sinologischen Nachwuchs ein Diskussionsforum zu eröffnen, sowie ein organisatorisches Dach für Forschungsprojekte zu bieten und Publikationsmöglichkeiten zu schaffen.
+Weitere Informationen zu den Vereinsaktivitäten bzw. Vereinsgeschichte finden Sie auf der <a href="http://www.ruhr-uni-bochum.de/oaw/dvcs/index.html" title="Link zur Homepage">Homepage</a> der Deutschen Vereinigung für Chinastudien.</p>
+ 
+			</div>        
+					
+					
+			<div class="col-lg-3">
+				<div id="infoBoxRechts">
+				<p>{{=IMG(_src=URL('static','images/partner/dvcs_logo.jpg'),_width='230px')}}</p>
+					   
+							  <p><b>Kontakt</b><br>
+							  Prof. Dr. Christian Soffel (Vorsitzender)<br>
+							  E-Mail: <a href="mailto:soffel@uni-trier.de">soffel@uni-trier.de</a><br /><br />
+							  Dr. Maria Khayutina (stellvertretende Vorsitzende)<br />
+							  E-Mail: <a href="mailto:maria.khayutina@ostasien.fak12.uni-muenchen.de">maria.khayutina@ostasien.fak12.uni-muenchen.de</a><br /><br />
+							  Dr. Rüdiger Breuer (Kassenwart)<br />
+							  E-Mail: <a href="mailto:ruediger.breuer@ruhr-uni-bochum.de">ruediger.breuer@ruhr-uni-bochum.de</a><br /><br />
+							  Internet: <a href="http://www.ruhr-uni-bochum.de/oaw/dvcs/vorstand.html" title="Homepage DVCS Verlag">http://www.ruhr-uni-bochum.de/oaw/dvcs/vorstand.html</a></p>
+				</div>                
+			</div>      
+					
+			{{pass}}
+	
+		</div>			
+
+    </div>
+ </div>
+
+ 
