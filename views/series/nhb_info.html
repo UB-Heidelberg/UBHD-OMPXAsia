@@ -1,0 +1,72 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				    {{if session.forced_language =='de': }}
+					<h3> 
+					Neue Hallesche Berichte<br />
+					Quellen und Studien zur Geschichte und Gegenwart Südindiens
+					</h3>
+					{{elif session.forced_language =='en': }}
+					<h3> 
+					Neue Hallesche Berichte<br />
+					Quellen und Studien zur Geschichte und Gegenwart Südindiens
+					</h3>
+					<h4>
+					[New Halle Reports. Sources and Studies on Historical and Contemporary South India]
+					</h4>
+					{{pass}}
+				
+				{{if session.forced_language =='de': }}
+				<p><strong>Im Auftrag der Franckeschen Stiftungen zu Halle herausgegeben von Michael Bergunder und Daniel Cyranka</strong></p>
+				{{elif session.forced_language =='en': }}
+				<p><strong>Edited by Michael Bergunder and Daniel Cyranka on behalf of the Francke Foundations in Halle</strong></p>
+				{{pass}}
+			</div>	
+		</div>
+		
+		<div class="row">
+			{{if session.forced_language =='de': }}
+			<div class="col-lg-9">
+				<p>Die Beziehungen der Franckeschen Stiftungen nach Indien reichen bis in die Anfänge der Stiftungsgeschichte zurück. Mit der Dänisch-Englisch-Halleschen Mission, der ersten protestantischen Mission überhaupt, knüpften die Stiftungen ab 1706 Kontakte nach Südindien und veröffentlichten die Berichte der Missionare, die sogenannten „Halleschen Berichte“, von 1710 bis 1772 in Halle. Mit den seit 1999 erscheinenden „Neuen Halleschen Berichten“ soll eine zeitgemäße wissenschaftliche Auseinandersetzung mit den traditionellen Indienbeziehungen gefördert werden. Die Themenschwerpunkte, die in Tagungsberichten, Monografien und Quelleneditionen aufgegriffen werden, sind Dravidologie, Volksreligiosität, Geschichte des Christentums, Geschichte des Hinduismus sowie Religion und Kultur Südindiens.</p>
+				<div class="widget">
+							<ul class="tags">
+
+								<li>
+
+								   <p><a href="{{=URL('catalog', 'series/nhb')}}">{{=T('Volumes')}}</a></p>
+
+								</li>
+
+							</ul>
+				</div> 
+			</div> 		
+			
+			<div class="col-lg-3">
+				<p>{{=IMG(_src=URL('static','images/series/franckesche_logo.png'),_width='200px')}}</p>
+			</div>
+			{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">
+				<p>The relations between the Francke Foundations and India go back to the early days of the Foundations. With the Danish-English-Halle Mission, the first mission of the Protestant church, the Foundations established contact with South India from 1706 on and published the missionaries’ reports, the “Hallesche Berichte”, between 1710 and 1772. The “Neue Hallesche Berichte”, published from 1999 on, aim at promoting contemporary scholarly studies of traditional relations with India. The series’ topics, developed in conference reports, monographs and critical editions of sources, include Dravidology, popular religion, the history of Christianity, the history of Hinduism, and the religion and culture of South India.</p>
+				<div class="widget">
+							<ul class="tags">
+
+								<li>
+								   <p><a href="{{=URL('catalog', 'series/nhb')}}">{{=T('Volumes')}}</a></p>
+								</li>
+
+							</ul>
+				</div>
+			</div> 		
+			
+			<div class="col-lg-3">
+				<p>{{=IMG(_src=URL('static','images/series/franckesche_logo.png'),_width='200px')}}</p>
+			</div>
+			{{pass}}
+
+		</div>
+    </div>
+</div>
+

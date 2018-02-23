@@ -1,0 +1,61 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>  {{if session.forced_language =='de': }}
+					   Franckesche Stiftungen zu Halle 
+					{{elif session.forced_language =='en': }}
+					   Franckesche Stiftungen zu Halle 
+				{{pass}}
+				</h3>
+			</div>
+		</div>
+
+		<div class="row">
+			{{if session.forced_language =='de': }}      
+			<div class="col-lg-9">	  
+				<p>Die Verlagstätigkeit der Franckeschen Stiftungen zu Halle reicht bis in die Gründungszeit der Schulstadt zurück. In Fortführung dieser Tradition erscheinen heute die Veröffentlichungen unter dem Namen Verlag der Franckeschen Stiftungen. Ausstellungskataloge, opulente Bildbände, spannende Quellentexte und renommierte Forschungsliteratur zählen zum breiten Spektrum an Publikationen, die der Verlag seiner Leserschaft bietet. So spiegelt sich die facettenreiche Arbeit der Franckeschen Stiftungen auch in den Verlagsreihen wider. Ihre Beziehungen nach Indien bilden einen wichtigen Aspekt innerhalb der Anstaltsgeschichte und reichen bis in die heutige Zeit. Dies verdeutlicht die Publikationsreihe „Neue Hallesche Berichte“ des Verlags. Auf CrossAsia-eBook sind vergriffene Bände dieser Reihe zu finden, die anderen Bände können über den Buchhandel oder den Verlag der Franckeschen Stiftungen bezogen werden.</p>
+			</div>
+			
+			<div class="col-lg-3">
+				<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/partner/franckesche_logo.png'),_width='200px')}}</p>
+				<p><b>Kontakt</b><br>
+							  Franckesche Stiftungen<br>
+							  Franckeplatz 1, Haus 37<br />
+							  06110 Halle (Saale)<br /><br />
+							  
+							  Tel.: +49 345 2127 499<br />
+							  Fax: +49 345 2127 433<br />
+							  E-Mail: verlag@francke-halle.de<br /><br />
+							  
+							  Internet: <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Francke Verlag">www.francke-halle.de/verlag</a></p>
+				</div>
+			</div>
+			{{elif session.forced_language =='en': }}
+			<div class="col-lg-9">	  
+				<p>The publishing activities of the Francke Foundations go back to the time when the “school town” was established. Continuing this tradition, publications currently appear under the imprint “Verlag der Franckeschen Stiftungen”. Exhibition catalogues, opulently illustrated books on the collections, fascinating source material and reputable research literature are included in the broad spectrum which the publishing house presents to its readers. Its series reflect the multifaceted work of the Francke Foundations. Their relations to India constitute an important aspect in the history of the institution and persist until today. This is illustrated by the series “Neue Hallesche Berichte”. The exhausted volumes of the series can be found on CrossAsia-eBook, the other volumes can be acquired via book trade or the Publications’ Department of the Francke Foundations.</p>
+			</div>
+			
+			<div class="col-lg-3">
+				<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/partner/franckesche_logo.png'),_width='200px')}}</p>
+				<p><b>Contact</b><br>
+							  Franckesche Stiftungen<br>
+							  Franckeplatz 1, Haus 37<br />
+							  06110 Halle (Saale)<br /><br />
+							  
+							  Phone.: +49 345 2127 499<br />
+							  Fax: +49 345 2127 433<br />
+							  E-Mail: verlag@francke-halle.de<br /><br />
+							  
+							  Internet: <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Francke Verlag">www.francke-halle.de/verlag</a></p>
+				
+				</div>
+			</div>
+			{{pass}}
+        </div>
+    </div>
+</div>
+
+ 
