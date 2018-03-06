@@ -2,10 +2,10 @@
 {{import json}}
 {{from ompformat import formatContributors, getSeriesImageLink}}
 
-<div id="main" class="container">
-  <section id="content">
-    <div class="container">
+
+
     {{for series in all_series:}}
+	<div class="col-lg-12 contentbox-12">
       <div class="row">
         <div class="col-lg-2">
           <article>
@@ -51,9 +51,8 @@
           </article>
         </div>
       </div>
+	  </div>
     {{pass}}
-    </div>
-  </section>
-</div>
+
 {{db.t_usage_statistics.insert()}}
 {{db.commit()}}
