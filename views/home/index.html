@@ -36,6 +36,32 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
 				</div>
 				<div class="media-body">
+                      <p class="media-heading">01.06.2018</p>
+                      {{if session.forced_language =='de': }}
+                      <h5><em>Neue Hallesche Berichte</em> online zugänglich – Kooperation zwischen den Franckeschen Stiftungen und CrossAsia-eBooks</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5><em>Neue Hallesche Berichte</em> online available – Cooperation between the Franckesche Stiftungen and CrossAsia-eBooks
+</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}Wir freuen uns Ihnen mitzuteilen, dass im Rahmen der Kooperation zwischen dem <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlg der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen</a> zu Halle und CrossAsia-eBooks, die im Buchhandel nicht mehr erhältlichen Bände der Schriftenreihe <em>Neue Hallesche Berichte</em> nun als Open-Access Publikationen auf CrossAsia-eBooks der Wissenschaft zugänglich sind.<br />
+					  Die Beziehungen der Franckeschen Stiftungen nach Indien reichen bis in die Anfänge der Stiftungsgeschichte zurück. Mit der Dänisch-Englisch-Halleschen Mission, der ersten protestantischen Mission überhaupt, knüpften die Stiftungen ab 1706 Kontakte nach Südindien und veröffentlichten die Berichte der Missionare, die sogenannten Halleschen Berichte, von 1710 bis 1772 in Halle. Mit den seit 1999 erscheinenden <em>Neuen Hallesche Berichte</em> soll eine zeitgemäße wissenschaftliche Auseinandersetzung mit den traditionellen Indienbeziehungen gefördert werden. Die Themenschwerpunkte, die in Tagungsberichten, Monografien und Quelleneditionen aufgegriffen werden, sind Dravidologie, Volksreligiosität, Geschichte des Christentums, Geschichte des Hinduismus sowie Religion und Kultur Südindiens<br />
+					  Von den bislang neun erschienenen Bänden stehen nun <a href="{{=URL('catalog','series/nhb')}}" title="Übersicht der digitalisierten Bände der Neuen Halleschen Berichten">vier Bände als digitale Ausgabe</a> zur Verfügung. 
+                      {{elif session.forced_language =='en': }}    
+                      We are pleased to announce that as part of the cooperation between the <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlg der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen zu Halle</a> and CrossAsia eBooks, the volumes of the <em>Neue Hallesche Berichte</em> series, which are out of print, are now accessible as Open Access publications on the CrossAsia eBooks platform.<br />
+					  The relations between the Francke Foundations and India go back to the early days of the Foundations. With the Danish-English-Halle Mission, the first mission of the Protestant church, the Foundations established contact with South India from 1706 on and published the missionaries’ reports, the “Hallesche Berichte”, between 1710 and 1772. The <em>Neue Hallesche Berichte</em>, published from 1999 on, aim at promoting contemporary scholarly studies of traditional relations with India. The series’ topics, developed in conference reports, monographs and critical editions of sources, include Dravidology, popular religion, the history of Christianity, the history of Hinduism, and the religion and culture of South India.<br />
+					  Of the nine books published so far, <a href="{{=URL('catalog','series/nhb')}}" title="online available volumes of the Neue Halleschen Berichten">four volumes are now available</a> as a digital edition.
+                      {{pass}}
+                      </p>
+				</div>
+			  </div> 				  
+				  
+				  
+			<div class="media">
+				<div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
                       <p class="media-heading">29.03.2018</p>
                       {{if session.forced_language =='de': }}
                       <h5>Neuerscheinung: Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal</h5>
