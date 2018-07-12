@@ -36,6 +36,29 @@
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
 				</div>
 				<div class="media-body">
+                      <p class="media-heading">12.07.2018</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>CrossAsia E-Publishing auf der 25. ECSAS in Paris (24.–27. Juli 2018)</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>CrossAsia E-Publishing at the 25th ECSAS in Paris (24–27 July 2018)</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}CrossAsia E-Publishing wird auf der 25. European Conference on South Asian Studies in Paris im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Paris!  
+                      {{elif session.forced_language =='en': }}    
+                      CrossAsia E-Publishing will be present at the 25th European Conference on South Asian Studies in Paris. Visit us at the publishers’ space and find out more on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Paris! 
+                      {{pass}}
+                      </p>
+				</div>
+			  </div> 
+
+
+
+
+			<div class="media">
+				<div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
                       <p class="media-heading">01.06.2018</p>
                       {{if session.forced_language =='de': }}
                       <h5><em>Neue Hallesche Berichte</em> online zugänglich – Kooperation zwischen den Franckeschen Stiftungen und CrossAsia-eBooks</h5>
