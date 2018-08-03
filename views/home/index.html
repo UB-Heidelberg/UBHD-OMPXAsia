@@ -36,6 +36,27 @@ $('.flexslider').flexslider();
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
 				</div>
 				<div class="media-body">
+                      <p class="media-heading">03.08.2018</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>Neuerscheinung: “HerStory. Historical Scholarship between South Asia and Europe” </h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>New publication: “HerStory. Historical Scholarship between South Asia and Europe” </h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+					  Die zu Ehren der Historikerin Professor Dr. Gita Dharampal-Frick erschienene Festschrift <a href="{{=URL('catalog','book/366')}}" title="Informationen über Neuerscheinung:HerStory. Historical Scholarship between South Asia and Europe">HerStory. Historical Scholarship between South Asia and Europe</a>, herausgegeben von Rafael Klöber und Manju Ludwig, vereint eine Vielzahl an innovativen Beiträgen von Freunden, Kollegen und ehemaligen Studierenden zu den vielschichtigen Forschungsgebieten der Geschichte Südasiens, die Gita Dharampal-Frick in den letzten Jahrzehnten bereichert hat. Der Band deckt mehrere Jahrhunderte und facettenreiche Themen ab, die von transkulturellen Begegnungen zwischen Südasien und Europa, über Aspekte des kolonialen Diskurses, wie etwa der kolonialen Wissensproduktion oder der Aushandlung von Identitäten, wegweisende Ansätze der maritimen Geschichte des Indischen Ozeans bis hin zu vielfältigen Perspektiven auf M.K. Gandhi reichen.
+                      {{elif session.forced_language =='en': }}    
+                      This Festschrift in honour of Professor Dr. Gita Dharampal-Frick assembles a number of innovative contributions by friends, colleagues, and former students to the multiple research areas in the field of history of South Asia that Gita Dharampal-Frick has enriched over the last decades. The essays included in this volume address a broad number of topics and periods, ranging from transcultural encounters between South Asia and Europe, reassessments of colonial discourses and their legacies, novel approaches to the maritime history of the Indian Ocean, and to perspectives on M.K. Gandhi.
+                      {{pass}}
+                      </p>
+				</div>
+			  </div> 
+			  
+			<div class="media">
+				<div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
                       <p class="media-heading">12.07.2018</p>
                       {{if session.forced_language =='de': }}
                       <h5>CrossAsia E-Publishing auf der 25. ECSAS in Paris (24.–27. Juli 2018)</h5>
