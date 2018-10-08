@@ -30,6 +30,27 @@ $('.flexslider').flexslider();
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
+				  
+			   <div class="media">
+				<div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
+                      <p class="media-heading">08.10.2018</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>Frankfurter Buchmesse 2018</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>Frankfurt Book Fair 2018</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+					  CrossAsia-ePublishing wird dieses Jahr zusammen mit dem Südasien-Institut und Heidelberg University Publishing auf der Frankfurter Buchmesse vertreten sein. Wir freuen uns auf Ihren Besuch an unserem Stand in Halle 4.1, B84.
+                      {{elif session.forced_language =='en': }}    
+                      This year CrossAsia-ePublishing will attend the Frankfurt Book Fair together with the South Asia Institute and Heidelberg University Publishing. We look forward to seeing you at our stall in Hall 4.1, B84.
+                      {{pass}}
+                      </p>
+				</div>
+			  </div> 
 
 			<div class="media">
 				<div class="media-left pull-left">
