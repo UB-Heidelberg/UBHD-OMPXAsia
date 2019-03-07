@@ -1,0 +1,65 @@
+{{extend 'layout.html'}}
+
+<div class="row">
+    <div class="col-lg-12 contentbox-12">
+	    <div class="row">
+			<div class="col-lg-12">
+				<h3>  {{if session.forced_language =='de': }}
+					   Ergon-Verlag
+					{{elif session.forced_language =='en': }}
+					   Ergon Publishing
+					   {{pass}}
+				</h3>
+			</div>	
+		</div>	
+
+        <div class="row">
+                {{if session.forced_language =='de': }}
+				
+				<div class="col-lg-9">
+					 <p>Der <b>Ergon-Verlag</b> wurde 1989 gegründet und gehört heute zu den führenden geisteswissenschaftlichen Fachverlagen, auch außerhalb des deutschen Sprachraums. Bedeutungsvoll für die Verlagsentwicklung war die Edition der herausragenden Koranübersetzung Friedrich Rückerts, die große Aufmerksamkeit in der Fachpresse erhielt. Nachdem der Schwerpunkt des Verlagsprogramms traditionell im Bereich der Literaturwissenschaften und der Orientalistik lag, hat sich mittlerweile das Portfolio in den geistes- und sozialwissenschaftlichen Disziplinen maßgeblich ausgeweitet. Ergon betreut renommierte Schriftenreihen von Universitäten und Forschungsinstitutionen, beispielsweise der Orient-Institute (Max-Weber-Stiftung) in Beirut und Istanbul. Im Juli 2017 begab sich Ergon unter das Dach der Nomos Verlagsgesellschaft und besteht dort als eigenständiger Verlag weiter. Neben die klassische Druckausgabe tritt nun auch die elektronische Veröffentlichung im Rahmen der Nomos eLibrary.  </p>
+                  
+
+				</div>
+						
+				<div class="col-lg-3">
+					<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/ergon_logo.png'),_width='230px')}}</p>
+					<p><b>Kontakt</b><br>
+                    Ergon– ein Verlag in der Nomos Verlagsgesellschaft mbH & Co. KG<br /><br />	
+                    Waldseestr. 3-5<br />
+					          D-76530 Baden-Baden<br />
+					          Tel. +49 (0)7221-2104-0<br />
+					          Fax +49 (0)7221-2104-27<br />
+					          Email: <a href="mailto:service@ergon-verlag.de" title="Mail an den Ergon-Verlag">service (at) ergon-verlag.de</a><br />			
+					Internet: <a href="https://www.ergon-verlag.de/index.php" title="Homepage Ergon-Verlag">https://www.ergon-verlag.de/index.php</a></p>
+					
+					</div>
+				</div>		
+
+				{{elif session.forced_language =='en': }}
+				
+				<div class="col-lg-9">
+					 <p>Established in 1989, Ergon now ranks among the leading publishing houses in the field of the humanities in German-speaking countries and beyond. The release of Friedrich Rückert’s outstanding translation of the Qur’an was particularly significant for the further development of Ergon and critically acclaimed by the specialized press. Meanwhile, the initial focus on literary and oriental studies has been extended to other fields in the humanities and social sciences. Ergon publishes renowned series edited by universities and research institutes such as the Orient Institutes (Max Weber Foundation) in Beirut and Istanbul. In July 2017, Ergon became part of the Nomos publishing company and continues to be a separate brand therein. Next to its traditional print editions, Ergon now offers electronic publications within the Nomos eLibrary.</p>
+				</div>
+						
+				<div class="col-lg-3">
+					<div id="infoBoxRechts"><p>{{=IMG(_src=URL('static','images/series/ergon_logo.png'),_width='230px')}}</p>
+					<p><b>Contact</b><br>
+                    Ergon– ein Verlag in der Nomos Verlagsgesellschaft mbH & Co. KG<br /><br />	
+                    Waldseestr. 3-5<br />
+					          D-76530 Baden-Baden<br />
+					          Tel. +49 (0)7221-2104-0<br />
+					          Fax +49 (0)7221-2104-27<br />
+					          Email: <a href="mailto:service@ergon-verlag.de" title="Mail to Ergon-Verlag">service (at) ergon-verlag.de</a><br />			
+					Internet: <a href="https://www.ergon-verlag.de/index.php" title="Homepage Ergon-Verlag">https://www.ergon-verlag.de/index.php</a></p>
+					
+					</div>
+				</div>	
+
+                {{pass}}
+		</div>		
+
+    </div>
+ </div>
+
+ 
