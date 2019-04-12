@@ -31,6 +31,28 @@ $('.flexslider').flexslider();
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
 
+
+         <div class="media">
+				<div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
+                      <p class="media-heading">14.02.2019</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>Zwei weitere Bände der „Neue Hallesche Berichte“ veröffentlicht</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>Two more volumes of the "New Hallesche Berichte" published</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+Im Rahmen der im Sommer 2018 begonnenen Kooperation zwischen dem <i>Verlag der Franckeschen Stiftungen zu Halle</i> und <a href="http://crossasia-books.ub.uni-heidelberg.de/xasia">CrossAsia-eBooks</a> konnten wir bei CrossAsia-eBooks zwei weitere Bände der Schriftenreihe „Neue Hallesche Berichte“ (NHB) als Open Access Publikationen der Wissenschaft zugänglich machen:<br><a href="{{=URL('catalog','book/467')}}" title="Publikation 'Ulrike Schröder: Religion, Caste and Ritual: Christian Mission and Tamil Hinduism in Southern India in the 19th Century'">Ulrike Schröder: Religion, Caste and Ritual: Christian Mission and Tamil Hinduism in Southern India in the 19th Century (NHB; 8)</a><br><br><a href="{{=URL('catalog','book/473')}}" title="Publikation 'Siegfried Kratzsch: Deex Autaer of Philip Angel. A seventeenth-century Dutch manuscript on the ten Avatāras of Viṣṇu'">Siegfried Kratzsch (ed.): Deex Autaer of Philip Angel. A seventeenth-century Dutch manuscript on the ten Avatāras of Viṣṇu (NHB; 7)</a>
+                      {{elif session.forced_language =='en': }}    
+As part of the cooperation between the <i>Verlag der Franckeschen Stiftungen zu Halle</i> and <a href="http://crossasia-books.ub.uni-heidelberg.de/xasia">CrossAsia-eBooks</a>, which began in the summer of 2018, we were able to publish two more volumes of the series "Neue Hallesche Berichte" (NHB) as open access publications:<br><a href="{{=URL('catalog','book/467')}}" title="Publication 'Ulrike Schröder: Religion, Caste and Ritual: Christian Mission and Tamil Hinduism in Southern India in the 19th Century'">Ulrike Schröder: Religion, Caste and Ritual: Christian Mission and Tamil Hinduism in Southern India in the 19th Century (NHB; 8)</a><br><br><a href="{{=URL('catalog','book/473')}}" title="Publication 'Siegfried Kratzsch: Deex Autaer of Philip Angel. A seventeenth-century Dutch manuscript on the ten Avatāras of Viṣṇu'">Siegfried Kratzsch (ed.): Deex Autaer of Philip Angel. A seventeenth-century Dutch manuscript on the ten Avatāras of Viṣṇu (NHB; 7) 
+                      {{pass}}
+                      </p>
+				</div>
+			  </div> 
+
 			   <div class="media">
 				<div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
