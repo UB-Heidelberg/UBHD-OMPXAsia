@@ -326,6 +326,7 @@
 'Powered by': 'Unterstützt von',
 'Preface': 'Allgemeines',
 'previous %s rows': 'vorherige %s Reihen',
+'Privacy Notice': 'Datenschutzhinweis',
 'Print On Demand': 'Print On Demand',
 'Produktform/Medienart': 'Produktform/Medienart',
 'Produktionsjahr': 'Produktionsjahr',
