@@ -31,6 +31,27 @@ $('.flexslider').flexslider();
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
 				  <div class="box-gray aligncenter" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
+        <div class="media">
+				  <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
+                      <p class="media-heading">01.07.2019</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>CrossAsia E-Publishing auf der 11. ICAS in Leiden (15.–19. Juli 2019)</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>CrossAsia E-Publishing at the 11th ICAS in Leiden (15–19 July 2019)</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+                      CrossAsia E-Publishing wird auf der <strong><a href="https://www.iias.asia/event/icas-11" title="Homepage INternational Convention of Asia Scholars in Leiden">11. International Convention of Asia Scholars in Leiden</a></strong> im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Sie finden uns im Kamerlingh Onnes Gebäude, 1. Etage (Steenschuur 25). Wir freuen uns auf Ihren Besuch in Leiden! 
+                      {{elif session.forced_language =='en': }}    
+                      CrossAsia E-Publishing will be present at the <strong><a href="https://www.iias.asia/event/icas-11" title="Homepage International Convention of Asia Scholars in Leiden">11th International Convention of Asia Scholars in Leiden</a></strong>. Visit us at the publishers’ space and find out more on the various possibilities we offer for publishing your books, series or journals. You will find us in the Kamerlingh Onnes building, 1st floor (Steenschuur 25). We are looking forward to seeing you in Leiden!
+                      {{pass}}
+                      </p>
+				  </div>
+			  </div> 
+
          <div class="media">
 				<div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
@@ -46,7 +67,8 @@ $('.flexslider').flexslider();
                       <p class="boxText">{{if session.forced_language =='de': }}
                       Dieses Buch präsentiert aktuelle wissenschaftliche Forschungen zu einer der wichtigsten literarischen und historischen Perioden der Frühen Neuzeit aus einer Vielzahl von Ansätzen und Perspektiven. Es enthält eine Auswahl von Beiträgen, die auf der 12. International Conference on Early Modern Literatures of North India vorgestellt wurden, und die neues Material sowie innovative Methoden bei der Interpretation dieses Materials bieten. Das Organisationsprinzip des Bandes liegt in der Erforschung der Verbindungen zwischen einer Vielzahl von Sprachen (indische Volkssprachen, Persisch, Sanskrit), Medien (Texte, Bilder) und Traditionen (Hindu, Jain, Sikh, Muslim). Die Rolle der persischen Sprache und die Bedeutung der Übersetzungen aus dem Sanskrit ins Persische werden vor dem Hintergrund des „translational turn“ diskutiert. 
                       {{elif session.forced_language =='en': }}    
-                      This book presents recent scholarly research on one of the most important literary and historical periods of the Early Modern era from a wide range of approaches and perspectives. It contains a selection of contributions presented at the <i>12th International Conference on Early Modern Literatures of North India</i> which provide fresh and new material as well as innovative methods to approach it. The organizing principle of the volume lies in its exploration of the links between a multiplicity of languages (Indian vernaculars, Persian, Sanskrit), of media (texts, paintings, images) and of traditions (Hindu, Jain, Sikh, Muslim). The role of the Persian language and the importance of the translations from Sanskrit into Persian are discussed in light of the translational turn. The relations between various yogic traditions, especially of Nath origin, from Kabir and other sampradayas, are reconsidered.
+                      This book presents recent scholarly research on one of the most important literary and historical periods of the Early Modern era from a wide range of approaches and perspectives. It contains a selection of contributions presented at the <i>12th International Conference on Early Modern Literatures of North India</i> which provide fresh and new material as well as innovative methods to approach it.
+The organizing principle of the volume lies in its exploration of the links between a multiplicity of languages (Indian vernaculars, Persian, Sanskrit), of media (texts, paintings, images) and of traditions (Hindu, Jain, Sikh, Muslim). The role of the Persian language and the importance of the translations from Sanskrit into Persian are discussed in light of the translational turn. The relations between various yogic traditions, especially of Nath origin, from Kabir and other sampradayas, are reconsidered.
                       {{pass}}
                       </p>
 				</div>
