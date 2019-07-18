@@ -1,26 +1,74 @@
 {{extend 'layout.html'}}
 
 <div class="row">
-    <div class="col-lg-12 contentbox-12">
-            <h3>  {{if session.forced_language =='de': }}
-                Technik
-                {{elif session.forced_language =='en': }}
-                Technology
-            {{pass}}
-            </h3>
+  <div class="col-lg-12 contentbox-12"><h3>
+  {{if session.forced_language =='de': }} Technik 
+  {{elif session.forced_language =='en': }} Technology 
+  {{pass}}</h3>
 
-            <p>
-                {{if session.forced_language =='de': }}
-                <p>Als technische Plattform für die Veröffentlichung elektronischer Bücher kommt die Open-Source Software <a href="https://pkp.sfu.ca/omp/" title="Open Monograph Press">OMP (Open Monograph Press)</a> zum Einsatz, die vom <a href="https://pkp.sfu.ca/">Public Knowledge Project (PKP)</a> entwickelt wird.<br />Die Universitätsbibliothek Heidelberg, als Betreiberin von <b>CrossAsia-eBooks</b>, ist Teil der internationalen Entwicklergemeinschaft.</p>
-                
+{{if session.forced_language =='de': }}
+      <p>CrossAsia-eBooks setzt auf Open-Source-Software und beteiligt sich an der Entwicklung von innovativen Publikationstechnologien. Hierzu zählt die Entwicklung von Software genauso wie die Kooperation mit Partnern wie dem 
+        <a href="https://pkp.sfu.ca/">Public Knowledge Project (PKP)</a> und die aktive Mitwirkung in internationalen und nationalen Anwendernetzwerken.
+      </p>
+      
+      <h4>Backend</h4>
+      <ul> 
+        <li>Monographien und Sammelbände: 
+        <a href="https://pkp.sfu.ca/omp/" title="Homepage Public Knowledge Project (PKP) - Open Monograph Press">Open Monograph Press (OMP)</a>
+        </li> 
+        <li>Datenbank: 
+        <a href="https://www.mysql.com/" title="Homepage Oracle MySQL">Oracle MySQL</a>
+        </li>
+      </ul> 
+      <h4>Frontend</h4>
+      <ul>
+        <li>Python-basiertes Framework für Web-Applikationen <a href="http://www.web2py.com/" title="Homepage Web2py Framework">Web2py</a></li>
+         <li>HTML, CSS, responsives Design via <a href="http://getbootstrap.com/" title="Homepage Bootstrap">Bootstrap</a></li>
+         <li>Übergreifende Suche: <a href="http://lucene.apache.org/solr/" title="Homepage Apache Solr">Apache Solr</a></li>
+         <li>Online-Leseumgebung: <a href="https://github.com/elifesciences/lens" title="Homepage Github: Projekt eLife Lens">eLife Lens Schnittstellen</a></li>
+         <li>Open-Access-Statistik</li>
+         <li><a href="http://www.vgwort.de/startseite.html" title="Homepage VG Wort">VG Wort</a></li>
+      </ul>   
+         
+      <h4>Satz und Layout</h4>
+      <ul> 
+         <li> <a href="https://www.adobe.com/de/products/indesign.html" title="Homepage Adobe InDesign">Adobe InDesign</a>  für manuellen Satz und Covergestaltung </li>
+      </ul>
+               
+         {{elif session.forced_language =='en': }}
+      
+      <p>CrossAsia-eBooks uses Open-Source-Software and participates in the development of innovative publication technology. This includes software development as well as co-operation with partners such as the <a href="https://pkp.sfu.ca/">Public Knowledge Project (PKP)</a> and active participation in national and international user networks.</p> 
+      
+      <h4>Backend</h4>
+      <ul>
+        <li>Monographs and collected volumes: <a href="https://pkp.sfu.ca/omp/" title="Homepage Public Knowledge Project (PKP) - Open Monograph Press">Open Monograph Press (OMP)</a></li>
+        <li>Database: <a href="https://www.mysql.com/" title="Homepage Oracle MySQL">Oracle MySQL</a></li>
+      </ul> 
+      
+      <h4>Frontend</h4>
+      <ul>
+        <li>Python-based framework for web applications <a href="http://www.web2py.com/" title="Homepage Web2py Framework">Web2py</a></li> 
+        <li>HTML, CSS, responsive design using <a href="http://getbootstrap.com/" title="Homepage Bootstrap">Bootstrap</a></li> 
+        <li>Comprehensive searching: <a href="http://lucene.apache.org/solr/" title="Homepage Apache Solr">Apache Solr</a></li> 
+        <li>Online reading environment: <a href="https://github.com/elifesciences/lens" title="Homepage Github: Projekt eLife Lens">eLife Lens Schnittstellen</a></li>
+      </ul>   
+      
+      <h4>Interfaces</h4>
+      <ul>
+        <li>Open-Access-Statistik</li> 
+        <li><a href="http://www.vgwort.de/startseite.html" title="Homepage VG Wort">VG Wort</a></li>
+      </ul>
+         
+      <h4>Typesetting and Layout</h4>
+      <ul>
+        <li><a href="https://www.adobe.com/de/products/indesign.html" title="Homepage Adobe InDesign">Adobe InDesign</a> is used for manual typesetting and cover design.</li>
+      </ul>  
 
-{{elif session.forced_language =='en': }}
-                <p>For managing the editorial workflow of electronic books we use the Open-Source Software <a href="https://pkp.sfu.ca/omp/" title="Open Monograph Press">OMP (Open Monograph Press)</a> developed by the <a href="https://pkp.sfu.ca/">Public Knowledge Project (PKP)</a>.<br />Heidelberg University Library as provider of <b>CrossAsia-eBooks</b> is a member of the international developer community.</p>
-                {{pass}}
+      
+      
+      
+       {{pass}}
 
-
-            </p>
-
-	</div>
-</div>  
+  </div>
+</div> 
 				
