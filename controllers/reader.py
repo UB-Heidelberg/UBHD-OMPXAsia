@@ -34,17 +34,11 @@ def index():
         if os.path.exists(path) is False:
             raise HTTP(404)
 
-        query = ((db.submission_settings.submission_id == int(submission_id))
-                 & (db.submission_settings.locale == locale))
-        author_q = ((db.authors.submission_id == submission_id))
-        authors_list = db(author_q).select(
-            db.authors.first_name, db.authors.last_name)
-        authors = ''
-        for i in authors_list:
-            authors += i.first_name + ' ' + i.last_name + ', '
-        if authors.endswith(', '):
-            authors = authors[:-2]
-        return dict(json_list=XML(json(json_list)), authors=authors)
+        authors = [OMPItem(author, OMPSettings(ompdal.getAuthorSettings(author.author_id)))
+                   for author in ompdal.getAuthorsBySubmission(submission_id)]
+        authors_string = ', '.join((ompformat.formatName(a.settings) for a in authors))
+
+        return dict(json_list=XML(json(json_list)), authors=authors_string)
     else:
         path = os.path.join(request.folder, 'static/files/presses', myconf.take('omp.press_id'), 'monographs',
                             submission_id, 'submission/', file_id)
@@ -54,10 +48,6 @@ def index():
 def home():
     return dict()
 
-def index2():
-    from gluon.serializers import json
-    json_list = dict(xml_url='')
-    return dict(json_list=XML(json(json_list)))
 
 def download():
     submission_id = request.args[0]
