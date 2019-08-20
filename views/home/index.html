@@ -30,7 +30,34 @@ $('.flexslider').flexslider();
 			
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
-				  <div class="box-gray aligncenter" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
+				  <div class="box-gray" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
+
+        <div class="media">
+				  <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
+                      <p class="media-heading">20.08.2019</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>Zwei weitere Bände der „Neue Hallesche Berichte“ veröffentlicht</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>Two more volumes of the &ldquo;New Hallesche Berichte&rdquo; published</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+                      Im Rahmen der im Sommer 2018 begonnenen Kooperation zwischen dem <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlag der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen zu Halle</a> und CrossAsia-eBooks konnten wir zwei weitere Bände der Schriftenreihe „Neue Hallesche Berichte“ (NHB) als Open Access Publikationen der Wissenschaft zugänglich machen:</p>
+                      <p><a href="{{=URL('catalog','book/538')}}">Bergunder, Michael (Hg.): Missionsberichte aus Indien im 18. Jahrhundert</a></p>
+                      <p><a href="{{=URL('catalog','book/539')}}">Bergunder, Michael u.a. (Hg.): Ritual, Caste, and Religion in Colonial South India</a></p>
+
+                      {{elif session.forced_language =='en': }}    
+                      <p>As part of the cooperation between the <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlag der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen zu Halle</a> and CrossAsia-eBooks, which began in the summer of 2018, we were able to publish two more volumes of the series &ldquo;New Hallesche Berichte&rdquo; (NHB) as open access publications:</p>
+                      <p><a href="{{=URL('catalog','book/538')}}">Bergunder, Michael (Hg.): Missionsberichte aus Indien im 18. Jahrhundert</a></p>
+                      <p><a href="{{=URL('catalog','book/539')}}">Bergunder, Michael u.a. (Hg.): Ritual, Caste, and Religion in Colonial South India</a></p>
+
+                      {{pass}}
+				  </div>
+			  </div> 
+
         <div class="media">
 				  <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
