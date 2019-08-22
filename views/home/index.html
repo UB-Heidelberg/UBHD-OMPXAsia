@@ -8,7 +8,16 @@ $('.flexslider').flexslider();
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
-		    <div class="col-lg-3">
+
+		  <div class="col-lg-3">
+				<div class="box box-shadow">                                       
+				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
+              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/506/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/506'))}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/506'))}}</div>  
+				</div>
+			</div>
+		  <div class="col-lg-3">
 				<div class="box box-shadow">                                       
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
               {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/387/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/387'))}}
@@ -17,14 +26,7 @@ $('.flexslider').flexslider();
 				</div>
 			</div>
 			
-            <div class="col-lg-3">
-				<div class="box box-shadow"> 
-					<div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-           {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/366/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/366'))}}
-					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/366'))}}</div>    
-				</div>
-			</div>
+
 			
 
 			
@@ -179,7 +181,7 @@ This open-access publication offers you <a href="{{=URL('catalog','book/446')}}"
                       {{pass}}
 
                       <p class="boxText">{{if session.forced_language =='de': }}
-					  Die zu Ehren der Historikerin Professor Dr. Gita Dharampal-Frick erschienene Festschrift <a href="{{=URL('catalog','book/366')}}" title="Informationen über Neuerscheinung:HerStory. Historical Scholarship between South Asia and Europe">HerStory. Historical Scholarship between South Asia and Europe</a>, herausgegeben von Rafael Klöber und Manju Ludwig, vereint eine Vielzahl an innovativen Beiträgen von Freunden, Kollegen und ehemaligen Studierenden zu den vielschichtigen Forschungsgebieten der Geschichte Südasiens, die Gita Dharampal-Frick in den letzten Jahrzehnten bereichert hat. Der Band deckt mehrere Jahrhunderte und facettenreiche Themen ab, die von transkulturellen Begegnungen zwischen Südasien und Europa, über Aspekte des kolonialen Diskurses, wie etwa der kolonialen Wissensproduktion oder der Aushandlung von Identitäten, wegweisende Ansätze der maritimen Geschichte des Indischen Ozeans bis hin zu vielfältigen Perspektiven auf M.K. Gandhi reichen.
+					             Die zu Ehren der Historikerin Professor Dr. Gita Dharampal-Frick erschienene Festschrift <a href="{{=URL('catalog','book/366')}}" title="Informationen über Neuerscheinung:HerStory. Historical Scholarship between South Asia and Europe">HerStory. Historical Scholarship between South Asia and Europe</a>, herausgegeben von Rafael Klöber und Manju Ludwig, vereint eine Vielzahl an innovativen Beiträgen von Freunden, Kollegen und ehemaligen Studierenden zu den vielschichtigen Forschungsgebieten der Geschichte Südasiens, die Gita Dharampal-Frick in den letzten Jahrzehnten bereichert hat. Der Band deckt mehrere Jahrhunderte und facettenreiche Themen ab, die von transkulturellen Begegnungen zwischen Südasien und Europa, über Aspekte des kolonialen Diskurses, wie etwa der kolonialen Wissensproduktion oder der Aushandlung von Identitäten, wegweisende Ansätze der maritimen Geschichte des Indischen Ozeans bis hin zu vielfältigen Perspektiven auf M.K. Gandhi reichen.
                       {{elif session.forced_language =='en': }}    
                       The Festschrift <a href="{{=URL('catalog','book/366')}}" title="Information about new title:HerStory. Historical Scholarship between South Asia and Europe">HerStory. Historical Scholarship between South Asia and Europe</a> in honour of Professor Dr. Gita Dharampal-Frick, edited by Rafael Klöber and Manju Ludwig, assembles a number of innovative contributions by friends, colleagues, and former students to the multiple research areas in the field of history of South Asia that Gita Dharampal-Frick has enriched over the last decades. The essays included in this volume address a broad number of topics and periods, ranging from transcultural encounters between South Asia and Europe, reassessments of colonial discourses and their legacies, novel approaches to the maritime history of the Indian Ocean, and to perspectives on M.K. Gandhi.
                       {{pass}}
@@ -206,291 +208,6 @@ This open-access publication offers you <a href="{{=URL('catalog','book/446')}}"
                       </p>
 				</div>
 			  </div> 
-
-
-
-
-			<!--<div class="media">
-				<div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-				</div>
-				<div class="media-body">
-                      <p class="media-heading">01.06.2018</p>
-                      {{if session.forced_language =='de': }}
-                      <h5><em>Neue Hallesche Berichte</em> online zugänglich – Kooperation zwischen den Franckeschen Stiftungen und CrossAsia-eBooks</h5>
-                      {{elif session.forced_language =='en': }}
-                      <h5><em>Neue Hallesche Berichte</em> online available – Cooperation between the Franckesche Stiftungen and CrossAsia-eBooks
-</h5>
-                      {{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Wir freuen uns Ihnen mitzuteilen, dass im Rahmen der Kooperation zwischen dem <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlg der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen</a> zu Halle und CrossAsia-eBooks, die im Buchhandel nicht mehr erhältlichen Bände der Schriftenreihe <em>Neue Hallesche Berichte</em> nun als Open-Access Publikationen auf CrossAsia-eBooks der Wissenschaft zugänglich sind.<br />
-					  Die Beziehungen der Franckeschen Stiftungen nach Indien reichen bis in die Anfänge der Stiftungsgeschichte zurück. Mit der Dänisch-Englisch-Halleschen Mission, der ersten protestantischen Mission überhaupt, knüpften die Stiftungen ab 1706 Kontakte nach Südindien und veröffentlichten die Berichte der Missionare, die sogenannten Halleschen Berichte, von 1710 bis 1772 in Halle. Mit den seit 1999 erscheinenden <em>Neuen Hallesche Berichte</em> soll eine zeitgemäße wissenschaftliche Auseinandersetzung mit den traditionellen Indienbeziehungen gefördert werden. Die Themenschwerpunkte, die in Tagungsberichten, Monografien und Quelleneditionen aufgegriffen werden, sind Dravidologie, Volksreligiosität, Geschichte des Christentums, Geschichte des Hinduismus sowie Religion und Kultur Südindiens<br />
-					  Von den bislang neun erschienenen Bänden stehen nun <a href="{{=URL('catalog','series/nhb')}}" title="Übersicht der digitalisierten Bände der Neuen Halleschen Berichten">vier Bände als digitale Ausgabe</a> zur Verfügung. 
-                      {{elif session.forced_language =='en': }}    
-                      We are pleased to announce that as part of the cooperation between the <a href="https://www.francke-halle.de/verlag-der-franckeschen-stiftungen/einrichtungen-e-12.html" title="Homepage Verlg der Franckeschen Stiftungen zu Halle">Verlag der Franckeschen Stiftungen zu Halle</a> and CrossAsia eBooks, the volumes of the <em>Neue Hallesche Berichte</em> series, which are out of print, are now accessible as Open Access publications on the CrossAsia eBooks platform.<br />
-					  The relations between the Francke Foundations and India go back to the early days of the Foundations. With the Danish-English-Halle Mission, the first mission of the Protestant church, the Foundations established contact with South India from 1706 on and published the missionaries’ reports, the “Hallesche Berichte”, between 1710 and 1772. The <em>Neue Hallesche Berichte</em>, published from 1999 on, aim at promoting contemporary scholarly studies of traditional relations with India. The series’ topics, developed in conference reports, monographs and critical editions of sources, include Dravidology, popular religion, the history of Christianity, the history of Hinduism, and the religion and culture of South India.<br />
-					  Of the nine books published so far, <a href="{{=URL('catalog','series/nhb')}}" title="online available volumes of the Neue Halleschen Berichten">four volumes are now available</a> as a digital edition.
-                      {{pass}}
-                      </p>
-				</div>
-			  </div> 				  
-				  
-				  
-			<div class="media">
-				<div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-				</div>
-				<div class="media-body">
-                      <p class="media-heading">29.03.2018</p>
-                      {{if session.forced_language =='de': }}
-                      <h5>Neuerscheinung: Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal</h5>
-                      {{elif session.forced_language =='en': }}
-                      <h5>New publication: Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal</h5>
-                      {{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Auch nach ihrer Einpassung in die Reihe lebenszyklischer Rituale (saṃskāra) im ersten vorchristlichen Jahrtausend wurde die brahmanische Initiation (upanayana) überarbeitet und uminterpretiert. Heute wird sie beim vratabandha zusammen mit drei weiteren saṃskāras nebst Vor- und Rahmenritual vollzogen. In seinem Buch <a href="{{=URL('catalog','book/316')}}" title="Informationen über Neuerscheinung: Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal">Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal</a> untersucht Christof Zotter mit einer Kombination von Textstudien und Feldforschung für eine bestimmte vedische Schule (den Weißen Yajurveda) und einen konkreten Kontext (das vratabandha der nepalischen Bāhun und Chetrī), nach welchen Prinzipien Elemente verschiedener Ritualformen (saṃskāra, pūjā, homa etc.) kombiniert und an veränderte Zeiten und Situationen angepasst werden.
-                      {{elif session.forced_language =='en': }}    
-                      After its integration into the series of life-cycle rituals (saṃskāra) in the first millennium BC, the Brahmanical initiation (upanayana) underwent continual revision and reinterpretation. Today it is performed during a ritual complex called vratabandha, in which it is conducted together with three other saṃskāras, the whole set being embedded in a preliminary and framing ritual. In his book <a href="{{=URL('catalog','book/316')}}" title="Information on new title: Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal">Asketen auf Zeit: Das brahmanische Intitiationsritual der Bāhun und Chetrī im Kathmandu-Tal</a>. Christof Zotter employs a combination of textual studies and fieldwork to examine the principles by which a particular Vedic school (the White Yajurveda) and a concrete context (the vratabandha of Nepalese Bāhuns and Chetrīs) combines and adapts elements of different types of ritual (saṃskāra, pūjā, homa, etc.) in order to accommodate itself to changing times and circumstances.
-                      {{pass}}
-                      </p>
-				</div>
-			  </div> 
-
-
-				  <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">27.11.2017</p>
-                      {{if session.forced_language =='de': }} 
-                      <h5>Neuerscheinung bei CrossAsia-eBooks</h5>
-                      {{elif session.forced_language =='en': }}
-                      <h5>New publication on CrossAsia-eBooks</h5>
-                      {{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Über den indischen König Vikrama liegt eine Reihe von Erzählungen in verschiedenen indischen Sprachen vor. Daneben finden sich auch persische Fassungen aus der Zeit, als Persisch in Indien als Literatur- und Verwaltungssprache genutzt wurde. In der vorliegenden Untersuchung  <a href="{{=URL('catalog','book/273')}}" title="Informationen über Neuerscheinung: Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus">Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus</a> befasst sich Anna Martin mit diesen persischen Versionen. Im Fokus der Betrachtung steht eine Bearbeitung aus dem 17. Jahrhundert, die der Autor Kišandās erstellte und „Kišans Unterhaltungsstück (Kišanbilās) nannte.
-                      {{elif session.forced_language =='en': }}    
-                      There exist many tales about the Indian king Vikrama in different Indian languages. Persian versions emerged during the 16th century, when the Persian language was one of the many literary languages and also functioned as administrative language in India. In her study <a href="{{=URL('catalog','book/273')}}" title="Information on new title: Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus">Übersetzung als kultureller Transfer: Eine Untersuchung persischer Versionen des indischen Vikrama-Erzählzyklus</a> Anna Martin examines a 17th century Persian adaptation of the Vikrama story called the Kišanbilās („Kišan’s dalliance“) by an author named Kišandās.
-                      {{pass}}
-                      </p>
-          </div>
-			  </div>
-
-
-			  
-			  
-			  
-			<div class="media">
-				<div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-				</div>
-				<div class="media-body">
-                      <p class="media-heading">06.11.2017</p>
-                      {{if session.forced_language =='de': }}
-                      <h5>CrossAsia-eBooks präsentiert den 8. Band der Geographien Südasiens</h5>
-                      {{elif session.forced_language =='en': }}
-                      <h5>CrossAsia-eBooks presents the 8th volume of the series Geographien Südasiens</h5>
-                      {{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Mit dieser Open-Access-Publikation stehen Ihnen <a href="{{=URL('catalog','book/300')}}" title="Informationen über Neuerscheinung: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">Extended Abstracts der 7.&nbsp;Jahrestagung des AK Südasien 2017</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Bildung, Konsum und Wertschöpfungsketten, Rurale Welten, Urbane Welten und Entwicklungsforschung und Tourismus als PDF herunterladen.
-                      {{elif session.forced_language =='en': }}    
-                      This open-access publication offers you extended abstracts of the  <a href="{{=URL('catalog','book/300')}}" title="Information on new title: Aktuelle Forschungsbeiträge zu Südasien - 7. Jahrestagung des AK Südasien, 27./28. Januar 2017, Augsburg">7.&nbsp;Jahrestagung des AK Südasien 2017</a>. As with previous volumes you can download the whole volume or individual articles as PDF. The volume contains articles on migration, education, consumption and value chains, rural and urban worlds as well as tourism and development research.
-                      {{pass}}
-                      </p>
-				</div>
-			  </div> 
-
-				  
-			<div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">05.09.2017</p>
-                      {{if session.forced_language =='de': }} 
-                      <h5>Neuerscheinung bei CrossAsia-eBooks</h5>
-                      {{elif session.forced_language =='en': }}
-                      <h5>New publication on CrossAsia-eBooks</h5>
-                      {{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Mit {{=A(T('Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā'),_href=URL('catalog','book/269'))}} legt der Indologe Jürgen Neuß erstmals einen umfassenden Überblick über die erhaltenen historischen Überreste in Oṃkāreśvar-Māndhātā, dem wichtigsten hinduistischen Pilgerort im Narmadā-Tal vor. Obschon der Ort bereits seit der Mitte des neunzehnten Jahrhunderts als archäologische Fundstätte bekannt ist, wurde bis heute übersehen, dass die historischen Überreste weit umfangreicher und in sich geschlossener sind, als die wenigen publizierten archäologischen Berichte, die sich zudem nur mit wenigen Einzelbauwerken beschäftigen, vermuten lassen. Dieses Buch liefert den lange überfälligen Überblick über das gesamte Areal, das im Wesentlichen aus drei historischen Siedlungsbereichen besteht. In deren Zentrum steht eine wohlstrukturierte Festungsanlage, Māndhātr̥durga, die die einzige erhaltene befestigte Stadtanlage der Paramāras of Dhāra im gesamten Narmadā-Tal darstellt.
-                      {{elif session.forced_language =='en': }}    
-                      In {{=A(T('Māndhātr̥durga – A Preliminary Catalogue of the Historic Monuments at Oṃkāreśvar-Māndhātā'),_href=URL('catalog','book/269'))}} the Indologist Jürgen Neuß offers for the first time a comprehensive survey of the extant historic remains at Oṃkāreśvar-Māndhātā, the most important place of pilgrimage in the Narmadā valley. Although the place has been known as an archaeological site since the middle of the nineteenth century, it has till date been overlooked that the remains are much more extensive and coherent than the rarely published archaeological notes, that deal with only a few monuments, suggest. This book provides a long overdue survey of the whole area which in essence represents a conglom-eration of three historic settlements. At the center lies a thoroughly structured fortification, Māndhātr̥durga, which represents the only preserved fortified city of the Paramāras of Dhāra in the Narmadā valley presently known to us.
-                      {{pass}}
-                      </p>
-          </div>
-			  </div> 	  
-				  
-		   <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">28.07.2017</p>
-                      {{if session.forced_language =='de': }} <h5>Kooperation zwischen dem Draupadi Verlag und CrossAsia-eBooks </h5>{{elif session.forced_language =='en': }} <h5>Cooperation between Draupadi Verlag and CrossAsia-eBooks </h5>{{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Der <a href="http://www.draupadi-verlag.de" title="Homepage Draupadi-Verlag">Draupadi-Verlag</a> in Heidelberg und CrossAsia-eBooks haben im Frühjahr 2017 vereinbart, ausgewählte Sachbücher über Südasien aus dem Verlagsprogramm, bei denen keine Neuauflage geplant ist, zusätzlich zur gedruckten Ausgabe als Open-Access Publikation auf CrossAsia-eBooks zur Verfügung zu stellen.<br>                   
-                      Als erstes Buch wurde nun die 2014 veröffentlichte Dissertation <i>{{=A(T('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)'),_href=URL('catalog','book/228'))}}</i> des Heidelberger Ethnologen Hans-Martin Kunz auf CrossAsia-eBooks als Open-Access-Publikation bereitgestellt. Die gedruckte Ausgabe kann weiterhin über den Buchhandel oder direkt beim Draupadi-Verlag erworben werden.<br>
-                      Für Herbst 2017 ist die Open-Access-Veröffentlichung des 2008 beim Draupadi-Verlag erschienenen Buches <i>Die Birhor. Ethnographie und die Folgen. Ein indischer &bdquo;Stamm&rdquo; im Spiegel kolonialer und postkolonialer Beschreibungen</i> von Markus Schleiter geplant.
-                      {{elif session.forced_language =='en': }}    
-                      The <a href="http://www.draupadi-verlag.de" title="Homepage Draupadi publishing house">Draupadi publishing house</a> in Heidelberg and CrossAsia-eBooks started in Spring 2017 a co-operation to publish electronic Open Access versions of selected books on South Asia that appeared originally as print editions and are not scheduled for reprint.<br>
-The first Draupadi title offered by CrossAsia-eBooks is <i>{{=A(T('Schaubühnen der Öffentlichkeit: Das Jatra-Wandertheater in Westbengalen (Indien)'),_href=URL('catalog','book/228'))}}</i>, a PhD dissertation by the ethnologist Hans-Martin Kunz. The print edition is still available in bookshops or directly at the Draupadi publishing house.<br>
-The next electronic publication of a Draupadi book will be Markus Schleiter’s <i>Die Birhor. Ethnographie und die Folgen. Ein indischer &bdquo;Stamm&rdquo; im Spiegel kolonialer und postkolonialer Beschreibungen</i> (2008). It is planned to appear in autumn 2017.	  
-                      {{pass}}
-                      </p>
-          </div>
-			  </div> 
-
-
-		   <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">27.06.2017</p>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}}
-
-                      <p class="boxText">{{if session.forced_language =='de': }}In seiner Studie {{=A(T('Development as Spectacle: Understanding Post-War Urban Development in Colombo, Sri Lanka'),_href=URL('catalog','book/270'))}} untersucht Marc Herter die nachkriegszeitliche Stadtentwicklung in Colombo. Auf der Grundlage von Guy Debords Buch mit dem Titel &bdquo;Die Gesellschaft des Spektakels&rdquo; wird die Thematik der Neugestaltung der urbanen Landschaft als Konsumlandschaft einer postindustriellen Gesellschaft aufgegriffen. Im internationalen Standortwettbewerb um Ansehen und Geschäftsinvestitionen greifen Stadtplaner vermehrt auf Stararchitektur als Werkzeug zur Markenbildung eines Standorts zurück. So erhofft sich das nachkriegszeitliche Sri Lanka von den größten sozialen Herausforderungen betreffend ethnischer Segregation, Armut oder Ethno-Nationalismus mittels eines durch infrastrukturelle Großinvestitionen induzierten Wirtschaftswachstums ablenken zu können. Anhand von Arcade Independence Square, eines neu entwickelten luxuriösen Einkaufszentrums in Colombo, zeigt diese Studie auf, wie die Regierung mit ihrer nachkriegszeitlichen Stadtentwicklungsagenda von solchen Problemen abwenden will. 
-                      {{elif session.forced_language =='en': }}    
-                      In {{=A(T('Development as Spectacle: Understanding Post-War Urban Development in Colombo, Sri Lanka'),_href=URL('catalog','book/270'))}} Marc Herter looks into  the matter of urban development in a post-war setting. Drawing on Guy Debord’s book titled &ldquo;The Society of the Spectacle&rdquo;, the author argues that urban governance has become increasingly concerned with transforming the cityscape into a space for consumption tailored to the needs of a post-industrial society. As cities compete for international prominence and business investments, urban planners turn to flagship projects as tools for city branding. In post-war Sri Lanka it is believed that economic progress will remedy grievances and detract from societal issues regarding ethnic segregation, poverty or ethno-nationalism. On the empirical case of Arcade Independence Square, a newly developed high-end shopping mall in Colombo, this study shows how the government aims to draw attention away from such issues by commissioning large-scale infrastructure projects.			  
-                      {{pass}}
-                      </p>
-          </div>
-			  </div> 
-
-		   <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">13.04.2017</p>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung zu &bdquo;Medical Travel Facilitators&rdquo;</h5>{{elif session.forced_language =='en': }} <h5>New publication on &ldquo;Medical Travel Facilitators&rdquo;</h5>{{pass}} 
-
-                      <p class="boxText">{{if session.forced_language =='de': }}In ihrer Masterarbeit <a href="{{=URL('catalog','book/251')}}" title="Link zum Buch">The Work of Medical Travel Facilitators: Caring For and Caring About International Patients in Delhi</a> untersucht Sarah Hartmann die Rolle von &bdquo;Medical Travel Facilitators&rdquo;. Diese spielen in der Realisierung transnationaler Gesundheitsmärkte eine wichtige Rolle, denn sie unterstützen Personen auf der Suche nach medizinischen Behandlungen im Ausland. Über ihre Arbeit an Medizintourismus-Destinationen wie Delhi in Indien ist bislang aber nur wenig bekannt. Ethnographische Forschung zeigt, dass &bdquo;medical travel facilitators&rdquo; in Delhi ein breites Tätigkeitsspektrum abdecken, um PatientInnen umfassend und individuell zu unterstützen. Ihre Arbeit, so die Argumentation, kann als Care-Arbeit konzeptualisiert werden. 
-                      {{elif session.forced_language =='en': }}    
-                      In her thesis <a href="{{=URL('catalog','book/251')}}" title="Link to the book">The Work of Medical Travel Facilitators: Caring For and Caring About International Patients in Delhi</a> Sarah Hartmann investigates the important role of medical travel facilitators in bringing transnational health care markets into being as they help patients seeking medical treatment abroad. However, little is known about the work of medical travel facilitators located at medical travel destinations, such as Delhi in India. Ethnographic fieldwork shows that the facilitation model practiced in Delhi excels in comprehensive and individualised support of international patients, in which facilitators engage in a broad range of tasks that I suggest conceptualising as ‘care work’. These facilitators not only care for the overall well-being of patients but express their care in a particularly concerned, devoted, even affectionate manner.					  
-                      {{pass}}
-                      </p>
-          </div>
-			     </div> 
-          
-
-           <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">30.03.2017</p>
-                      {{if session.forced_language =='de': }} <h5>Neuerscheinung bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>New publication on CrossAsia-eBooks</h5>{{pass}} 
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Die Historikerin Martina Franke untersucht in ihrer Dissertation <em>{{=A(T('Hoffnungsträger und Sorgenkind Südasien: Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973'),_href=URL('catalog','book/177'))}}</em> die Wahrnehmung der Länder Südasiens in einer sich wandelnden westdeutschen politischen Öffentlichkeit. Die medial transportierten Bilder von Jawaharlal Nehru, dem ersten indischen Ministerpräsidenten, und die Sichtweisen auf Ereignisse wie den indisch-portugiesischen Konflikt um Goa oder die deutsch-indische Zusammenarbeit am Stahlwerk in Rourkela verdeutlichen unterschiedliche Perspektiven. Die Wahrnehmung der politischen Entwicklung in Südasien bis Anfang der 1970er Jahre stand im Zusammenhang mit den Debatten um die Vergabe und Verwendung von Entwicklungshilfe. Dabei prägten generationelle Zugehörigkeiten und unterschiedliche Lebenserfahrungen die Eigen- und Fremdwahrnehmung.
-                      {{elif session.forced_language =='en': }}                     
-                      The historian Martina Franke examines in her dissertation  <em>{{=A(T('Hoffnungsträger und Sorgenkind Südasien: Westdeutsche Betrachtungen und Begegnungen zwischen 1947 und 1973'),_href=URL('catalog','book/177'))}}</em> the perception of the South Asian countries in a West German political public changing in the course of time. The medially transported views on Jawaharlal Nehru, the first Prime Minister of India, and the views on occurrences such as the conflict between India and Portugal over Goa or the German-Indian cooperation to build the steel mill in Rourkela reveal different perspectives. The perception of the political development in South Asia until the beginning of the 1970s was in connection with the debates on granting and use of development aid. In the course of this generational affiliations and different life experiences left an imprint on the self- and external perception.
-                      {{pass}}
-                      </p>
-          </div>
-			     </div> 
-
-           <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">12.01.2017</p>
-                      {{if session.forced_language =='de': }} <h5>Zwei Neuerscheinungen bei CrossAsia-eBooks</h5>{{elif session.forced_language =='en': }} <h5>Two new books on CrossAsia-eBooks</h5>{{pass}} 
-
-                      <p class="boxText">{{if session.forced_language =='de': }}In seiner <em>{{=A(T('Bibliography of Online Resources on Chinese Strategy, Security and Military Matters'),_href=URL('catalog','book/191'))}}</em>  bietet der deutsche Sinologe Oliver Corff einen Überlick über Online-Materialien zur chinesischen Strategie, Sicherheit und Militärwesen. Die Bibliographie wird in regelmäßigen Abständen aktualisiert.<br />
-                      The <em>{{=A(T('Satsaṅgijīvanam by Śatānanda'),_href=URL('catalog','book/185'))}}</em> beschreibt das Leben von Swami Sahajananda (1781-1830), dem Gründer der Swaminarayan Bewegung, der von seinen Anhängern als Verkörperung Krishnas angesehen wird. Es handelt sich um ein bedeutendes Dokument zur religiösen Situation des Hinduismus im Gujarat seiner Zeit. Das umfangreiche, auf Sanskrit abgefasste Werk wird hier in einer englischen Zusammenfassung von Jaydev A. Jani und Peter Schreiner präsentiert.
-                      {{elif session.forced_language =='en': }}                     
-                      In his <em>{{=A(T('Bibliography of Online Resources on Chinese Strategy, Security and Military Matters'),_href=URL('catalog','book/191'))}}</em> the German Sinologist Oliver Corff presents an overview of the material available online on these subjects. The bibliography will be updated on a regular basis.<br />
-                      The <em>{{=A(T('Satsaṅgijīvanam by Śatānanda'),_href=URL('catalog','book/185'))}}</em> describes the biography of Swami Sahajananda (1781-1830), the founder of the Swaminarayan Movement, considered by his followers as an embodiment of Krishna. The <em>Satsaṅgijīvanam</em> is an important document for the religious situation in the Gujarat of its time. The extensive work is composed in Sanskrit and is here presented in an English summary by Jaydev A. Jani and Peter Schreiner.        
-                      {{pass}}
-                      </p>
-          </div>
-			     </div> 
-          				
-					 <div class="media">
-           <div class="media-left pull-left">
-                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
-           </div>
-					<div class="media-body">
-                      <p class="media-heading">24.10.2016</p>
-                      {{if session.forced_language =='de': }} <h5>Veranstaltungsreihe Open Access am Mittag: Publizieren an der Universität Heidelberg</h5>{{elif session.forced_language =='en': }} <h5>Series of events Open Access at noon: Publishing with the Heidelberg University</h5>{{pass}} 
-
-                      <p class="boxText">{{if session.forced_language =='de': }}Anlässlich der Open-Access-Woche 2016 vom 24.10. bis 30.10. lädt die UB Sie in Ihrer Mittagspause dazu ein, sich über die <a href="http://www.ub.uni-heidelberg.de/service/openaccess/Welcome.html" title="Informationen über die Publikationsmöglichkeiten im Open Access an der Universität Heidelberg">vielfältigen Publikationsmöglichkeiten im Open Access</a>, die die Uni Heidelberg bereitstellt, zu informieren. Beginn: 13 Uhr im <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&amp;zweig=&amp;sprache=de" title="Lageplan: Handschriftenlesesaal der UB Heidelberg">Handschriftenlesesaal (Rundzimmer)</a> der UB. [<a href="http://www.ub.uni-heidelberg.de/bilder/oa/oa-woche_plakat_A4.pdf">&rsaquo;&rsaquo;Veranstaltungsübersicht</a>]
-                      {{elif session.forced_language =='en': }}                     
-                      On occasion of the open acces week, 24-30 October 2016, the University Library invites you in your lunch break to inform you about the <a href="http://www.ub.uni-heidelberg.de/Englisch/service/openaccess/Welcome.html" title="Information on Open Access publishing options at Heidelberg University">various publishing options</a> Heidelberg University offers. Start: 1 pm in the <a href="http://www.ub.uni-heidelberg.de/cgi-bin/ub3d.cgi?bereich=Handschriftenlesesaal&zweig=altstadt&sprache=en" title="site plan manuscript reading room of Heidelberg University Library">manuscript reading room (round chamber)</a> of the library.           
-                      {{pass}}
-                      </p>
-          </div>
-			     </div> 
-			
-			<div class="media">
-						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
-						  <div class="media-body">
-							<p class="media-heading">12.10.2016</p>
-							  {{if session.forced_language =='de': }}<h5>Neu erschienen</h5>{{elif session.forced_language =='en': }}<h5>Newly published</h5>{{pass}}
-							
-							<p class="boxText"> 
-							  {{if session.forced_language =='de': }} 
-							        Der Marburger Indologe Felix Otter untersucht in seiner Dissertation <em>{{=A(T('Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien'),_href=URL('catalog','book/129'))}}</em> die Wiederbelebungsversuche von Vāstuvidyā im Kontext ideologischer und geistesgeschichtlicher Entwicklungen mit Methoden der Textanalyse. Das Verhältnis der revitalisierten Version(en) von Vāstuvidyā zu den vorkolonialen vāstuśāstras, ebenso die Relevanz der Apologetik der einheimischen Wissenschaften für die Revitalisierung von Vāstuvidyā sowie die Diskursstrategien, die im revitalistischen Vāstu-Schrifttum zur Anwendung kommen, bilden die zentralen Themen des Buches.
-                              {{elif session.forced_language =='en': }} 
-									In his dissertation <em>{{=A(T('Die Revitalisierung von Vāstuvidyā im kolonialen und nachkolonialen Indien'),_href=URL('catalog','book/129'))}}</em> the Marburg Indologist Felix Otter examines several attempts at revitalisation of Vāstuvidyā since the first half of the 20th century in the context of ideological and historical developments with the methods of textual analysis. The relationship between the revived version(s) of Vāstuvidyā with the precolonial formulations of the lore, the relevance of the apologetic discourse of the indigenous sciences for the revitalisation of Vāstuvidyā, and the discourse strategies employed in colonial and post-colonial Vāstu literature are the central themes of the book.{{pass}}
-							</p>
-						  </div>
-					</div>		 
-					 
-            <div class="media">
-						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
-						  <div class="media-body">
-							<p class="media-heading">15.09.2016</p>
-							  {{if session.forced_language =='de': }}<h5>Neuerscheinung bei &bdquo;Geographien Südasiens&rdquo;</h5>{{elif session.forced_language =='en': }}<h5>New publication "Geographien Südasiens"</h5>{{pass}}
-							
-							<p class="boxText"> 
-							  {{if session.forced_language =='de': }} 
-									  Der vierte Tagungsband <em>{{=A(T('Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien'),_href=URL('catalog','book/158'))}}</em> Die auf der Jahrestagung präsentierten Forschungsergebnisse werden in Form von Extended Abstracts veröffentlicht und geben Einblicke in aktuelle Forschung zu Südasien. Der Sammelband enthält Beiträge zu Ernährungssicherheit, Umweltveränderungen in den Backwaters von Kerala, Urbanisierung in Leh u.v.m. 
-							  {{elif session.forced_language =='en': }} 
-                The fourth conference proceedings <em>{{=A(T('Aktuelle Forschungsbeiträge zu Südasien - 6. Jahrestagung des AK Südasien'),_href=URL('catalog','book/158'))}}</em>. The conference proceedings are published in form of extended abstracts and provide information on current research on South Asia. The volumes contains articles on food security, environmental change, urbanisation in Leh and more.
-							  {{pass}}
-							</p>
-						  </div>
-					</div>
-           
-           <div class="media">
-						  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
-						  <div class="media-body">
-							<p class="media-heading">25.07.2016</p>
-							  {{if session.forced_language =='de': }}<h5>Neuerscheinung zum Thema Arbeitsmigration</h5>{{elif session.forced_language =='en': }}<h5>New publication on labour migration</h5>{{pass}}
-							
-							<p class="boxText"> 
-							  {{if session.forced_language =='de': }} 
-									  Im Vorfeld der näher rückenden FIFA-Weltmeisterschaft in Katar wächst das mediale Interesse an der großen Rolle, die ausländische Arbeitskräfte für das rasante Wachstum der Golfstaaten-Metropolen spielen.<br />
-		Hannah Uprety untersucht in ihrer Masterarbeit <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> wie sich diese meist männlichen Migranten und ihre Familien in transnationale Formen der Lebensführung einfinden und wie ihre Identitäten sich entlang dieses Prozesses verändert.
-							  {{elif session.forced_language =='en': }} 
-									   In light of the upcoming FIFA world championship in Qatar, increasing international attention has turned to the large role of foreign workers in the rapid growth of many Gulf cities, as well as the often problematic working and living conditions of these laborers.<br />
-									   In her thesis <em>{{=A(T('Between Exploitation and Economic Opportunity?: Identities of Male Nepalese Labor Migrants in the Gulf Region'),_href=URL('catalog','book/126'))}}</em> Hannah Uprety investigates how these mostly male migrants and their families navigate through transnational lifestyles and how their identities are transformed alongside them.
-							  {{pass}}
-							</p>
-						  </div>
-					</div>
-					
-					<div class="media">
-					  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" /></div>
-						  <div class="media-body">
-							<p class="media-heading">06.06.2016</p>
-							  {{if session.forced_language =='de': }}<h5>CrossAsia E-Publishing auf der 24. ECSAS in Warschau (27.–30. Juli 2016)</h5> {{elif session.forced_language =='en': }}<h5>CrossAsia E-Publishing at the 24th ECSAS in Warsaw (27-30 July 2016)</h5> {{pass}}
-							
-							<p class="boxText"> 
-							  {{if session.forced_language =='de': }} 
-									   CrossAsia E-Publishing wird auf der 24. European Conference on South Asian Studies in Warschau im Verlagsbereich mit einem Stand vertreten sein. Besuchen Sie uns und informieren Sie sich über die Publikationsmöglichkeiten, die Ihnen CrossAsia E-Publishing für Bücher, Serien und Zeitschriften anbietet. Wir freuen uns auf Ihren Besuch in Warschau! 
-							  {{elif session.forced_language =='en': }} 
-									   CrossAsia E-Publishing will be present at the 24th European Conference on South Asian Studies in Warsaw. Visit us at the publisher space and get informed on the various possibilities we offer for publishing your books, series or journals. We are looking forward to seeing you in Warsaw! 
-							  {{pass}}
-							</p>
-						  </div>
-					</div>   -->
-
 				  <div class="media">
 					  <div class="media-left pull-left"><img alt="" src="{{=URL('static','images/home/Open_access_logo.png')}}" style="width: 50px;" /></div>
 					  <div class="media-body"><p class="media-heading"></p>{{if session.forced_language =='de': }}<h5>open-access.net</h5>{{elif session.forced_language =='en': }}<h5>open-access.net</h5>{{pass}}
@@ -514,13 +231,12 @@ The next electronic publication of a Draupadi book will be Markus Schleiter’s 
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
-			<div class="col-lg-3">
-				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-           {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/446/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/446'))}}
-           </div>
-				  <div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/446'))}}
-				  </div>
+      <div class="col-lg-3">
+				<div class="box box-shadow"> 
+					<div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
+           {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/366/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/366'))}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/366'))}}</div>    
 				</div>
 			</div>
 
