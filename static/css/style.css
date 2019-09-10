@@ -716,13 +716,7 @@ ul.team-detail li ul.social-network li i {
 .pricing-title h3 {
 	font-weight: 600;
 	margin-bottom: 0;
-r .toggle-topbar {
-	position: absolute;
-	right: 0;
-	top: 0;
 }
-}
-	top:0;
 .pricing-offer {
 	background: #fcfcfc;
 	text-align: center;
