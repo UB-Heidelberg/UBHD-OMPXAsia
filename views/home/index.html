@@ -12,19 +12,22 @@ $('.flexslider').flexslider();
 		  <div class="col-lg-3">
 				<div class="box box-shadow">                                       
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
+              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/551/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/551'))}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/551'))}}</div>  
+				</div>
+			</div>
+
+
+		  <div class="col-lg-3">
+				<div class="box box-shadow">                                       
+				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
               {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/506/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/506'))}}
 					</div>
 					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/506'))}}</div>  
 				</div>
 			</div>
-		  <div class="col-lg-3">
-				<div class="box box-shadow">                                       
-				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/387/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/387'))}}
-					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/387'))}}</div>  
-				</div>
-			</div>
+
 			
 
 			
@@ -33,6 +36,28 @@ $('.flexslider').flexslider();
 			<div id="boxAktuelles" class="col-lg-6">
 				<div class="box box-shadow">
 				  <div class="box-gray" style="overflow-y: scroll"><h4>{{=T('News')}}</h4>
+
+        <div class="media">
+				  <div class="media-left pull-left">
+                      <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
+				</div>
+				<div class="media-body">
+                      <p class="media-heading">30.09.2019</p>
+                      {{if session.forced_language =='de': }}
+                      <h5>CrossAsia-eBooks präsentiert den 11. Band der Geographien Südasiens</h5>
+                      {{elif session.forced_language =='en': }}
+                      <h5>CrossAsia-eBooks presents the 10th volume of the series Geographien Südasiens</h5>
+                      {{pass}}
+
+                      <p class="boxText">{{if session.forced_language =='de': }}
+                      Mit dieser Open-Access-Publikation stehen Ihnen <a href="{{=URL('catalog','book/551')}}">Extended Abstracts der 9. Jahrestagung des AK Südasien, 2019</a> zur Verfügung. Wie bei den bisherigen Bänden der Reihe können Sie den gesamten Band oder die einzelnen Beiträge zu den Themenbereichen Migration, Urbanisierung, Politische Ökologie, Biotechnologie, Handel u.v.m. als PDF herunterladen.</p>
+
+                      {{elif session.forced_language =='en': }}    
+                      <p>This open-access publication offers you <a href="{{=URL('catalog','book/551')}}">Extended Abstracts of the 9. Jahrestagung des AK Südasien, 2019</a>. As with previous volumes, you can download the whole volume or individual articles as PDF. The volume contains articles on migration, political ecology, biotechnology, trade and much more.</p>
+
+                      {{pass}}
+				  </div>
+			  </div> 
 
         <div class="media">
 				  <div class="media-left pull-left">
@@ -60,6 +85,7 @@ $('.flexslider').flexslider();
 				  </div>
 			  </div> 
 
+        
         <div class="media">
 				  <div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
@@ -104,7 +130,7 @@ The organizing principle of the volume lies in its exploration of the links betw
 			  </div> 
 			  
 
-         <div class="media">
+        <div class="media">
 				<div class="media-left pull-left">
                       <img alt="" src="{{=URL('static','images/home/xasia_logo.png')}}" style="width: 50px;" />
 				</div>
@@ -231,22 +257,21 @@ This open-access publication offers you <a href="{{=URL('catalog','book/446')}}"
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
+    
+		  <div class="col-lg-3">
+				<div class="box box-shadow">                                       
+				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
+              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/387/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/387'))}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/387'))}}</div>  
+				</div>
+			</div>    
       <div class="col-lg-3">
 				<div class="box box-shadow"> 
 					<div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
            {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/366/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/366'))}}
 					</div>
 					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/366'))}}</div>    
-				</div>
-			</div>
-
-			
-			<div class="col-lg-3">
-				<div class="box box-shadow">
-				  <div class="box-gray aligncenter"> <h4>{{=T('Series')}}</h4>
-              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/467/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('series','info/nhb'))}}          
-				  </div>
-				  <div class="box-bottom"> {{=A(T('More'),_href=URL('series','info/nhb'))}}</div>
 				</div>
 			</div>
 			
