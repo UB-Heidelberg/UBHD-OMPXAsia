@@ -60,14 +60,16 @@ $('.flexslider').flexslider();
 				</div>
 			</div>
 			
-		  <div class="col-lg-3">
-				<div class="box box-shadow">                                       
-				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/387/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/387'))}}
-					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/387'))}}</div>  
-				</div>
-			</div>    
+    	 <div class="col-lg-3">
+                  <div class="box box-shadow">
+                    <div class="box-gray aligncenter"><h4>{{=T('Soon')}}</h4> 
+                      {{=A(IMG(_src=URL(myconf.take('web.application'),'static','/images/catalog/cover_stasik.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','preview#stasik'))}}                                    
+                    </div>
+                    <div class="box-bottom"> 
+                    {{=A(T('More Information'),_href=URL('catalog','preview#stasik'))}}  
+                    </div>
+                  </div>
+          </div> 
 
 			
 			<div class="col-lg-6">
