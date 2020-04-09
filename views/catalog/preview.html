@@ -15,7 +15,7 @@
     
 
     		<div class="row contentbox-12" id="stasik">
-			  <div class="box-gray alignleft" style="height: auto;">
+			  <div class="alignleft" style="height: auto;">
 				<div class="col-lg-2">
 					<article>
 						<div class="post-image">
@@ -35,6 +35,33 @@
                             Erscheint am 28. Mai 2020
 							{{elif session.forced_language =='en': }}
 							Forthcoming on 28 May 2020
+							{{pass}}
+						</p>
+					</article>
+				</div>
+			  </div>
+			</div>
+			
+			<div class="row contentbox-12" id="chen">
+			  <div class="alignleft" style="height: auto;">
+				<div class="col-lg-2">
+					<article>
+						<div class="post-image">
+							{{=IMG(_src=URL('static','images/catalog/preview.png'),_style='width:230px')}}
+						</div>
+					</article>
+				</div>
+				<div class="col-lg-9">
+					<article>
+						<div class="post-heading">
+						    <b>Liang Chen<br />
+                            Begräbnistexte im Sozialen Wandel der Han-Zeit: Eine typologische Untersuchung der Jenseitsvorstellungen</b>
+						</div>
+						<p>
+						  {{if session.forced_language =='de': }}
+                            Erscheint im Sommer 2020
+							{{elif session.forced_language =='en': }}
+							Forthcoming in summer 2020
 							{{pass}}
 						</p>
 					</article>
