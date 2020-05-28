@@ -12,20 +12,21 @@ $('.flexslider').flexslider();
 		<div class="col-lg-3">
 				<div class="box box-shadow">                                       
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
+              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/530/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/530'))}}
+					</div>
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/530'))}}</div>  
+				</div>
+			</div>
+		
+		<div class="col-lg-3">
+				<div class="box box-shadow">                                       
+				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
               {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/611/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/611'))}}
 					</div>
 					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/611'))}}</div>  
 				</div>
 			</div>
 
-		  <div class="col-lg-3">
-				<div class="box box-shadow">                                       
-				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/581/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/581'))}}
-					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/581'))}}</div>  
-				</div>
-			</div>
 			
 		  <div id="boxAktuelles" class="col-lg-6">
               <div class="box">
@@ -50,23 +51,23 @@ $('.flexslider').flexslider();
 <div class="row news-row">
     <div class="col-lg-12">
 		<div class="row">
-    
 		  <div class="col-lg-3">
 				<div class="box box-shadow">                                       
 				  <div class="box-gray aligncenter"><h4>{{=T('New Titles')}}</h4>
-              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/506/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/506'))}}
+              {{=A(IMG(_src=URL(myconf.take('web.application'),'static','files/presses/4/monographs/581/simple/cover.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','book/581'))}}
 					</div>
-					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/506'))}}</div>  
+					<div class="box-bottom"> {{=A(T('More'),_href=URL('catalog','book/581'))}}</div>  
 				</div>
-			</div>
+			</div> 
+ 
 			
     	 <div class="col-lg-3">
                   <div class="box box-shadow">
                     <div class="box-gray aligncenter"><h4>{{=T('Soon')}}</h4> 
-                      {{=A(IMG(_src=URL(myconf.take('web.application'),'static','/images/catalog/cover_stasik.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','preview#stasik'))}}                                    
+                      {{=A(IMG(_src=URL(myconf.take('web.application'),'static','/images/catalog/cover_chen.jpg'),_alt='',_style='width:145px', _class='bildrahmen'),_href=URL('catalog','preview#chen'))}}                                    
                     </div>
                     <div class="box-bottom"> 
-                    {{=A(T('More Information'),_href=URL('catalog','preview#stasik'))}}  
+                    {{=A(T('More Information'),_href=URL('catalog','preview#chen'))}}  
                     </div>
                   </div>
           </div> 
