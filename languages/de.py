@@ -179,6 +179,7 @@
 'First name': 'Vorname',
 'For Authors': 'Informationen für Autoren',
 'For technical reasons, statistical data is available from 03.07.2016 onward. ': 'Aufgrund technischer Gegebenheiten beginnt die statistische Erfassung für diesen Titel erst am 07.03.2016',
+'Forthcoming': 'Demnächst',
 'Forms and Validators': 'Forms und Validators',
 'Free Applications': 'Kostenlose Anwendungen',
 'FSK / USK Angabe': 'FSK / USK Angabe',
